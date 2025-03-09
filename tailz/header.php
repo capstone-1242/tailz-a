@@ -15,6 +15,10 @@
 <html <?php language_attributes(); ?>>
 
 <head>
+	<meta name="description" content="Tailz is a pet resort that offers
+	grooming, daycare, overnight lodging, products, and training services.">
+	<meta name="keywords" content="pet resort, grooming, daycare, overnight lodging, products, training, Edmonton">
+	<meta name="author" content="Tailz | Code catalyst">
 	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
@@ -27,12 +31,10 @@
 	<div id="page" class="site">
 		<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'tailz'); ?></a>
 
+
 		<header id="masthead" class="site-header">
 
 
-
-
-			
 
 				<?php
 				the_custom_logo();
@@ -54,6 +56,7 @@
 		
 
 				<nav id="site-navigation" class="main-navigation">
+
 					<p><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></p></a>
 
 					<?php
@@ -61,6 +64,7 @@
 						'theme_location' => 'menu-1',  // This should match the key used in the register_nav_menus() function
 						'menu_id'        => 'primary-menu',
 					));
+
 					?>
 
 				</nav><!-- #site-navigation -->

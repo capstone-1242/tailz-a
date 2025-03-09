@@ -645,6 +645,44 @@ textarea {
 # Layouts
 --------------------------------------------------------------*/
 
+
+/* ===============Footer start============================ */
+
+.site-info{
+	
+	background-color: darkgrey;
+
+}
+
+.site-footer{
+	display: flex;
+}
+
+.footer-content{
+	display: flex;
+	width: 100%;
+	
+}
+
+.footer-content:first-child{
+	width: 50%;
+}
+.footer-content:nth-child(2){
+	width: 20%;
+}
+
+.footer-content:last-child{
+	width: 30%;
+}
+/* ================Footer end==================== */
+
+
+
+
+
+
+
+
 /*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/
