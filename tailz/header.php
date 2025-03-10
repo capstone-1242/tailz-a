@@ -24,6 +24,21 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
 	<?php wp_head(); ?>
+
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-XGERCH5WEY"></script>
+	
+	<script>
+		window.dataLayer = window.dataLayer || [];
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+
+		gtag('config', 'G-XGERCH5WEY');
+	</script>
+
 </head>
 
 <body <?php body_class(); ?>>
@@ -36,24 +51,24 @@
 
 
 
-				<?php
-				the_custom_logo();
-				if (is_front_page() && is_home()) :
-				?>
-					<h1 class="site-title">
-						<a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a>
-					</h1>
+			<?php
+			the_custom_logo();
+			if (is_front_page() && is_home()) :
+			?>
+				<h1 class="site-title">
+					<a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a>
+				</h1>
 
-				<?php else : ?>
+			<?php else : ?>
 
-					<p class="site-title	">
-						<a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?>
-						</a>
-					</p>
+				<p class="site-title	">
+					<a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?>
+					</a>
+				</p>
 
-			
 
-		
+
+
 
 				<nav id="site-navigation" class="main-navigation">
 
@@ -68,8 +83,8 @@
 					?>
 
 				</nav><!-- #site-navigation -->
-			
-		<?php endif; ?>
+
+			<?php endif; ?>
 
 
 
