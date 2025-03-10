@@ -14,14 +14,24 @@ get_header();
 
     <h1><?php echo 'Tailz' . Get_the_title(); ?></h1>
 
+
+
+
     <!-- first section -->
     <section>
 
-        <h2> Seasonal Photographs</h2>
-        <p>
-            Professional Pet Photography
-            We offer seasonal props for seasonal photos to capture your pet enjoying the current festivities!
-        </p>
+    <?php if (get_field('photography_heading')) : ?>
+            <h2><?php the_field('photography_heading'); ?></h2>
+        <?php else : ?>
+            <h2>Seasonal Photographs</h2> <!-- Default fallback heading -->
+        <?php endif; ?>
+
+        <?php if (get_field('photography_content')) : ?>
+            <p><?php the_field('photography_content'); ?></p>
+        <?php else : ?>
+            <p>Professional Pet Photography
+            We offer seasonal props for seasonal photos to capture your pet enjoying the current festivities!</p> <!-- Default fallback content -->
+        <?php endif; ?>
 
 
     </section>

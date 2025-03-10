@@ -14,6 +14,22 @@ get_header();
 
     <h1><?php echo 'Tailz' . Get_the_title(); ?></h1>
 
+    <section>
+
+        <?php if (get_field('welcome_heading')) : ?>
+            <h2><?php the_field('welcome_heading'); ?></h2>
+        <?php else : ?>
+            <h2> Tailz pet resort</h2> <!-- Default fallback heading -->
+        <?php endif; ?>
+
+        <?php if (get_field('welcome_content')) : ?>
+            <p><?php the_field('welcome_content'); ?></p>
+        <?php else : ?>
+            <p>Welcome to edmontons first and only pet resort</p> <!-- Default fallback content -->
+        <?php endif; ?>
+
+    </section>
+
     <!-- first section -->
     <section>
 
@@ -21,6 +37,7 @@ get_header();
         <p>Come visit our resort! Give your pet the luxury they deserve.</p>
 
     </section>
+
 
     <!-- second section -->
     <section>
@@ -64,7 +81,7 @@ get_header();
 
     <!-- seventh section -->
     <section>
-        
+
         <h2>Newsletter</h2>
         <p>
             What’s the bark around Tailz? Find out for yourself!
