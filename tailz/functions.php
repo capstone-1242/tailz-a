@@ -176,3 +176,13 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+
+
+// -----------------------------------------------
+
+function tailz_register_menus() {
+    register_nav_menus( array(
+        'menu-1' => __( 'Primary Menu', 'tailz' ), // Ensure this matches your theme location
+    ) );
+}
+add_action( 'after_setup_theme', 'tailz_register_menus' );

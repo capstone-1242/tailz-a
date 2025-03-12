@@ -14,6 +14,26 @@ get_header();
 
     <h1><?php echo 'Tailz' . Get_the_title(); ?></h1>
 
+
+    <!--  banner image -->
+
+
+
+
+    <section class="hero-banner" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('<?php echo the_field('home_page_banner_image'); ?>') center/cover no-repeat;">
+        <div class="hero-content">
+            <h1><?php the_field('hero_title'); ?></h1>
+            <p><?php the_field('hero_subtitle'); ?></p>
+            <a href="#services" class="btn">Explore Services</a>
+        </div>
+    </section>
+
+    <!-- banner image end -->
+
+
+
+
+
     <section>
 
         <?php if (get_field('welcome_heading')) : ?>

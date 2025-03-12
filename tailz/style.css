@@ -54,6 +54,29 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # Generic
 --------------------------------------------------------------*/
 
+/* Tailz color scheme */
+:root {
+    --primary-color: #273CA5;  /* Main Theme Color (Blue) */
+    --dark-primary-color: #273CA5; /* Dark shade of primary */
+    --light-primary-color: #C2CAEA; /* light shade of primary */
+
+	--secondary-color: #FEA91D;  /* Secondary Theme Color (Yellow) */
+	--light-secondary-color: #F4E3C6; /* light shade of secondary */
+
+	--light-third-color: #F4F2EB;  /* Third Theme Color (Grey) */
+	--third-color-blue-grey: #B4ADBB;  /* Third Theme Color (Grey) */
+	--third-color-grey: #514B58;  /* Third Theme Color (Grey) */
+	--third-color-darkest: #15042B;  /* Third Theme Color (Grey) */
+
+	--warning-color: #900000;  /* Warning Color */
+
+    --text-color-dark: black;  /* Main Text Color */
+    --text-color-light: #fffdfd;  /* Main Text Color */
+
+    --background-color: #f8f8f8; /* Background */
+   
+}
+
 /* Normalize
 --------------------------------------------- */
 
@@ -645,6 +668,83 @@ textarea {
 # Layouts
 --------------------------------------------------------------*/
 
+/* ===================Header================================== */
+.site-header{
+	background-color: var(--primary-color);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem 2rem;
+}
+
+.header-logo{
+	max-width: 3rem;
+}
+
+/* Basic Menu Styling */
+.main-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+}
+
+.main-menu li {
+    position: relative;
+    display: inline-block;
+}
+
+.main-menu a {
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    color:var(--text-color-light); ;
+    /* background: #f8f8f8; */
+    transition: 0.3s;
+}
+
+.main-menu a:hover {
+    font-weight: 600;
+}
+
+/* Dropdown Menu */
+.main-menu .sub-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--primary-color);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    min-width: 150px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.main-menu .sub-menu li {
+    display: block;
+}
+
+.main-menu .sub-menu a {
+    padding: 10px;
+    white-space: nowrap;
+    display: block;
+    /* background: #fff; */
+}
+
+.main-menu .sub-menu a:hover {
+    background: var(--dark-primary-color);
+	font-weight: 600;
+}
+
+/* Show Dropdown on Hover */
+.main-menu li:hover > .sub-menu {
+    display: block;
+}
+
+/* ==========header end============== */
 
 /* ===============Footer start============================ */
 
@@ -677,8 +777,59 @@ textarea {
 /* ================Footer end==================== */
 
 
+/* =================hero image=========================== */
 
+/* .hero-banner{
+	background: url('https://images.unsplash.com/photo-1557683316-973673baf926');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+} */
 
+.hero-banner{
+    position: relative;
+    width: 100%;
+    height: 90vh; /* Full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    padding: 0 20px;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--secondary-color);
+    color: black;
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #e64a19;
+}
 
 
 

@@ -23,11 +23,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
-	<?php wp_head(); ?>
+
 
 	<!-- Google tag (gtag.js) -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-XGERCH5WEY"></script>
-	
+
 	<script>
 		window.dataLayer = window.dataLayer || [];
 
@@ -39,6 +39,8 @@
 		gtag('config', 'G-XGERCH5WEY');
 	</script>
 
+
+	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
@@ -72,12 +74,16 @@
 
 				<nav id="site-navigation" class="main-navigation">
 
-					<p><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></p></a>
+					<a href="<?php echo esc_url(home_url('/')); ?>" rel="home"> <?= the_custom_logo(); ?> <img class="header-logo" src="<?= get_template_directory_uri() ?>/images/logo/tailz-transperant-logo.png"> </a>
 
+
+					
 					<?php
 					wp_nav_menu(array(
 						'theme_location' => 'menu-1',  // This should match the key used in the register_nav_menus() function
 						'menu_id'        => 'primary-menu',
+						'menu_class'     => 'main-menu',
+						'container'      => 'ul',
 					));
 
 					?>

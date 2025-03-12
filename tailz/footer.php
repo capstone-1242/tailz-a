@@ -19,7 +19,7 @@
 
 		<section class="footer-content">
 
-			<div> <!-- put logo here --></div>
+			<div> <img src="/images/logo/logo-w-bg.png" alt="" srcset=""></div>
 
 			<article>
 
@@ -80,7 +80,7 @@
 
 
 	</div><!-- .site-info -->
-	
+
 </footer><!-- #colophon -->
 </div><!-- #page -->
 

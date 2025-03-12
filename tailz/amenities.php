@@ -11,6 +11,25 @@ get_header();
 
     <h1><?php echo 'Tailz' . Get_the_title(); ?></h1>
 
+    <!--  banner image -->
+
+    <section class="hero-banner">
+
+        <?php if (get_field('')) : ?>
+
+            <div> <img src="<?php echo the_field(''); ?>"></div>
+
+        <?php else : ?>
+
+            <div> <img src="" alt=""></div>
+
+        <?php endif; ?>
+
+    </section>
+
+    <!-- banner image end -->
+
+
     <!-- first section -->
     <section>
         <h2>Amenities</h2>
