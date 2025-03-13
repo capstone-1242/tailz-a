@@ -748,32 +748,139 @@ textarea {
 
 /* ===============Footer start============================ */
 
-.site-info{
-	
-	background-color: darkgrey;
+/* Site info background */
+.site-info {
+    background-color: darkgrey;
+    padding: 20px;
+    color: #fff; /* Ensures the text is visible on dark background */
+    text-align: center;
+}
+
+/* Footer */
+.site-footer {
+    display: flex;
+    flex-wrap: wrap; /* Ensures responsiveness */
+
+    padding: 4rem 4rem;
+    background-color: #333; /* Dark background for footer */
+    color: #fff; /* Light text color for footer */
+}
+
+/* Footer Content Layout */
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* Logo Section */
+.footer-logo {
+    width: 30%;
+}
+
+/* Our Promise Section */
+.footer-promise {
+    width: 50%;
+    padding: 0 20px;
+}
+
+.footer-promise h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.footer-promise p {
+    font-size: 1rem;
+}
+
+/* Services Section */
+.footer-services {
+    width: 20%;
+	text-align: left;
+}
+
+.footer-services h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.footer-services ul {
+    list-style-type: none;
+    padding: 0;
+	margin:0;
+}
+
+.footer-services li {
+    margin-bottom: 10px;
+	margin-left: 0;
+	padding-left:0;
+}
+
+/* Contact Us Section */
+.footer-contact {
+    width: 20%;
+	text-align: left;
 
 }
 
-.site-footer{
-	display: flex;
+.footer-contact h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
 }
 
-.footer-content{
-	display: flex;
-	width: 100%;
-	
+.footer-contact a {
+    display: block;
+    color: #fff;
+    margin-top: 5px;
+    text-decoration: none;
 }
 
-.footer-content:first-child{
-	width: 50%;
-}
-.footer-content:nth-child(2){
-	width: 20%;
+.footer-contact a:hover {
+    color: #ff5722; /* Add hover effect to contact links */
 }
 
-.footer-content:last-child{
-	width: 30%;
+/* Newsletter Section */
+.footer-newsletter {
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
 }
+
+.footer-newsletter h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.footer-newsletter p {
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    text-align: center;
+    width: 100%;
+    padding-top: 20px;
+}
+
+.footer-bottom p {
+    font-size: 1rem;
+}
+
+/* Responsive Footer Layout */
+@media (max-width: 768px) {
+    .footer-logo, .footer-promise, .footer-services, .footer-contact {
+        width: 100%; /* Stack all sections vertically on smaller screens */
+        text-align: center;
+    }
+
+    .footer-promise, .footer-services, .footer-contact {
+        padding: 10px;
+    }
+}
+
+
 /* ================Footer end==================== */
 
 
@@ -828,7 +935,7 @@ textarea {
 }
 
 .btn:hover {
-    background: #e64a19;
+    background: var(--light-secondary-color);
 }
 
 
