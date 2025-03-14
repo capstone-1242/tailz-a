@@ -57,16 +57,13 @@
 		</section>
 
 		<!-- Newsletter Section -->
-		<section class="footer-newsletter">
-			<h2>Newsletter</h2>
-			<p>
-				What’s the bark around Tailz? Find out for yourself! Sign up for our mailing services for updates, alerts, special offers, and more!
-			</p>
-		</section>
+		
 
 		<!-- Payment Info & Copyright -->
 		<div class="footer-bottom">
 			<!-- Payment Info logos could go here -->
+
+
 			<p>&copy; <?php echo date('Y'); ?> Tailz Pet Resort</p>
 		</div>
 

@@ -178,7 +178,7 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 
 
 
-// -----------------------------------------------
+// -----------------Tailz Custom Functions------------------------------
 
 function tailz_register_menus() {
     register_nav_menus( array(
@@ -186,3 +186,9 @@ function tailz_register_menus() {
     ) );
 }
 add_action( 'after_setup_theme', 'tailz_register_menus' );
+
+
+function tailz_enqueue_styles() {
+    wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&family=Rokkitt:wght@100;300;400;700;900&display=swap', array(), null);
+}
+add_action('wp_enqueue_scripts', 'tailz_enqueue_styles');
