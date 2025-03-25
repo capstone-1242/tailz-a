@@ -756,22 +756,26 @@ textarea {
 
 /* =============================Footer start============================ */
 
-/* Site info background */
-.site-info {
-  background-color: darkgrey;
-  padding: 20px;
-  color: #fff; /* Ensures the text is visible on dark background */
-  text-align: center;
-}
-
 /* Footer */
 .site-footer {
-  display: flex;
-  flex-wrap: wrap; /* Ensures responsiveness */
-
-  padding: 4rem 4rem;
-  background-color: var(--third-color-grey); /* Dark background for footer */
   color: var(--text-color-light); /* Light text color for footer */
+  background-color: var(--third-color-grey); /* Dark background for footer */
+  padding: 4rem;
+}
+
+.footer-container{
+  display: flex;
+  flex-wrap: wrap; 
+  max-width:820px;
+  margin: auto;
+}
+
+.footer-container h2{
+  text-transform: uppercase;
+}
+
+.site-footer div {
+max-width: 820px;
 }
 
 /* Footer Content Layout */
@@ -780,6 +784,14 @@ textarea {
   flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
+  
+}
+
+.footer-bottom {
+  padding: 4rem 0;
+  background-color: var(--text-color-dark);
+  width:100%;
+  color: var(--text-color-light);
 }
 
 /* Logo Section */
@@ -787,10 +799,27 @@ textarea {
   width: 30%;
 }
 
+.footer-icons {
+  display: flex;
+}
+
+.footer-phone {
+  text-decoration: none;
+  font-style: none;
+  font-size: 1rem;
+  color: #fff;
+  margin-top: 10px;
+}
+
+.footer-icons svg {
+  width: 3rem;
+  height: 3rem;
+}
+
 /* Our Promise Section */
 .footer-promise {
-  width: 50%;
-  padding: 0 20px;
+  width: 30%;
+  /* padding: 0 20px; */
 }
 
 .footer-promise h2 {
@@ -805,7 +834,7 @@ textarea {
 
 /* Services Section */
 .footer-services {
-  width: 20%;
+  width: 30%;
   text-align: left;
 }
 
@@ -828,7 +857,7 @@ textarea {
 
 /* Contact Us Section */
 .footer-contact {
-  width: 20%;
+  width: 30%;
   text-align: left;
 }
 
@@ -875,6 +904,8 @@ textarea {
 .footer-bottom p {
   font-size: 1rem;
 }
+.page-footer {
+}
 
 /* Responsive Footer Layout */
 @media (max-width: 768px) {
@@ -911,26 +942,24 @@ textarea {
   /* background-color: var(--primary-color); */
 }
 
-
-
 /* CONTAINER FOR IMAGE + TEXT */
 .section-container {
-	max-width: 1550px;
-	width: 100%;
-	margin: 0 auto;
-	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
-	/* height: 332px; */
-	background-color: var(--text-color-light);
+  max-width: 1550px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  /* height: 332px; */
+  background-color: var(--text-color-light);
 }
 
 .section-container:nth-child(odd) {
-	background-color: var(--light-secondary-color);
+  background-color: var(--light-secondary-color);
 }
 
 .section-container:nth-child(even) {
-	background-color: var(--light-primary-color) !important;
+  background-color: var(--light-primary-color) !important;
 }
 
 /* IMAGE WRAPPER */
@@ -969,7 +998,6 @@ textarea {
 .tailz-homepage-content section:nth-child(odd) .section-container {
   flex-direction: row-reverse;
 }
-
 
 @media screen and (max-width: 1024px) {
   .tailz-homepage-content section {
