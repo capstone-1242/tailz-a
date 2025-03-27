@@ -26,19 +26,18 @@ get_header();
 
     <div class="hero-content">
 
-        <?php if (get_field('hero_title')): ?>
 
-            <h2><?php the_field('hero_title'); ?></h2>
+        <h2>TAILZ: Grooming to furfection</h2>
 
-        <?php else: ?>
-            
-            <h2>TAILZ</h2>
+        <div>
+            <p>Come visit our resort! give your pet the luxury they deserve.</p>
+            <a href="<?php echo home_url('/amenities/'); ?>"><button class="blue-btn paw">VIEW NEW AMMENITIES</button></a>
 
-        <?php endif; ?>
+        </div>
 
 
-        <a href="<?php echo home_url('/amenities/'); ?>" class="paw"><button class="yellow-btn paw">Explore our new
-                Services</button></a>
+
+
 
     </div>
 
@@ -46,12 +45,162 @@ get_header();
 
 <!-- banner image end -->
 
+<!-- homepage content blocks -->
 <div class="tailz-homepage-content">
 
+    <!-- doggy daycare -->
+    <section class="homepage-section">
+
+        <div class="section-container">
+
+            <div class="image-wrapper">
+                <?php
+                $second_block_image = get_field('second_block_image');
+                if ($second_block_image): ?>
+                    <img src="<?php echo esc_url($second_block_image); ?>" alt="Second Block Image">
+                <?php endif; ?>
+            </div>
+
+            <div class="content-wrapper">
+                <?php if (get_field('second_block_title')): ?>
+                    <h2><?php the_field('second_block_title'); ?></h2>
+                <?php else: ?>
+                    <h2>Doggy Daycare</h2>
+                <?php endif; ?>
+
+                <?php if (get_field('second_block_content')): ?>
+                    <p><?php the_field('second_block_content'); ?></p>
+                <?php else: ?>
+                    <p>Mental and physical enjoyment for social dogs, and Puppy Preschool for teaching young pups!</p>
+                <?php endif; ?>
+
+                <a href="<?php echo home_url('/doggy-daycare/'); ?>"><button class="yellow-btn paw">View
+                        Daycare</button></a>
+            </div>
+
+        </div>
+
+    </section>
+    <!-- grooming -->
+    <section class="homepage-section">
+
+        <div class="section-container">
+
+            <div class="image-wrapper">
+
+                <?php
+                $third_block_image = get_field('third_block_image'); // Get image URL
+                if ($third_block_image): ?>
+                    <img src="<?php echo esc_url($third_block_image); ?>" alt="third block Image">
+                <?php endif; ?>
+
+            </div>
 
 
-    <!-- first section -->
+            <div class="content-wrapper">
+                <?php if (get_field('third_block_title')): ?>
+                    <h2><?php the_field('third_block_title'); ?></h2>
+                <?php else: ?>
+                    <h2>Pet Grooming</h2> <!-- Default fallback heading -->
+                <?php endif; ?>
 
+                <?php if (get_field('third_block_content')): ?>
+                    <p><?php the_field('third_block_content'); ?></p>
+                <?php else: ?>
+                    <p>Pampering pups from head to tail with the aid of professional pet stylists and products.</p> <!-- Default fallback content -->
+                <?php endif; ?>
+
+                <a href="#services"><button class="blue-btn paw">Book a Bath</button></a>
+                <!-- set up booking -->
+            </div>
+
+        </div>
+
+    </section>
+    <!-- overnight lodgings -->
+    <section class="homepage-section">
+
+        <div class="section-container">
+
+            <div class="image-wrapper">
+
+                <?php
+                $images = array(
+                    get_field('carousel_1'),
+                    get_field('carousel_2'),
+                    get_field('carousel_3'),
+                    get_field('carousel_4'),
+                    get_field('carousel_5'),
+                );
+
+                $images = array_filter($images);
+
+                if (!empty($images)): ?>
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <?php foreach ($images as $image): ?>
+                                <div class="swiper-slide">
+                                    <img src="<?php echo esc_url($image); ?>" alt="Carousel Image">
+                                </div>
+                            <?php endforeach; ?>
+
+                        </div>
+
+                    </div>
+                <?php endif; ?>
+
+            </div>
+
+            <div class="content-wrapper">
+
+                <h2>Overnight Lodgings</h2>
+
+                <p>Can’t bring your pet on a trip?</p>
+                <p>Treat them to a crate-less luxury overnight stay with us!</p>
+
+                <a href="#services"><button class="yellow-btn paw">VIEW LODGINGS</button></a>
+
+            </div>
+
+
+        </div>
+
+        <!-- Set up image carusel here VVV -->
+
+        <div class="">
+            <?php
+            $full_width_block_images = get_field('full_width_block_images'); // Get image URL
+            if ($full_width_block_images): ?>
+                <img src="<?php echo esc_url($full_width_block_images); ?>" alt="Welcome Image">
+            <?php endif; ?>
+        </div>
+
+    </section>
+    <!-- cat services -->
+    <section class="homepage-section">
+
+        <div class="section-container">
+
+            <div class="image-wrapper">
+
+                <?php
+                $welcome_image = get_field('welcome_image'); // Get image URL
+                if ($welcome_image): ?>
+                    <img src="<?php echo esc_url($welcome_image); ?>" alt="Welcome Image">
+                <?php endif; ?>
+
+            </div>
+
+            <div class="content-wrapper">
+                <h2>Cat SERVICES</h2>
+                <p>New cat services are coming to Tailz! Bring your cat in for a spa day, or bring them in for luxury lodgings!</p>
+                <a href="<?php echo home_url('/contact-us/'); ?>"><button class="blue-btn paw">BOOK NOW</button></a>
+            </div>
+
+        </div>
+
+    </section>
+    <!-- the new location -->
     <section class="homepage-section">
 
         <div class="section-container">
@@ -80,163 +229,27 @@ get_header();
                     <p>Come visit our resort! Give your pet the luxury they deserve.</p> <!-- Default fallback content -->
                 <?php endif; ?>
 
-                <a href="<?php echo home_url('/contact-us/'); ?>"><button class="yellow-btn">Visit Us</button></a>
+                <a href="<?php echo home_url('/contact-us/'); ?>"><button class="yellow-btn paw">Visit Us</button></a>
 
             </div>
 
         </div>
 
     </section>
-
-    <!-- second section -->
-
-    <section class="homepage-section">
-
-        <div class="section-container">
-
-            <div class="image-wrapper">
-                <?php
-                $second_block_image = get_field('second_block_image');
-                if ($second_block_image): ?>
-                    <img src="<?php echo esc_url($second_block_image); ?>" alt="Second Block Image">
-                <?php endif; ?>
-            </div>
-
-            <div class="content-wrapper">
-                <?php if (get_field('second_block_title')): ?>
-                    <h2><?php the_field('second_block_title'); ?></h2>
-                <?php else: ?>
-                    <h2>Doggy Daycare</h2>
-                <?php endif; ?>
-
-                <?php if (get_field('second_block_content')): ?>
-                    <p><?php the_field('second_block_content'); ?></p>
-                <?php else: ?>
-                    <p>our doggy daycare has alot to 'Paw"fur.</p>
-                <?php endif; ?>
-
-                <a href="<?php echo home_url('/doggy-daycare/'); ?>"><button class="yellow-btn ">View
-                        Daycare</button></a>
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- third section -->
-
-    <section class="homepage-section">
-
-        <div class="section-container">
-
-            <div class="image-wrapper">
-
-                <?php
-                $third_block_image = get_field('third_block_image'); // Get image URL
-                if ($third_block_image): ?>
-                    <img src="<?php echo esc_url($third_block_image); ?>" alt="third block Image">
-                <?php endif; ?>
-
-            </div>
-
-
-            <div class="content-wrapper">
-                <?php if (get_field('third_block_title')): ?>
-                    <h2><?php the_field('third_block_title'); ?></h2>
-                <?php else: ?>
-                    <h2>Pet Grooming</h2> <!-- Default fallback heading -->
-                <?php endif; ?>
-
-                <?php if (get_field('third_block_content')): ?>
-                    <p><?php the_field('third_block_content'); ?></p>
-                <?php else: ?>
-                    <p>Come visit our resort! Give your pet the luxury they deserve.</p> <!-- Default fallback content -->
-                <?php endif; ?>
-
-                <a href="#services"><button class="yellow-btn">Book a Bath</button></a>
-                <!-- set up booking -->
-            </div>
-
-        </div>
-
-    </section>
-    
 </div>
-
-<!--  Full width block -->
-<section class="homepage-full-width-block">
-
-    <div class="">
-        <?php if (get_field('full_width_block_title')): ?>
-            <h2><?php the_field('full_width_block_title'); ?></h2>
-        <?php else: ?>
-            <h2>Overnight Lodgings</h2> <!-- Default fallback heading -->
-        <?php endif; ?>
-
-        <?php if (get_field('full_width_block_content')): ?>
-            <p><?php the_field('full_width_block_content'); ?></p>
-        <?php else: ?>
-            <p> Check out our overnight lodgings. your pet will find them purr'fect.</p>
-        <?php endif; ?>
-
-        <!-- --------------------image carosel-------------------------------------- -->
-        <?php
-        $images = array(
-            get_field('carousel_1'),
-            get_field('carousel_2'),
-            get_field('carousel_3'),
-            get_field('carousel_4'),
-            get_field('carousel_5'),
-        );
-
-        $images = array_filter($images);
-
-        if (!empty($images)): ?>
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <?php foreach ($images as $image): ?>
-                        <div class="swiper-slide">
-                            <img src="<?php echo esc_url($image); ?>" alt="Carousel Image">
-                        </div>
-                    <?php endforeach; ?>
-                </div>
-                <!-- <div class="swiper-pagination"></div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div> -->
-            </div>
-        <?php endif; ?>
-
-        <!-- --------------------image carosel end-------------------------------------- -->
-
-
-
-
-        <a href="#services"><button class="yellow-btn">View Lodgings</button></a>
-    </div>
-
-    <!-- Set up image carusel here VVV -->
-
-    <div class="">
-        <?php
-        $full_width_block_images = get_field('full_width_block_images'); // Get image URL
-        if ($full_width_block_images): ?>
-            <img src="<?php echo esc_url($full_width_block_images); ?>" alt="Welcome Image">
-        <?php endif; ?>
-    </div>
-
-</section>
-
 <!--  Products -->
 <section class="homepage-products">
 
     <div>
         <h2>Products</h2>
-        <p>Check out our selection of products for your furry friend!</p>
+        <!-- <p>Check out our selection of products for your furry friend!</p> -->
     </div>
 
     <div class="product-cards">
 
         <div class="product-card">
+
+            <h3>DOG FOOD</h3>
 
             <?php
             $first_category_image = get_field('first_category_image'); // Get image URL
@@ -244,21 +257,11 @@ get_header();
                 <img src="<?php echo esc_url($first_category_image); ?>" alt="first_category_image">
             <?php endif; ?>
 
-            <?php if (get_field('first_category_title')): ?>
-                <h3><?php the_field('first_category_title'); ?></h3>
-            <?php else: ?>
-                <h3>Dog Food</h3> <!-- Default fallback heading -->
-            <?php endif; ?>
-
-            <?php if (get_field('first_category_content')): ?>
-                <p><?php the_field('first_category_content'); ?></p>
-            <?php else: ?>
-                <p>Keep your pet healthy with our selection of dog food.</p> <!-- Default fallback -->
-            <?php endif; ?>
-
         </div>
 
         <div class="product-card">
+
+            <h3>DOG TREATS</h3>
 
             <?php
             $second_category_image = get_field('second_category_image'); // Get image URL
@@ -266,43 +269,47 @@ get_header();
                 <img src="<?php echo esc_url($second_category_image); ?>" alt="first_category_image">
             <?php endif; ?>
 
-            <?php if (get_field('second_category_title')): ?>
-                <h3><?php the_field('second_category_title'); ?></h3>
-            <?php else: ?>
-                <h3>Dog Food</h3> <!-- Default fallback heading -->
-            <?php endif; ?>
-
-            <?php if (get_field('second_category_content')): ?>
-                <p><?php the_field('second_category_content'); ?></p>
-            <?php else: ?>
-                <p>Keep your pet healthy with our selection of dog food.</p> <!-- Default fallback -->
-            <?php endif; ?>
-
         </div>
 
         <div class="product-card">
 
+            <h3>WET FOOD</h3>
+
             <?php
-            $third_category_image = get_field('third_category_image'); // Get image URL
+            $third_category_image = get_field('third_category_image');
             if ($third_category_image): ?>
                 <img src="<?php echo esc_url($third_category_image); ?>" alt="third_category_image">
             <?php endif; ?>
 
-            <?php if (get_field('third_category_title')): ?>
-                <h3><?php the_field('third_category_title'); ?></h3>
-            <?php else: ?>
-                <h3>Cat Food</h3> <!-- Default fallback heading -->
-            <?php endif; ?>
+        </div>
 
-            <?php if (get_field('third_category_content')): ?>
-                <p><?php the_field('third_category_content'); ?></p>
-            <?php else: ?>
-                <p>Give your feline friend the best nutrition with our premium cat food.</p> <!-- Default fallback -->
+        <div class="product-card">
+
+            <h3>BULK TREATS</h3>
+
+            <?php
+            $fourth_category_image = get_field('fourth_category_image');
+            if ($fourth_category_image): ?>
+                <img src="<?php echo esc_url($fourth_category_image); ?>" alt="fourth_category_image">
             <?php endif; ?>
 
         </div>
 
         <div class="product-card">
+
+            <h3>CAT TREATS</h3>
+
+            <?php
+            $fourth_category_image = get_field('fourth_category_image');
+            if ($fourth_category_image): ?>
+                <img src="<?php echo esc_url($fourth_category_image); ?>" alt="fourth_category_image">
+            <?php endif; ?>
+
+        </div>
+
+        <div class="product-card">
+
+            <h3>CAT FOOD</h3>
 
             <?php
             $fourth_category_image = get_field('fourth_category_image'); // Get image URL
@@ -310,48 +317,35 @@ get_header();
                 <img src="<?php echo esc_url($fourth_category_image); ?>" alt="fourth_category_image">
             <?php endif; ?>
 
-            <?php if (get_field('fourth_category_title')): ?>
-                <h3><?php the_field('fourth_category_title'); ?></h3>
-            <?php else: ?>
-                <h3>Pet Accessories</h3> <!-- Default fallback heading -->
-            <?php endif; ?>
-
-            <?php if (get_field('fourth_category_content')): ?>
-                <p><?php the_field('fourth_category_content'); ?></p>
-            <?php else: ?>
-                <p>Find the perfect accessories for your pets, from collars to beds.</p> <!-- Default fallback -->
-            <?php endif; ?>
-
         </div>
-
 
     </div>
 
 </section>
 
-
-
 <!--   Newsletter -->
-<article class="newsletter">
+<article class="newsletter ">
+    <div class="newsletter-container">
 
-    <div class="newsletter-content">
-
-        <h2>Newsletter</h2>
-
-        <p>
-            What’s the bark around Tailz? Find out for yourself!
-            Sign up for our mailing services for updates, alerts, special offers and more!
-        </p>
-
-
-
-        <div class="sign-up">
-            <input type="email" placeholder="Enter your email address">
-            <button class="">Subscribe</button>
+        <div class="newsletter-image">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/hero/dogs-on-chair.webp" alt="Newsletter Image">
         </div>
 
+        <div class="newsletter-content">
 
+            <h2>tailz newsletter</h2>
 
+            <p>
+                What’s the bark around Tailz? Find out for yourself!
+                Sign up for our mailing services for updates, alerts, special offers and more!
+            </p>
+
+            <div class="sign-up">
+                <input type="email" placeholder="Enter your email address">
+                <button class="">Subscribe</button>
+            </div>
+
+        </div>
 
     </div>
 
