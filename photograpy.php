@@ -19,20 +19,20 @@ get_header();
 <?php
 $hero_image = get_field('photography_hero_image');
 ?>
-<section class="photography-hero-banner"
+<section class="short-hero-banner"
     style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0, 0, 0, 0.15)), 
            url('<?php echo esc_url($hero_image); ?>') center/cover no-repeat;">
     <div class="hero-content">
         <h2>Pet photography</h2>
     </div>
 </section>
+<!-- banner image end -->
 
 <div class="tailz-photograpy-content">
-    <!-- banner image end -->
 
 
-    <!-- first section -->
-    <section>
+
+    <section class="photography-intro">
 
         <?php if (get_field('photography_heading')) : ?>
             <h2><?php the_field('photography_heading'); ?></h2>
@@ -53,35 +53,32 @@ $hero_image = get_field('photography_hero_image');
 
     <!-- photography gallery using masonry ui-->
 
-    <section class="gallery">
-
-        <div id="masonry-grid" class="grid">
-            <?php
-            $images = [
-                get_field('masonry_image_1'),
-                get_field('masonry_image_2'),
-                get_field('masonry_image_3'),
-                get_field('masonry_image_4'),
-                get_field('masonry_image_5'),
-                get_field('masonry_image_7'),
-            ];
-
-            foreach ($images as $image):
-                if ($image): ?>
-                    <div class="grid-item gallery-img">
-                        <img src="<?php echo esc_url($image); ?>" alt="Masonry Image">
-                    </div>
-            <?php endif;
-            endforeach;
-            ?>
-        </div>
-        
-    </section>
-
-    <!-- fourth section -->
-    <section>
-
-    </section>
+  <div class="gallery-container">
+        <section class="gallery">
+    
+            <div id="masonry-grid" class="grid">
+                <?php
+                $images = [
+                    get_field('masonry_image_1'),
+                    get_field('masonry_image_2'),
+                    get_field('masonry_image_3'),
+                    get_field('masonry_image_4'),
+                    get_field('masonry_image_5'),
+                    get_field('masonry_image_7'),
+                ];
+    
+                foreach ($images as $image):
+                    if ($image): ?>
+                        <div class="grid-item gallery-img">
+                            <img src="<?php echo esc_url($image); ?>" alt="Masonry Image">
+                        </div>
+                <?php endif;
+                endforeach;
+                ?>
+            </div>
+    
+        </section>
+  </div>
 
 
 </div>

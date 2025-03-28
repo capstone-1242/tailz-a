@@ -767,19 +767,19 @@ textarea {
   padding: 4rem;
 }
 
-.footer-container{
+.footer-container {
   display: flex;
-  flex-wrap: wrap; 
-  max-width:820px;
+  flex-wrap: wrap;
+  max-width: 820px;
   margin: auto;
 }
 
-.footer-container h2{
+.footer-container h2 {
   text-transform: uppercase;
 }
 
 .site-footer div {
-max-width: 820px;
+  max-width: 820px;
 }
 
 /* Footer Content Layout */
@@ -788,13 +788,12 @@ max-width: 820px;
   flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
-  
 }
 
 .footer-bottom {
   padding: 4rem 0;
   background-color: var(--text-color-dark);
-  width:100%;
+  width: 100%;
   color: var(--text-color-light);
 }
 
@@ -934,19 +933,15 @@ max-width: 820px;
 Tailz home page
 =========================== */
 
-
 .tailz-homepage-content {
   /* background-color: var(--light-primary-color); */
 }
 
 .tailz-homepage-content section {
-  /* width: 100%; */
   margin: auto;
-  min-height: 180px; /* Changed fixed height to min-height */
+  min-height: 180px;
   display: flex;
   justify-content: center;
-  /* align-items: center; */
-  /* background-color: var(--primary-color); */
 }
 
 /* CONTAINER FOR IMAGE + TEXT */
@@ -957,8 +952,6 @@ Tailz home page
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  /* height: 332px; */
-  /* background-color: var(--text-color-light); */
 }
 
 /* IMAGE WRAPPER */
@@ -981,12 +974,11 @@ Tailz home page
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* align-items: flex-start; */
   text-align: left;
   padding: 2rem;
-  /* background-color: var(--light-third-color); */
 }
-.content-wrapper p{
+
+.content-wrapper p {
   margin: 0;
   font-size: 1rem;
   line-height: 1.5;
@@ -1000,7 +992,6 @@ Tailz home page
 
 /* ALTERNATE LAYOUT FOR ODD SECTIONS */
 .tailz-homepage-content section:nth-child(odd) .section-container {
-  /* background-color: var(--background-color); */
   flex-direction: row-reverse;
 }
 
@@ -1057,7 +1048,7 @@ Tailz home page
 .homepage-products h2 {
   font-size: 24px;
   margin: 0;
-  color:var(--primary-color)
+  color: var(--primary-color);
 }
 
 .product-cards {
@@ -1070,19 +1061,19 @@ Tailz home page
 .product-card {
   background-color: var(--primary-color);
   color: var(--text-color-dark);
-  padding: .5rem;
+  padding: 0.5rem;
   border-radius: 10px;
   max-width: 100px;
-   box-shadow: 2px 8px 8px rgba(0, 0, 0, 0.2);
-   display: flex;
-   flex-direction: column;
-   justify-content: space-between;
+  box-shadow: 2px 8px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .product-card h3 {
   font-size: 1rem;
   margin: 0;
-  color:var(--text-color-light)
+  color: var(--text-color-light);
 }
 
 .product-card img {
@@ -1096,7 +1087,7 @@ Tailz home page
   width: 100%;
   background-color: var(--third-color-darkest);
   color: var(--text-color-light);
-  /* padding: 2rem 0; */
+
 }
 
 .newsletter h2 {
@@ -1108,22 +1099,18 @@ Tailz home page
   margin: 0;
 }
 
-.newsletter-container{
+.newsletter-container {
   max-width: 980px;
-  /* height: auto  ; */
-  /* width: 100%; */
   margin: 0 auto;
   display: flex;
-  /* flex-wrap: wrap; */
   align-items: top;
   padding: 0;
 }
 
-.newsletter-image{
-
+.newsletter-image {
 }
 
-.newsletter-image img{
+.newsletter-image img {
   width: 100%;
   height: auto;
   object-fit: cover;
@@ -1135,7 +1122,7 @@ Tailz home page
   padding: 1rem 2rem;
   gap: 1rem;
   justify-content: center;
-  width:60%;
+  width: 60%;
 }
 
 .newsletter-content .sign-up {
@@ -1179,7 +1166,240 @@ Tailz home page
   background: var(--light-secondary-color);
   color: var(--primary-color);
 }
-/* ==================Contact page=============================== */
+
+/* ============================================
+================================================
+Photography page
+=================================================
+================================================= */
+
+.photography-intro {
+  justify-content: center;
+  text-align: center;
+  max-width: 520px;
+  margin: auto;
+}
+
+/* ========================
+masonry for photography
+====================== */
+
+#grid {
+  width: 80%;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.grid-item {
+  width: 30%;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+
+.grid-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 2px 10px 10px rgba(0, 0, 0, 0.427);
+}
+
+.gallery {
+  display: flex;
+  max-width: 820px;
+  margin: 0 auto;
+}
+.gallery-container {
+  background-color: var(--light-secondary-color);
+  padding: 2rem 2rem 1rem;
+}
+
+.gallery-img {
+  width: 200px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.gallery-img:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .grid-item {
+    width: 48%;
+    /* 2 items per row */
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-item {
+    width: 100%;
+    /* 1 item per row */
+  }
+}
+/* =========================
+Masonry end
+============================ */
+
+/* ================================================================
+====================================================================
+Doggy Daycare
+====================================================================
+=================================================================== */
+
+.doggy-daycare-hours {
+  justify-content: center;
+  text-align: center;
+  max-width: 520px;
+  margin: 2rem auto;
+}
+
+.doggy-daycare-hours p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.get-started {
+  display: flex;
+  justify-content: center;
+  text-align: left;
+  max-width: 980px;
+  height: fit-content;
+  margin: auto;
+  background-color: var(--light-secondary-color);
+}
+
+.get-started h2 {
+  text-align: center;
+  color: var(--primary-color);
+}
+
+.get-started p {
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+.get-started div:last-child {
+  max-width: 50%;
+  padding: 0 2rem;
+}
+
+.get-started img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  display: block;
+  border-radius: 0 0 25px 0;
+  -webkit-border-radius: 0 0 25px 0;
+  -moz-border-radius: 0 0 25px 0;
+  -ms-border-radius: 0 0 25px 0;
+  -o-border-radius: 0 0 25px 0;
+}
+
+.rates {
+  justify-content: center;
+  text-align: center;
+  max-width: 980px;
+  height: fit-content;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: var(--light-primary-color);
+}
+
+.rates-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.rate-card {
+  background-color: var(--background-color);
+
+  color: var(--text-color-light);
+  border-radius: 10px;
+  max-width: 300px;
+  box-shadow: 2px 8px 8px rgba(0, 0, 0, 0.2);
+}
+
+.rate-card-header {
+  background-color: var(--primary-color);
+  color: var(--light-secondary-color);
+  padding: 1rem;
+  border-radius: 10px 10px 0 0;
+}
+
+.rate-card ul {
+  width: 100%;
+  list-style: none;
+  text-align: left;
+  padding: 1rem;
+  margin: 0;
+  color: var(--text-color-dark);
+}
+
+/* ---------requirements----------- */
+
+.requirements {
+  width: 100%;
+  background-color: var(--light-secondary-color);
+  padding: 2rem 0;
+}
+
+.requirements-content {
+  justify-content: center;
+  text-align: left;
+  max-width: 920px;
+  margin: 2rem auto;
+}
+
+.requirements h2 {
+  text-align: center;
+  color: var(--primary-color);
+}
+
+/* --------puppy-training-banner-------------------- */
+
+.puppy-training-banner {
+  width: 100%;
+  height: fit-content;
+  background-color: var(--primary-color);
+  display: flex;
+}
+
+.puppy-training-banner-content {
+  color: var(--text-color-light);
+}
+
+.puppy-training-banner-content h2 {
+  color: var(--light-secondary-color);
+  text-align: center;
+  font-size: 2rem;
+  margin: 0;
+}
+
+.puppy-training-banner div {
+  width: 50%;
+  margin: auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.puppy-training-banner div > img {
+  width: 100%;
+  height: 290px;
+  object-fit: cover;
+  display: block;
+  border-radius: 26px;
+  -webkit-border-radius: 26px;
+  -moz-border-radius: 26px;
+  -ms-border-radius: 26px;
+  -o-border-radius: 26px;
+}
+
+/* ==================
+Contact page
+=============================== */
 .tailz-contact-content {
   background-color: var(--light-third-color);
   padding: 2rem 0;
@@ -1236,101 +1456,32 @@ Tailz home page
   /* cursor: url('/wp-content/themes/tailz/images/cursor/paw-w-border-shadow-inflate-2x.png' ) , auto; */
 }
 
-/* ========================
-masonry for photography
-====================== */
-
-/* .grid {
-  display: flex;
-  width: 100%;
-  margin: 0 auto;
-}
-
-.grid-item {
-  width: 30%; 
-  margin-bottom: 15px;
-}
-
-.grid-item img {
-  width: 100%;
-  height: auto;
-  display: block;
-} */
- 
-#grid {
-  width: 80%;
-  margin: 0 auto;
-  justify-content: space-between;
-}
-
-.grid-item {
-  width: 30%;
-  margin-bottom: 15px;
-  box-sizing: border-box;
-}
-
-
-.grid-item img {
-  width: 100%;
-  height: auto;
+/* =========warning text============== */
+.warning-text {
+  color: var(--warning-color);
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  margin: 2rem auto;
+  /* padding: 1rem; */
+  background-color: var(--light-warning-color);
   border-radius: 10px;
-  box-shadow: 2px 10px 10px rgba(0, 0, 0, 0.427);
-
 }
-
-
-.gallery {
-  display: flex;
- max-width: 820px;
- margin: 0 auto;
+.warning-text p {
+  margin: 0;
+  /* padding: 1rem; */
 }
-
-.gallery-img {
-  width: 200px;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-.gallery-img:hover {
-  transform: scale(1.05);
-}
-
-@media (max-width: 768px) {
-  .grid-item {
-      width: 48%;
-      /* 2 items per row */
-  }
-}
-
-@media (max-width: 480px) {
-  .grid-item {
-      width: 100%;
-      /* 1 item per row */
-  }
-}
-
-
 
 /* =========================Slick caroseul ====================================== */
 .swiper-container {
-  /* width: 100%; */
   max-width: 800px;
   margin: auto;
   overflow: hidden;
 }
 
-/* .swiper-slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 10%;
-} */
-
 .swiper-slide img {
   object-fit: cover/center;
   /* overflow: hidden; */
-
 }
 
 /* =====================Yellow button===================================== */
@@ -1407,25 +1558,23 @@ masonry for photography
 .hero-banner {
   position: relative;
   width: 100%;
-  height: 384px; 
+  height: 384px;
   display: flex;
   align-items: center;
   justify-content: center;
-  /* text-align: center; */
   color: #fff;
   padding: 0 20px;
 }
 
-.photography-hero-banner{
+.short-hero-banner {
   position: relative;
   width: 100%;
-  height: 248px; 
+  height: 248px;
   display: flex;
   align-items: center;
   justify-content: center;
-  /* text-align: center; */
   color: #fff;
-  padding: 0 20px
+  padding: 0 20px;
 }
 
 .hero-content {
@@ -1436,43 +1585,19 @@ masonry for photography
   font-size: 3rem;
   margin-bottom: 1rem;
 }
-.hero-content>div{
-display: flex;
-flex-direction: column;
-text-align: center;
+.hero-content > div {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
-.hero-content h2::first-letter{
-color:var(--secondary-color);
-
+.hero-content h2::first-letter {
+  color: var(--secondary-color);
 }
 
 .hero-content a {
-  /* margin-left: 80%; */
   align-self: end;
 }
-
-/* .hero p {
-  font-size: 1.5rem;
-  margin-bottom: 20px;
-} */
-
-/* .btn {
-  display: inline-block;
-  background: var(--secondary-color);
-  color: black;
-  padding: 12px 25px;
-font-family: "League Spartan", sans-serif;
-  font-size: 1.2rem;
-  font-weight: 500;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background 0.3s;
-}
-
-.btn:hover {
-  background: var(--light-secondary-color);
-} */
 
 /* =================hero image end=========================== */
 

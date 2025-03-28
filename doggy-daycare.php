@@ -6,11 +6,24 @@ get_header();
 
 ?>
 
+<h1><?php echo 'Tailz' . Get_the_title(); ?></h1>
 
-<iv class="tailz-doggy-daycare-content">
+<?php
+$hero_image = get_field('doggy_daycare_hero_image');
+?>
+<section class="short-hero-banner"
+    style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0, 0, 0, 0.15)), 
+           url('<?php echo esc_url($hero_image); ?>') center/cover no-repeat;">
+    <div class="hero-content">
+        <h2>Doggy Daycare</h2>
+    </div>
+</section>
 
 
-    <h1><?php echo 'Tailz' . Get_the_title(); ?></h1>
+
+<div class="tailz-doggy-daycare-content">
+
+
 
 
     <section class="doggy-daycare-hours">
@@ -19,14 +32,19 @@ get_header();
         <p>Closed Sundays and Holiday</p>
     </section>
 
-   
+
     <section class="get-started">
 
+        <?php
+        $get_started_image = get_field('get_started_image');
+        ?>
+
         <div>
-            <img src="" alt="">
+            <img src="<?php echo esc_url($get_started_image); ?>" alt="">
         </div>
 
         <div>
+
             <h2>get started </h2>
             <p>Our daycare offers a rich environment for your dog to exercise, socialize, and rest. With a carefully designed and unique program, your dog will have the best daycare experience the resort has to offer!</p>
 
@@ -35,7 +53,7 @@ get_header();
             <p>Dogs looking to join us will be assessed through our Meet and Greet in order to ensure they are suitable for the program. To ensure the enjoyment and safety of all pups, some pups may not be accepted into the daycare program.</p>
             <p>Package/Passes Prices</p>
 
-            <button>book your pup</button>
+            <button class="blue-btn paw">book your pup</button>
 
         </div>
 
@@ -49,9 +67,11 @@ get_header();
         <div class="rates-card-container">
 
             <div class="rate-card">
+                <div class="rate-card-header">
 
-                <h3>Per Day</h3>
+                    <h3>Per Day</h3>
 
+                </div>
                 <ul>
 
                     <li> Full Day - $40</li>
@@ -65,9 +85,11 @@ get_header();
 
             <div class="rate-card">
 
-                <h3>Monthly Rates</h3>
+                <div class="rate-card-header">
+                    <h3>Monthly Rates</h3>
 
 
+                </div>
 
                 <ul>
                     <li>Priority Overnight Booking, ‘Wag’ More Rewards, VIP Bonus!</li>
@@ -82,13 +104,15 @@ get_header();
             </div>
 
             <div class="rate-card">
+                <div class="rate-card-header">
 
-                <h3>FLEX Passes</h3>
+                    <h3>FLEX Passes</h3>
 
-                <p>Advanced booking required.</p>
 
+                </div>
                 <ul>
 
+                    <p>Advanced booking required.</p>
                     <li> 5 Playdates - $190</li>
                     <li> 10 Playdates - $360</li>
                     <li> 20 Playdates - $660</li>
@@ -97,36 +121,40 @@ get_header();
             </div>
         </div>
 
-        <p class="warning-text">
-            Monthly Automatic Passes and Flex Passes purchases are non-refundable,
-            not transferable and not eligible for in-store credit.
-        </p>
+        <div class="warning-text">
+            <p>
+                Monthly Automatic Passes and Flex Passes purchases are non-refundable,</p>
+            <p> not transferable and not eligible for in-store credit.</p>
+
+        </div>
 
     </section>
 
 
     <section class="requirements">
 
-        <h2>Requirements</h2>
+        <div class="requirements-content">
+            <h2>Requirements</h2>
 
-        <p>
-            All puppies under 16 weeks must start in one of our Puppy Programs before moving up to our regular Doggy Daycare program.
-            Spay and Neuter: Pets over 7 months of age must be spayed and neutered. Our management team may grant exceptions with written medical reasons from your pet’s veterinarian for pets up to 10 months of age.
-            Puppies are encouraged to join prior to being altered, as this is their best socialization time.
-        </p>
+            <p>
+                All puppies under 16 weeks must start in one of our Puppy Programs before moving up to our regular Doggy Daycare program.
+                Spay and Neuter: Pets over 7 months of age must be spayed and neutered. Our management team may grant exceptions with written medical reasons from your pet’s veterinarian for pets up to 10 months of age.
+                Puppies are encouraged to join prior to being altered, as this is their best socialization time.
+            </p>
 
-        <h3> Vaccinations</h3>
+            <h3> Vaccinations</h3>
 
-        <p>
-            Required Vaccinations (6+ months): Rabies, Distemper Combo & Bordetella.  A complete set of vaccinations during your pups lifetime is still required prior to any exceptions granted.
-            We ask that each pup have the distemper combo as well as the Bordetella vaccination for canine cough prevention to begin doggy daycare.
-            Vaccination requirement exceptions require written medical reasons by your pup's Veterinarian and proof of titer tests every 6 months. Any approvals for exceptions are handled on a case-by-case basis and are not guaranteed. Management will review any request for exception before to their Meet & Greet, and will consult with veterinarians prior making any decision
-        </p>
+            <p>
+                Required Vaccinations (6+ months): Rabies, Distemper Combo & Bordetella.  A complete set of vaccinations during your pups lifetime is still required prior to any exceptions granted.
+                We ask that each pup have the distemper combo as well as the Bordetella vaccination for canine cough prevention to begin doggy daycare.
+                Vaccination requirement exceptions require written medical reasons by your pup's Veterinarian and proof of titer tests every 6 months. Any approvals for exceptions are handled on a case-by-case basis and are not guaranteed. Management will review any request for exception before to their Meet & Greet, and will consult with veterinarians prior making any decision
+            </p>
 
-        <h3>Pest Management</h3>
+            <h3>Pest Management</h3>
 
-        <p>It is strongly recommended for your pet to be on monthly anti-parasite medication such as Revolution or Advantage, as this will greatly reduce the risk of spreading ticks, fleas, and lice to the facility and to your pup. Ask your veterinarian or purchase from over-the-counter</p>
+            <p>It is strongly recommended for your pet to be on monthly anti-parasite medication such as Revolution or Advantage, as this will greatly reduce the risk of spreading ticks, fleas, and lice to the facility and to your pup. Ask your veterinarian or purchase from over-the-counter</p>
 
+        </div>
 
     </section>
 
@@ -139,15 +167,19 @@ get_header();
 
             <p>Need training for your pup? Check out our Puppy Training and let our experts show your puppy tricks and etiquette!</p>
 
-            <button>View Training</button>
+            <button class="yellow-btn paw">View Training</button>
 
         </div>
 
-        <img src="" alt="">
+        <?php $puppy_training_image = get_field('puppy_training_image'); ?>
+
+        <div>
+            <img src="<?php echo esc_url($puppy_training_image); ?>" alt="">
+        </div>
 
     </section>
 
-<div>
+</div>
 
 <?=
 get_footer();
