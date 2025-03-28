@@ -24,7 +24,7 @@ get_header();
     style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('<?php echo the_field('home_page_banner_image'); ?>') center/cover no-repeat;">
 
 
-    <div class="hero-content">
+    <div class="hero-content"> 
 
 
         <h2>TAILZ: Grooming to furfection</h2>

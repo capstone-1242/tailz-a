@@ -1,36 +1,33 @@
 <?php
 /*
-Template Name: Tailz Photograpy
+Template Name: Tailz Photography
 */
 get_header();
 
 ?>
 
 <!-- Tailz home page content -->
+
+
+
+
+<h1><?php echo 'Tailz' . Get_the_title(); ?></h1>
+
+
+<!--  banner image -->
+
+<?php
+$hero_image = get_field('photography_hero_image');
+?>
+<section class="photography-hero-banner"
+    style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0, 0, 0, 0.15)), 
+           url('<?php echo esc_url($hero_image); ?>') center/cover no-repeat;">
+    <div class="hero-content">
+        <h2>Pet photography</h2>
+    </div>
+</section>
+
 <div class="tailz-photograpy-content">
-
-
-
-
-    <h1><?php echo 'Tailz' . Get_the_title(); ?></h1>
-
-
-    <!--  banner image -->
-
-    <section class="hero-banner">
-
-        <?php if (get_field('h')) : ?>
-
-            <div> <img src="<?php echo the_field(''); ?>"></div>
-
-        <?php else : ?>
-
-            <div> <img src="" alt=""></div>
-
-        <?php endif; ?>
-
-    </section>
-
     <!-- banner image end -->
 
 
@@ -40,34 +37,45 @@ get_header();
         <?php if (get_field('photography_heading')) : ?>
             <h2><?php the_field('photography_heading'); ?></h2>
         <?php else : ?>
-            <h2>Seasonal Photographs</h2> <!-- Default fallback heading -->
+            <h2>Professional pet photography</h2> <!-- Default fallback heading -->
         <?php endif; ?>
 
         <?php if (get_field('photography_content')) : ?>
             <p><?php the_field('photography_content'); ?></p>
         <?php else : ?>
-            <p>Professional Pet Photography
-                We offer seasonal props for seasonal photos to capture your pet enjoying the current festivities!</p> <!-- Default fallback content -->
+            <p>Let our photographers take photos of your pets in-resort!</p>
+            <p>On holidays and special events, we transform one of our rooms into a themed photo studio! We offer festive holiday props and accessories for your pet.</p>
         <?php endif; ?>
 
 
     </section>
 
-    <!-- second section -->
-    <section>
 
-        <h2> Pet Photography</h2>
+    <!-- photography gallery using masonry ui-->
 
-        <p>Photography</p>
-        <p>Professional photos for your pets.</p>
-        <p>Seasonal Photography</p>
-        <p>On holidays and special events, we transform one of our rooms into a themed photo studio! We offer festive holiday</p>
+    <section class="gallery">
 
-    </section>
+        <div id="masonry-grid" class="grid">
+            <?php
+            $images = [
+                get_field('masonry_image_1'),
+                get_field('masonry_image_2'),
+                get_field('masonry_image_3'),
+                get_field('masonry_image_4'),
+                get_field('masonry_image_5'),
+                get_field('masonry_image_7'),
+            ];
 
-    <!-- third section -->
-    <section>
-
+            foreach ($images as $image):
+                if ($image): ?>
+                    <div class="grid-item gallery-img">
+                        <img src="<?php echo esc_url($image); ?>" alt="Masonry Image">
+                    </div>
+            <?php endif;
+            endforeach;
+            ?>
+        </div>
+        
     </section>
 
     <!-- fourth section -->
