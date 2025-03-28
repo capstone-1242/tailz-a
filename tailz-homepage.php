@@ -24,7 +24,7 @@ get_header();
     style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('<?php echo the_field('home_page_banner_image'); ?>') center/cover no-repeat;">
 
 
-    <div class="hero-content"> 
+    <div class="hero-content">
 
 
         <h2>TAILZ: Grooming to furfection</h2>
@@ -165,15 +165,6 @@ get_header();
 
         </div>
 
-        <!-- Set up image carusel here VVV -->
-
-        <div class="">
-            <?php
-            $full_width_block_images = get_field('full_width_block_images'); // Get image URL
-            if ($full_width_block_images): ?>
-                <img src="<?php echo esc_url($full_width_block_images); ?>" alt="Welcome Image">
-            <?php endif; ?>
-        </div>
 
     </section>
     <!-- cat services -->
