@@ -41,14 +41,14 @@ get_header();
         <section class="contact-info">
 
     
-            <h2>Contact</h2>
+            <h2>Email</h2>
+            <p>wags@tailz.ca</p>
 
-            <ul>
-                <li> wawawa@wawa.wa</li>
-                <li> +1 780-988-0089</li>
-                <li> 123 wawa street</li>
-            </ul>
-    
+            <h2>Phone</h2>
+            <p>+1 780-988-0089</p>
+
+            <h2>Location</h2>
+            <p>11204 119 Street</p>
     
         </section>
     
@@ -59,12 +59,39 @@ get_header();
 
         </section>
 
-
   </div>
 
  
-
 </div>
+
+<!--   Newsletter -->
+<article class="newsletter ">
+    <div class="newsletter-container">
+
+        <div class="newsletter-image">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/hero/dogs-on-chair.webp" alt="Newsletter Image">
+        </div>
+
+        <div class="newsletter-content">
+
+            <h2>tailz newsletter</h2>
+
+            <p>
+                What’s the bark around Tailz? Find out for yourself!
+                Sign up for our mailing services for updates, alerts, special offers and more!
+            </p>
+
+            <div class="sign-up">
+                <input type="email" placeholder="Enter your email address">
+                <button class="">Subscribe</button>
+            </div>
+
+        </div>
+
+    </div>
+
+</article>
+
 
 <?=
 get_footer();
