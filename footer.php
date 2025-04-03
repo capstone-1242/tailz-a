@@ -62,10 +62,10 @@
 				<article class="footer-promise">
 					<h2>Our Philosophy</h2>
 					<p>
-					Passionate about promoting healthy foods and lifestyles for canine companions. 
+						Passionate about promoting healthy foods and lifestyles for canine companions. 
 					</p>
 
-					<p>We treat your pets as though they were our own. Caring for the well-being  of their minds, bodies, and emotions we use positive reinforcement. </p>
+					<p>We treat your pets as though they were our own. Caring for the well-being of their minds, bodies, and emotions we use positive reinforcement. </p>
 
 				</article>
 
@@ -116,6 +116,36 @@
 
 <?php wp_footer(); ?>
 
+<script>
+	document.addEventListener("DOMContentLoaded", function() {
+	
+		const menuToggle = document.querySelector(".menu-toggle");
+		const menu = document.querySelector(".main-menu");
+
+		if (menuToggle && menu) {
+			menuToggle.addEventListener("click", function() {
+				let isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
+				menuToggle.setAttribute("aria-expanded", !isExpanded);
+				menu.classList.toggle("active"); 
+
+			
+				if (!isExpanded) {
+					menu.classList.add("active");
+				} else {
+					menu.classList.remove("active");
+				}
+			});
+		}
+
+		
+		document.addEventListener('click', function(e) {
+			if (!menu.contains(e.target) && !menuToggle.contains(e.target)) {
+				menu.classList.remove('active'); 
+				menuToggle.setAttribute("aria-expanded", "false");
+			}
+		});
+	});
+</script>
 
 </body>
 

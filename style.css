@@ -64,6 +64,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   --secondary-color: #fea91d; /* Secondary Theme Color (Yellow) */
   --light-secondary-color: #f4e3c6; /* light shade of secondary */
 
+  --tailz-green: #d1eb89; /* Tailz Green */
+  --wall-paint-light-blue: #bbc5f6; /* Wall Paint Light Blue */
+  --wall-paint-tan: #ffdca2; /* Wall Paint Tan */
+
   --light-third-color: #f4f2eb; /* Third Theme Color (Grey) */
   --third-color-blue-grey: #b4adbb; /* Third Theme Color (Grey) */
   --third-color-grey: #514b58; /* Third Theme Color (Grey) */
@@ -103,7 +107,7 @@ html {
  */
 body {
   margin-bottom: 0 !important;
-  /* cursor: url("/wp-content/themes/tailz/images/cursor/paw-border.png"), auto; */
+
 }
 
 /**
@@ -419,6 +423,7 @@ template {
 
 html {
   box-sizing: border-box;
+  /* margin: 0 !important; */
 }
 
 /*--------------------------------------------------------------
@@ -689,7 +694,7 @@ textarea {
 }
 
 .header-logo {
-  max-width: 3rem;
+  max-width: 2.5rem !important;
 }
 
 /* Basic Menu Styling */
@@ -881,20 +886,104 @@ textarea {
 }
 
 /* Newsletter Section */
-.footer-newsletter {
+
+.newsletter {
   width: 100%;
-  padding: 20px 0;
-  text-align: center;
+  background-color: var(--third-color-darkest);
+  color: var(--text-color-light);
 }
 
-.footer-newsletter h2 {
+.newsletter h2 {
   font-size: 2rem;
-  margin-bottom: 10px;
+  margin: 0;
 }
 
-.footer-newsletter p {
-  font-size: 1.1rem;
-  color: #fff;
+.newsletter p {
+  margin: 0;
+}
+
+.newsletter-container {
+  max-width: 980px;
+  margin: 0 auto;
+  display: flex;
+  align-items: top;
+  padding: 0;
+}
+
+.newsletter-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.newsletter-content {
+  text-align: center;
+  padding: 1rem 2rem;
+  gap: 1rem;
+  justify-content: center;
+  width: 60%;
+}
+
+.newsletter-content .sign-up {
+  display: flex;
+  flex-direction: row;
+  border: 4px solid var(--secondary-color);
+  border-radius: 5px;
+  width: fit-content;
+  margin: 2rem auto;
+}
+
+.newsletter-content .sign-up input {
+  padding: 15px;
+  border: none;
+  border-radius: none !important;
+  -webkit-border-radius: none !important;
+  -moz-border-radius: none !important;
+  -ms-border-radius: none !important;
+  -o-border-radius: none !important;
+}
+
+.newsletter-content .sign-up button {
+  background: var(--secondary-color);
+  color: var(--third-color-darkest);
+  padding: 15px 25px;
+  font-family: "League Spartan", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.3s;
+  border: none;
+  border-radius: none !important;
+  -webkit-border-radius: none !important;
+  -moz-border-radius: none !important;
+  -ms-border-radius: none !important;
+  -o-border-radius: none !important;
+  height: 54px;
+}
+
+.newsletter-content .sign-up button:hover {
+  background: var(--light-secondary-color);
+  color: var(--primary-color);
+}
+
+@media screen and (max-width: 768px) {
+  .newsletter-content {
+    justify-content: center;
+  }
+
+  .newsletter-image {
+    width: 100%;
+  }
+
+  .newsletter-image img {
+    width: 100%;
+    height: auto;
+  }
+  .sign-up {
+    width: 320px;
+    margin: 0 auto;
+  }
 }
 
 /* Footer Bottom */
@@ -985,9 +1074,13 @@ Tailz home page
 }
 
 /* BUTTON PLACEMENT */
-.content-wrapper a {
+.content-wrapper button {
   align-self: flex-end;
   margin-top: 2rem;
+}
+.content-wrapper button a {
+  text-decoration: none;
+  color: var(--text-color-light);
 }
 
 /* ALTERNATE LAYOUT FOR ODD SECTIONS */
@@ -1082,90 +1175,6 @@ Tailz home page
 }
 
 /* ------------------------newsletter--------------------------- */
-
-.newsletter {
-  width: 100%;
-  background-color: var(--third-color-darkest);
-  color: var(--text-color-light);
-
-}
-
-.newsletter h2 {
-  font-size: 2rem;
-  margin: 0;
-}
-
-.newsletter p {
-  margin: 0;
-}
-
-.newsletter-container {
-  max-width: 980px;
-  margin: 0 auto;
-  display: flex;
-  align-items: top;
-  padding: 0;
-}
-
-.newsletter-image {
-}
-
-.newsletter-image img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  display: block;
-}
-
-.newsletter-content {
-  text-align: center;
-  padding: 1rem 2rem;
-  gap: 1rem;
-  justify-content: center;
-  width: 60%;
-}
-
-.newsletter-content .sign-up {
-  display: flex;
-  flex-direction: row;
-  border: 4px solid var(--secondary-color);
-  border-radius: 5px;
-  width: fit-content;
-  margin: 2rem auto;
-}
-
-.newsletter-content .sign-up input {
-  padding: 15px;
-  border: none;
-  border-radius: none !important;
-  -webkit-border-radius: none !important;
-  -moz-border-radius: none !important;
-  -ms-border-radius: none !important;
-  -o-border-radius: none !important;
-}
-
-.newsletter-content .sign-up button {
-  background: var(--secondary-color);
-  color: var(--third-color-darkest);
-  padding: 15px 25px;
-  font-family: "League Spartan", sans-serif;
-  font-size: 1.2rem;
-  font-weight: 500;
-  text-decoration: none;
-  transition: background 0.3s;
-  border: none;
-  border-radius: none !important;
-  -webkit-border-radius: none !important;
-  -moz-border-radius: none !important;
-  -ms-border-radius: none !important;
-  -o-border-radius: none !important;
-  height: 54px;
-}
-
-.newsletter-content .sign-up button:hover {
-  background: var(--light-secondary-color);
-  color: var(--primary-color);
-}
 
 /* ============================================
 ================================================
@@ -1303,7 +1312,7 @@ Doggy Daycare
   height: fit-content;
   margin: 0 auto;
   padding: 2rem;
-  background-color: var(--light-primary-color);
+  background-color: var(--tailz-green);
 }
 
 .rates-card-container {
@@ -1396,6 +1405,27 @@ Doggy Daycare
   -ms-border-radius: 26px;
   -o-border-radius: 26px;
 }
+/* ===============================
+====================================
+Pet Spa & grooming
+=====================================
+=================================== */
+
+.loyalty-program {
+  background-color: var(--light-secondary-color); /* Main background */
+  background-image: url("images/svg/paw-black-shape-svgrepo-com.svg");
+
+  background-repeat: repeat; /* Ensures tiling */
+  background-size: 50px 50px; /* Adjust size of each tile */
+  position: relative;
+  padding: 40px;
+}
+
+.loyalty-program-scrim {
+  /* background-color: rgba(255, 255, 255, 0.6); Light overlay for better text readability */
+  padding: 20px;
+  border-radius: 10px;
+}
 
 /* ==================
 Contact page
@@ -1444,17 +1474,18 @@ Contact page
 --------------------------------------------------------------*/
 
 /* ===========paw cursor..... just somthing to set us apart ;') ================================ */
-.paw:hover {
-  /* cursor: url('/wp-content/themes/tailz/images/cursor/paw-64.png'), auto; */
-  /* cursor: url("/wp-content/themes/tailz/images/cursor/paw-border.png"), auto; */
-  /* cursor: url("/wp-content/themes/tailz/images/cursor/paw-border@2x.png"), auto; */
-  /* cursor: url('/wp-content/themes/tailz/images/cursor/paw-edited-32.png'), auto; */
-  /* cursor: url('/wp-content/themes/tailz/images/cursor/paw-inflate-38.png'), auto; */
-  /* cursor: url('/wp-content/themes/tailz/images/cursor/paw-w-shadow-38.png'), auto; */
-  cursor: url("/wp-content/themes/tailz/images/cursor/paw-w-border-shadow-inflate.png"),
-    auto;
-  /* cursor: url('/wp-content/themes/tailz/images/cursor/paw-w-border-shadow-inflate-2x.png' ) , auto; */
-}
+/* .paw:hover {
+
+  cursor: url("../tailz/images/cursor/paw-inflate-38.png"), auto;
+  
+} */
+
+/* .paw:hover {
+  cursor: url("/wp-content/themes/tailz/assets/images/cursor/paw-inflate-38.png"), auto;
+} */
+
+/* moved it into header : head>style  for loading with wp*/
+
 
 /* =========warning text============== */
 .warning-text {
@@ -1599,8 +1630,30 @@ Contact page
   align-self: end;
 }
 
+@media screen and (max-width: 720px) {
+  .hero-content h2 {
+    font-size: 2rem;
+  }
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .hero-banner {
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    padding: 0 20px 2rem;
+  }
+}
+
 /* =================hero image end=========================== */
 
+/* Navigation
+--------------------------------------------- */
 /* Navigation
 --------------------------------------------- */
 .main-navigation {
@@ -1612,7 +1665,7 @@ Contact page
 }
 
 .main-navigation ul {
-  display: none;
+  display: none; /* Keep main menu hidden by default */
   list-style: none;
   margin: 0;
   padding-left: 0;
@@ -1670,12 +1723,122 @@ Contact page
   display: block;
 }
 
-@media screen and (min-width: 37.5em) {
+.mobile-view-menu {
+  display: none;
+}
+
+@media screen and (min-width: 770px) {
   .menu-toggle {
     display: none;
   }
 
   .main-navigation ul {
+    display: flex;
+  }
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 770px) {
+ 
+  .mobile-view-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+  }
+
+  /* Main Navigation Layout */
+  .main-navigation {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+
+  /* Main Menu: Initially hidden from the get go */
+  .main-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    width: 200px;
+    background: var(--primary-color);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+
+  /* Menu items */
+  .main-menu li {
+    display: block;
+    width: 100%;
+  }
+
+  /* Links inside menu */
+  .main-menu a {
+    display: block;
+    padding: 10px;
+    color: var(--text-color-light);
+    text-decoration: none;
+  }
+  .main-menu li:hover {
+    background: var(--dark-primary-color);
+    color: var(--secondary-color);
+  }
+
+  /* When menu is active, it is displayed */
+  .main-menu.active {
+    display: flex;
+  }
+
+  /* Hamburger Button */
+  .menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    /* padding: 10px; */
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    z-index: 1001;
+  }
+
+  .menu-toggle .hamburger-icon rect {
+    fill: var(--text-color-light);
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+
+  .menu-toggle:hover .hamburger-icon rect {
+    fill: var(--secondary-color);
+  }
+
+  .main-menu .sub-menu {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 0;
+    top: 0;
+    background: var(--primary-color);
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    box-shadow: none;
+  }
+
+  /* Sub-menu items */
+  .main-menu .sub-menu li {
+    display: block;
+  }
+
+  .main-menu li.active > .sub-menu {
     display: flex;
   }
 }

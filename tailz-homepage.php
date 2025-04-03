@@ -31,7 +31,7 @@ get_header();
 
         <div>
             <p>Come visit our resort! give your pet the luxury they deserve.</p>
-            <a href="<?php echo home_url('/amenities/'); ?>"><button class="blue-btn paw">VIEW NEW AMMENITIES</button></a>
+            <a href="<?php echo get_permalink(get_page_by_title('amenities')); ?>"><button class="blue-btn paw">VIEW NEW AMMENITIES</button></a>
 
         </div>
 
@@ -74,7 +74,7 @@ get_header();
                     <p>Mental and physical enjoyment for social dogs, and Puppy Preschool for teaching young pups!</p>
                 <?php endif; ?>
 
-                <a href="<?php echo home_url('/doggy-daycare/'); ?>"><button class="yellow-btn paw">View
+                <a href="<?php echo get_permalink(get_page_by_title('doggy daycare')); ?>"><button class="yellow-btn paw">View
                         Daycare</button></a>
             </div>
 
@@ -158,7 +158,7 @@ get_header();
                 <p>Can’t bring your pet on a trip?</p>
                 <p>Treat them to a crate-less luxury overnight stay with us!</p>
 
-                <a href="#services"><button class="yellow-btn paw">VIEW LODGINGS</button></a>
+                <a href="<?php echo get_permalink(get_page_by_title('overnight lodgings')); ?>"><button class="yellow-btn paw">VIEW LODGINGS</button></a>
 
             </div>
 
@@ -185,7 +185,7 @@ get_header();
             <div class="content-wrapper">
                 <h2>Cat SERVICES</h2>
                 <p>New cat services are coming to Tailz! Bring your cat in for a spa day, or bring them in for luxury lodgings!</p>
-                <a href="<?php echo home_url('/contact-us/'); ?>"><button class="blue-btn paw">BOOK NOW</button></a>
+                <a href="<?php echo get_permalink(get_page_by_title('booking')); ?>"><button class="blue-btn paw">BOOK NOW</button></a>
             </div>
 
         </div>
@@ -220,7 +220,7 @@ get_header();
                     <p>Come visit our resort! Give your pet the luxury they deserve.</p> <!-- Default fallback content -->
                 <?php endif; ?>
 
-                <a href="<?php echo home_url('/contact-us/'); ?>"><button class="yellow-btn paw">Visit Us</button></a>
+                <a href="<?php echo get_permalink(get_page_by_title('contact')); ?>"><button class="yellow-btn paw">Visit Us</button></a>
 
             </div>
 

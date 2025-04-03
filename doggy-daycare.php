@@ -167,7 +167,7 @@ $hero_image = get_field('doggy_daycare_hero_image');
 
             <p>Need training for your pup? Check out our Puppy Training and let our experts show your puppy tricks and etiquette!</p>
 
-            <button class="yellow-btn paw">View Training</button>
+            <button class="yellow-btn paw"><a class="paw" href="<?php echo get_permalink(get_page_by_title('dog training')); ?>">View Training</a></button>
 
         </div>
 

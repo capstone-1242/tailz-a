@@ -187,6 +187,14 @@ function tailz_register_menus() {
 }
 add_action( 'after_setup_theme', 'tailz_register_menus' );
 
+function tailz_register_mobile_menus() {
+    register_nav_menus( array(
+        'menu-2' => __( 'Mobile menu', 'tailz' ), // Ensure this matches your theme location
+    ) );
+}
+add_action( 'after_setup_theme', 'tailz_register_mobile_menus' );
+
+
 
 function tailz_enqueue_styles() {
     wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&family=Rokkitt:wght@100;300;400;700;900&display=swap', array(), null);
@@ -202,9 +210,28 @@ function enqueue_swiper_scripts() {
 add_action('wp_enqueue_scripts', 'enqueue_swiper_scripts', 99);
   
 
+//masonry
 function tailz_enqueue_scripts() {
     wp_enqueue_script('masonry');
     wp_enqueue_script('custom-masonry', get_template_directory_uri() . '/js/masonry-init.js', array('masonry', 'jquery'), '1.0.0', true);
 }
 
 add_action('wp_enqueue_scripts', 'tailz_enqueue_scripts');
+
+
+//woocomerce suport
+
+function mytheme_add_woocommerce_support() {
+    add_theme_support('woocommerce');
+}
+add_action('after_setup_theme', 'mytheme_add_woocommerce_support');
+
+
+function mytheme_enqueue_woocommerce_styles() {
+    if (class_exists('WooCommerce')) {
+        wp_enqueue_style('woocommerce-style', get_template_directory_uri() . '/woocommerce.css');
+    }
+}
+add_action('wp_enqueue_scripts', 'mytheme_enqueue_woocommerce_styles');
+
+
