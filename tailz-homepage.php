@@ -31,7 +31,11 @@ get_header();
 
         <div>
             <p>Come visit our resort! give your pet the luxury they deserve.</p>
+<<<<<<< HEAD
             <a href="<?php echo get_permalink(get_page_by_title('amenities')); ?>"><button class="blue-btn paw">VIEW NEW AMMENITIES</button></a>
+=======
+            <a href="<?php echo home_url('/amenities/'); ?>"><button class="blue-btn paw">VIEW NEW AMENITIES</button></a>
+>>>>>>> ef7eda8da103422b09314659b1432fdf92ac1c7a
 
         </div>
 
