@@ -616,6 +616,7 @@ input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
   /* border-color: #ccc #bbb #aaa; */
+  cursor: pointer;
 }
 
 button:active,
@@ -1041,6 +1042,7 @@ Tailz home page
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  padding: 0.5rem;
 }
 
 /* IMAGE WRAPPER */
@@ -1426,6 +1428,19 @@ Pet Spa & grooming
   padding: 20px;
   border-radius: 10px;
 }
+
+
+/* =============
+   Lodgings Page
+   ============= */
+.overnight-lodging-packages{flex-flow: column;}
+.package-card-container{display: flex;gap: 1rem;}
+.package-card{border-radius: 10px;text-align: center;}
+.package-card ul{margin-left: 0;padding-right: 40px;}
+.package-card:first-child{background-color: #FFDCA2;}
+.package-card:nth-child(2){background-color: #BBC5F6;}
+.package-card:last-child{background-color: #CEF06F;}
+.package-card-header{background-color: var(--secondary-color);padding: 10px;border-radius: 10px 10px 0 0;}
 
 /* ==================
 Contact page
