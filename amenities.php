@@ -31,41 +31,43 @@ get_header();
 
 
     <!-- first section -->
-    <section>
-        <h2>Amenities</h2>
-        <!-- <p>Barkery > sanitary > outdoor > pool</p> -->
-
-        <h3>The Barkery</h3>
-        <p>
-            An in-house bakery offering freshly-baked dog treats for your pups! We offer a variety of goods which you can purchase.
-            Sanitary
-        </p>
-        <p>The new location has built-in sanitary wall panelling and specialized flooring, allowing for ‘accidents’ caused by pets to be fully cleaned up quickly.</p>
-
-
+    <h2>Amenities</h2>
+    <!-- <p>Barkery > sanitary > outdoor > pool</p> -->
+    <section class="section-container">
+        <div>
+            <h3>The Barkery</h3>
+            <p>
+                An in-house bakery offering freshly-baked dog treats for your pups! You can bring our treats to your own home through our online store as well.
+            </p>
+            <input type="submit" value="PURCHASE NOW">
+        </div>
+        <img src="">
     </section>
-
     <!-- second section -->
-    <section>
-        <h3>Outdoor Area</h3>
-
-        <p>The new location has a large outdoor play area, allowing for your pets to roam in the fresh air</p>
+    <section class="section-container">
+        <img src="">
+        <div>
+            <h3>Sanitary</h3>
+            <p>The new location has built-in sanitary wall paneling and specialized flooring, allowing for ‘accidents’ caused by pets to be cleaned up quickly and completely, maintaining a sanitary zone for your pets.</p>
+        </div>
     </section>
-
     <!-- third section -->
-    <section>
-        <h3> Indoor Pool</h3>
-
-        <p>Imagine a safe, supervised space where your pet can cool off and enjoy a refreshing bath in a pool built just for them. Our newly added pool isn’t just for splashing around—it’s designed to make bath time fun!</p>
-        <p>
+    <section class="section-container">
+        <div>
+            <h3>Outdoor Area</h3>
+            <p>The new location has a large fenced off outdoor play area, allowing for your pets to roam in the fresh air safely during their daycare experience!</p>
+        </div>
+        <img src="">
     </section>
 
     <!-- fourth section -->
-    <section>
-        <p>
-            We bathe cats and dogs separately in order to prevent any altercations between the two.
-            Give your pet a taste of luxury, because every pet deserves a little splash of joy!
-        </p>
+    <section class="section-container">
+        <img src="">
+        <div>
+            <h3> Indoor Pool</h3>
+            <p>Imagine a safe, supervised space where your pet can cool off and enjoy a refreshing bath in a pool built just for them. Our newly added pool isn’t just for splashing around, it’s designed to make bath time fun!</p>
+            <p>Give your pet a taste of luxury, because every pet deserves a little splash of joy!</p>
+        </div>
     </section>
 
 
