@@ -1176,7 +1176,6 @@ Tailz home page
   height: auto;
 }
 
-/* ------------------------newsletter--------------------------- */
 
 /* ============================================
 ================================================
@@ -1670,8 +1669,7 @@ Contact page
 
 /* Navigation
 --------------------------------------------- */
-/* Navigation
---------------------------------------------- */
+
 .main-navigation {
   display: flex;
   width: 100%;
@@ -1859,6 +1857,80 @@ Contact page
   }
 }
 
+/* ==================================
+Booking pages
+======================================= */
+/* Booking Page Container */
+.booking-container {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Booking Header */
+.booking-header {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--text-color-light);
+}
+.booking-header h2::first-letter {
+    color: var(--secondary-color);
+}
+
+.booking-header h2 {
+    font-size: 2rem;
+    color: var(--text-color-light);
+    margin-bottom: 10px;
+}
+
+.booking-header p {
+    font-size: 1rem;
+}
+
+/* Booking Form */
+.booking-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.booking-form-content {
+    width: 100%;
+    padding: 20px;
+    background-color: var(--text-color-light);
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    justify-content: center !important;
+}
+
+/* Customize form fields */
+.booking-form-content input, .booking-form-content select, .booking-form-content button {
+    /* width: 100%; */
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+/* Add hover effect for buttons */
+.booking-form-content button:hover {
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+}
+
+.cpp_form {
+  display: flex;
+justify-content: center;
+}
+
+
+/* ---------------------------------------------------- */
 .site-main .comment-navigation,
 .site-main .posts-navigation,
 .site-main .post-navigation {

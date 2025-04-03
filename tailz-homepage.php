@@ -31,11 +31,7 @@ get_header();
 
         <div>
             <p>Come visit our resort! give your pet the luxury they deserve.</p>
-<<<<<<< HEAD
             <a href="<?php echo get_permalink(get_page_by_title('amenities')); ?>"><button class="blue-btn paw">VIEW NEW AMMENITIES</button></a>
-=======
-            <a href="<?php echo home_url('/amenities/'); ?>"><button class="blue-btn paw">VIEW NEW AMENITIES</button></a>
->>>>>>> ef7eda8da103422b09314659b1432fdf92ac1c7a
 
         </div>
 
@@ -179,9 +175,9 @@ get_header();
             <div class="image-wrapper">
 
                 <?php
-                $welcome_image = get_field('welcome_image'); // Get image URL
-                if ($welcome_image): ?>
-                    <img src="<?php echo esc_url($welcome_image); ?>" alt="Welcome Image">
+                $fourth_block_image = get_field('fourth_block_image'); // Get image URL
+                if ($fourth_block_image): ?>
+                    <img src="<?php echo esc_url($fourth_block_image); ?>" alt="fourth_block_image">
                 <?php endif; ?>
 
             </div>
@@ -203,28 +199,24 @@ get_header();
             <div class="image-wrapper">
 
                 <?php
-                $welcome_image = get_field('welcome_image'); // Get image URL
-                if ($welcome_image): ?>
-                    <img src="<?php echo esc_url($welcome_image); ?>" alt="Welcome Image">
+                $fifth_block_image = get_field('fifth_block_image'); // Get image URL
+                if ($fifth_block_image): ?>
+                    <img src="<?php echo esc_url($fifth_block_image); ?>" alt="fifth_block_image">
                 <?php endif; ?>
 
             </div>
 
             <div class="content-wrapper">
 
-                <?php if (get_field('welcome_heading')): ?>
-                    <h2><?php the_field('welcome_heading'); ?></h2>
-                <?php else: ?>
-                    <h2>Grooming to Furfection</h2> <!-- Default fallback heading -->
-                <?php endif; ?>
+              
+                    <h2>THE NEW LO'CAT'ION</h2> <!-- Default fallback heading -->
+                
 
-                <?php if (get_field('welcome_content')): ?>
-                    <p><?php the_field('welcome_content'); ?></p>
-                <?php else: ?>
+               
                     <p>Come visit our resort! Give your pet the luxury they deserve.</p> <!-- Default fallback content -->
-                <?php endif; ?>
+             
 
-                <a href="<?php echo get_permalink(get_page_by_title('contact')); ?>"><button class="yellow-btn paw">Visit Us</button></a>
+                <a href="<?php echo get_permalink(get_page_by_title('contact us')); ?>"><button class="yellow-btn paw">Visit Us</button></a>
 
             </div>
 
@@ -295,7 +287,7 @@ get_header();
             <h3>CAT TREATS</h3>
 
             <?php
-            $fourth_category_image = get_field('fourth_category_image');
+            $fourth_category_image = get_field('fifth_category_image');
             if ($fourth_category_image): ?>
                 <img src="<?php echo esc_url($fourth_category_image); ?>" alt="fourth_category_image">
             <?php endif; ?>
@@ -307,7 +299,7 @@ get_header();
             <h3>CAT FOOD</h3>
 
             <?php
-            $fourth_category_image = get_field('fourth_category_image'); // Get image URL
+            $fourth_category_image = get_field('sixth_category_image'); // Get image URL
             if ($fourth_category_image): ?>
                 <img src="<?php echo esc_url($fourth_category_image); ?>" alt="fourth_category_image">
             <?php endif; ?>
