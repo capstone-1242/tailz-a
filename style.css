@@ -1439,8 +1439,21 @@ Pet Spa & grooming
 .package-card:first-child{background-color: #FFDCA2;}
 .package-card:nth-child(2){background-color: #BBC5F6;}
 .package-card:last-child{background-color: #CEF06F;}
+<<<<<<< Updated upstream
 .package-card-header{background-color: var(--secondary-color);padding: 10px;border-radius: 10px 10px 0 0;}
 /* BRANCH COMMIT TEST */
+=======
+.package-card div:first-child{background-color: var(--secondary-color);padding: 10px;border-radius: 10px 10px 0 0;}
+
+/* =============
+   Training Page
+   ============= */
+.training-card{background-color: var(--light-primary-color);border-radius: 10px;text-align: center;}
+.training-card div:first-child{background-color: var(--dark-primary-color);color: var(--light-secondary-color);padding: 10px;border-radius: 10px 10px 0 0;}
+.training-card table{border-collapse: collapse;}
+.training-card th{padding: 7px 0;}
+.training-card tr:nth-child(2){background-color: #ffffff56;}
+>>>>>>> Stashed changes
 
 /* ==================
 Contact page
