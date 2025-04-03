@@ -39,16 +39,12 @@ get_header();
         <p>When it comes to overnight care, we’ve redefined the experience. Our new sleepover nights offer a resort-style stay in ample-spaced lodges that goes beyond traditional day care.</p>
         <p>Each day of restful sleep offers the benefits of Doggy Daycare, meaning your pet will never be left alone while they’re with us. You may also sign your dog up for a departure bath on their last day so they come home fresh and squeaky clean!</p>
 
-        <div>
+        <div class="section-container">
+                <div class="image-wrapper"><img src="https://placehold.co/600x400" alt=""></div>
 
-            <div>
-
-                <img src="" alt="">
-
-                <p>We provide all the toys, beds, blankets and love that your dog needs; all you need to do is bring some dog food! We will feed your dog two to three times a day with the provided food. Bring all items in a marked reusable shopping bag. Pre-portioned food is appreciated.</p>
-
-            </div>
-
+                <div class="content-wrapper">
+                    <p>We provide all the toys, beds, blankets and love that your dog needs; all you need to do is bring some dog food! We will feed your dog two to three times a day with the provided food. Bring all items in a marked reusable shopping bag. Pre-portioned food is appreciated.</p>
+                </div>
         </div>
 
     </section>
@@ -81,7 +77,11 @@ get_header();
         <div class="package-card-container">
 
             <div class="package-card">
+<<<<<<< Updated upstream
                 <div class="package-card-header">
+=======
+                <div>
+>>>>>>> Stashed changes
                     <h2>Bronze Package</h2>
                     <p>$51.99/night</p>
                 </div>
@@ -95,7 +95,11 @@ get_header();
             </div>
 
             <div class="package-card">
+<<<<<<< Updated upstream
                 <div class="package-card-header">
+=======
+                <div>
+>>>>>>> Stashed changes
                     <h2>Silver Package</h2>
                     <p>$57.99/night</p>
                 </div>
@@ -110,7 +114,11 @@ get_header();
             </div>
 
             <div class="package-card">
+<<<<<<< Updated upstream
                 <div class="package-card-header">
+=======
+                <div>
+>>>>>>> Stashed changes
                     <h2>Gold Package</h2>
                     <p>$69.99/night</p>
                 </div>
