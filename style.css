@@ -1731,12 +1731,11 @@ BUTTON TEMPLATES:
 
 .yellow-btn:hover {
   background: var(--light-secondary-color);
-}
-
+} 
 /* =================yellow button end============================= */
 
 /* ===================Blue Button============================================= */
-.blue-btn {
+ .blue-btn {
   display: inline-block;
   background: var(--primary-color);
   color: var(--text-color-light);
@@ -1756,8 +1755,7 @@ BUTTON TEMPLATES:
 
 .blue-btn:hover {
   background: var(--dark-primary-color);
-}
-
+} 
 /* ===================Blue Button end============================================= */
 
 /* ======================Grey button=========================================================== */
