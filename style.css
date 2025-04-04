@@ -1450,6 +1450,85 @@ Pet Spa & grooming
 .training-card th{padding: 7px 0;}
 .training-card tr:nth-child(2){background-color: #ffffff56;}
 
+/* Amenities page */
+.hero-banner {
+  position: relative;
+  text-align: left;
+}
+.hero-banner img {
+  width: 100%;
+  height: auto;
+}
+.page-heading {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+.amenity-block {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem 1rem;
+}
+.amenity-block.reverse {
+  flex-direction: column-reverse;
+}
+
+.amenity-image img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.amenity-text {
+  background: white;
+  padding: 1.25rem;
+  border-radius: 8px;
+}
+.amenity-text.beige {
+  background: #f9e4b7;
+}
+
+.btn-yellow {
+  background-color: #FFD700;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+  border-radius: 4px;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.btn-purple {
+  background-color: #3b2b84;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+/* Tablet/Desktop */
+@media (min-width: 768px) {
+  .amenity-block {
+      flex-direction: row;
+      align-items: center;
+  }
+  .amenity-block.reverse {
+      flex-direction: row-reverse;
+  }
+  .amenity-image,
+  .amenity-text {
+      flex: 1;
+  }
+}
+
 /* ==================
 Contact page
 =============================== */
