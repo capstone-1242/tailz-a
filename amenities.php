@@ -39,7 +39,7 @@ get_header();
             <p>
                 An in-house bakery offering freshly-baked dog treats for your pups! You can bring our treats to your own home through our online store as well.
             </p>
-            <a href="#"><button>PURCHASE NOW</button></a>
+            <a href="#" class="no-decoration"><div class="custom-button-bottom blue-colors"><div class="custom-button">PURCHASE NOW</div></div></a>
         </div>
         <img src="">
     </section>

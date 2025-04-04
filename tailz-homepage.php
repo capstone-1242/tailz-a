@@ -31,7 +31,7 @@ get_header();
 
         <div>
             <p>Come visit our resort! give your pet the luxury they deserve.</p>
-            <a href="<?php echo get_permalink(get_page_by_title('amenities')); ?>"><button class="blue-btn paw">VIEW NEW AMMENITIES</button></a>
+            <a href="<?php echo get_permalink(get_page_by_title('amenities')); ?>" class="no-decoration"><div class="custom-button-bottom blue-colors"><div class="custom-button">VIEW NEW AMENITIES</div></div></a>
 
         </div>
 
@@ -76,6 +76,7 @@ get_header();
 
                 <a href="<?php echo get_permalink(get_page_by_title('doggy daycare')); ?>"><button class="yellow-btn paw">View
                         Daycare</button></a>
+                <a href="#" class="no-decoration"><div class="custom-button-bottom yellow-colors"><div class="custom-button">View Daycare</div></div></a>
             </div>
 
         </div>
