@@ -35,22 +35,40 @@ get_header();
 
 
     <!-- first section -->
-  <div class="contact-page">
+  <!-- Contact Section -->
+  <div class="contact-wrapper">
 
+        <!-- Info & Form -->
+        <div class="contact-info-form">
+            <div class="info-box">
+                <h2>Email</h2>
+                <p>wags@tailz.ca</p>
 
-        <section class="contact-info">
+                <h2>Phone</h2>
+                <p>+1 (780) 988-0089</p>
 
-    
-            <h2>Email</h2>
-            <p>wags@tailz.ca</p>
+                <h2>Location</h2>
+                <p>11204 119 Street</p>
+            </div>
 
-            <h2>Phone</h2>
-            <p>+1 780-988-0089</p>
+            <div class="contact-form-box">
+                <form action="#" method="post">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
 
-            <h2>Location</h2>
-            <p>11204 119 Street</p>
-    
-        </section>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email"         required>
+
+                    <label for="phone">Phone Number</label>
+                    <input type="text" id="phone" name="phone">
+
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4"      required></textarea>
+
+                    <button type="submit" class="btn-yellow">Send Message</button>
+                </form>
+            </div>
+        </div>
     
       
         <section class="google-map-container">
