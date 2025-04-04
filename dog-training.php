@@ -22,11 +22,11 @@ get_header();
 
         <?php if (get_field('')) : ?>
 
-        <div> <img src="<?php echo the_field(''); ?>"></div>
+            <div> <img src="<?php echo the_field(''); ?>"></div>
 
         <?php else : ?>
 
-        <div> <img src="" alt=""></div>
+            <div> <img src="https://placehold.co/800x300" alt=""></div>
 
         <?php endif; ?>
 
@@ -163,8 +163,10 @@ get_header();
 
     </section> -->
     <section class="section-container">
-        <h2>BETTER MANNERED PUPS</h2>
-        <p>Positive training methods for positive results.</p>
+        <div class="section-intro-text">
+            <h2>BETTER MANNERED PUPS</h2>
+            <p>Positive training methods for positive results.</p>
+        </div>
         Humane handling and a positive approach are the foundation of our training philosophy. At Tailz, we believe in
         building relationships based on scientifically-backed training techniques.
         Having a well-trained dog is very important for your dog’s safety and your own peace of mind. We provide a wide
@@ -174,8 +176,10 @@ get_header();
         guidance and direction specific to your pup's needs.
     </section>
     <section class="section-container">
-        <h2>CANINE CLASSES</h2>
-        <p>PUPPY cLASSES</p>
+        <div class="section-intro-text">
+            <h2>CANINE CLASSES</h2>
+            <p>PUPPY cLASSES</p>
+        </div>
         <div>
             <h3>Puppy Kindergarten (8-22 weeks) | 6 WEEKS | $###.###</h3>
             <p>The Puppy Kindergarten class focuses on socialization with people, dogs, and objects, problem prevention,
@@ -214,58 +218,60 @@ get_header();
             </p>
         </div>
     </section>
-    <section class="section-container">
-        <h2>adult cLASSES</h2>
-        <div>
-            <h3>Basic Dog Manners (9 months +) | 4 WEEKS | $229</h3>
-            <p>This class teaches the foundations of obedience training to help build training skills, manners, and
-                solve
-                regular dog behavior challenges. It’s also recommended for dogs that are getting settled into a new home
-                and
-                could use a refresher on their manners.</p>
-            <p>Topics include:</p>
-            <ul>
-                <li>Stay</li>
-                <li>Leave it</li>
-                <li>Loose leash walking</li>
-                <li>Coming when called</li>
-                <li>Troubleshoot issues like counter surfing, jumping on guests, or barking for attention</li>
-            </ul>
-            <p>NOTE: If your dog barks, growls, or is aggressive to people or dogs, your dog is not yet eligible for the
-                in
-                person class. We recommend taking the ONLINE live Zoom classroom Intermediate Manners or our Growly Dog
-                class (issues toward other dogs) or Private Training sessions (issues toward people and/or other dogs).
-                Basic</p>
-            <p>Manners meets the prerequisite requirement for: Intermediate Manners</p>
-        </div>
-        <div>
-            <h3>Intermediate Manners (9 months +) | 6 WEEKS | $ 269</h3>
-            <p>
-                This class focuses on distraction training for leash walking, name, come, targeting (nose to hand – very
-                useful), go lie down, anti-jump, focus, leave it, tricks, and more. The Intermediate Dog Manners
-                training
-                class
-                is suitable for dogs that have graduated from Basic Manners or Puppy Elementary. Your instructor will
-                tailor
-                the
-                activities to each dog, so you’ll always be practicing at the right level.
-            </p>
-            <p>Topics include:</p>
-            <ul>
-                <li>Distraction training for leash walking</li>
-                <li>Name</li>
-                <li>Come</li>
-                <li>Targeting (nose to hand – very useful)</li>
-                <li>Go lie down</li>
-                <li>Anti-jump</li>
-                <li>Focus</li>
-                <li>Leave it</li>
-                <li>Tricks</li>
-            </ul>
-            <p>REQUIRED Prerequisite is one of the following: Kindergarten, Elementary, Basic Manners, or Walking 101
-            </p>
-        </div>
-    </section>
+    <div class="section-secondary">
+        <section class="section-container">
+            <h2>adult cLASSES</h2>
+            <div>
+                <h3>Basic Dog Manners (9 months +) | 4 WEEKS | $229</h3>
+                <p>This class teaches the foundations of obedience training to help build training skills, manners, and
+                    solve
+                    regular dog behavior challenges. It’s also recommended for dogs that are getting settled into a new home
+                    and
+                    could use a refresher on their manners.</p>
+                <p>Topics include:</p>
+                <ul>
+                    <li>Stay</li>
+                    <li>Leave it</li>
+                    <li>Loose leash walking</li>
+                    <li>Coming when called</li>
+                    <li>Troubleshoot issues like counter surfing, jumping on guests, or barking for attention</li>
+                </ul>
+                <p>NOTE: If your dog barks, growls, or is aggressive to people or dogs, your dog is not yet eligible for the
+                    in
+                    person class. We recommend taking the ONLINE live Zoom classroom Intermediate Manners or our Growly Dog
+                    class (issues toward other dogs) or Private Training sessions (issues toward people and/or other dogs).
+                    Basic</p>
+                <p>Manners meets the prerequisite requirement for: Intermediate Manners</p>
+            </div>
+            <div>
+                <h3>Intermediate Manners (9 months +) | 6 WEEKS | $ 269</h3>
+                <p>
+                    This class focuses on distraction training for leash walking, name, come, targeting (nose to hand – very
+                    useful), go lie down, anti-jump, focus, leave it, tricks, and more. The Intermediate Dog Manners
+                    training
+                    class
+                    is suitable for dogs that have graduated from Basic Manners or Puppy Elementary. Your instructor will
+                    tailor
+                    the
+                    activities to each dog, so you’ll always be practicing at the right level.
+                </p>
+                <p>Topics include:</p>
+                <ul>
+                    <li>Distraction training for leash walking</li>
+                    <li>Name</li>
+                    <li>Come</li>
+                    <li>Targeting (nose to hand – very useful)</li>
+                    <li>Go lie down</li>
+                    <li>Anti-jump</li>
+                    <li>Focus</li>
+                    <li>Leave it</li>
+                    <li>Tricks</li>
+                </ul>
+                <p>REQUIRED Prerequisite is one of the following: Kindergarten, Elementary, Basic Manners, or Walking 101
+                </p>
+            </div>
+        </section>
+    </div>
     <section class="section-container">
         <h2>SPORTS & GAMES </h2>
         <div>
@@ -308,95 +314,97 @@ get_header();
             </p>
         </div>
     </section>
-    <section class="section-container">
-        <h2>GROWLY DOG CLASSES</h2>
-        <p>
-            Is your dog barking, growling, snapping, or snarling at other dogs or people out on walks? Do they
-            frequently
-            overwhelm other dogs when they try to say hello? Our Growly Dog classes are specially designed for dogs who
-            need
-            some extra help with their social skills, and use methods that will help keep you and your dog (and
-            passers-by!)
-            safe and happy.
-        </p>
-        <p>
-            In Growly Dog classes or in private training, you will learn tactics to keep you and your dog safe right
-            away,
-            as well as how to teach your dog appropriate alternative behaviors. Our end goal is to help dogs learn to
-            manage
-            their social needs without aggression so that you don’t have to constantly keep them distracted from their
-            triggers.
-        </p>
-        <p>
-            At Tailz we understand that Growly Dogs are not bad dogs, and their owners are not bad owners! Our trainers
-            are
-            highly educated and have experience with dog to dog aggression and dog to human aggression. We look forward
-            to
-            helping rehabilitate both your dog’s behavior and your relationship with them.
-        </p>
-        <p>
-            The first step for most Growly Dogs is to attend our Fear and Aggression 101 class, which will help you
-            understand why your dog might be growly, what to do about it, and what you’ll learn in the Growly Dog
-            classes.
-            If your dog has been aggressive with people, it may be most appropriate to start with private training to
-            keep
-            your dog and other students safe. Please contact us if you aren’t sure about where to start!
-        </p>
-        <div>
-            <h3>
-                Fear & Aggression (All Ages) | ONLINE | 2 Hours | $99
-            </h3>
-            <p>Is your dog a Feisty Fido? This class is for dog owners who have dogs that growl, bark, or lunge at other
-                dogs on leash. Whether your dog is frustrated, fearful, or angry, this class will give you strategies to
-                help you manage and train your dog. You will learn the basics of clicker training, why dogs exhibit
-                aggression and the tools we use (and don’t use) to rehabilitate aggression and fear in dogs.
+    <div class="section-secondary">
+        <section class="section-container">
+            <h2>GROWLY DOG CLASSES</h2>
+            <p>
+                Is your dog barking, growling, snapping, or snarling at other dogs or people out on walks? Do they
+                frequently
+                overwhelm other dogs when they try to say hello? Our Growly Dog classes are specially designed for dogs who
+                need
+                some extra help with their social skills, and use methods that will help keep you and your dog (and
+                passers-by!)
+                safe and happy.
             </p>
             <p>
-                Fear & Aggression meets the prerequisite requirement for: The Reactivity Evaluation Class and is
-                recommended before Private Training for dogs with fear or aggression issues. </p>
-        </div>
-        <div>
-            <h3>Reactivity Evaluation (6 months +)</h3>
-            <p>The Reactivity Evaluation class is to teach people the skills they will need for the Growly Dog Class
-                which addresses dog to dog reactivity and is not for dogs with aggression toward humans.
-                Dogs over react to other dogs out of fear, frustration or aggression. The Reactivity Evaluation class
-                includes the fake dog test which will help you understand more about the emotions underlying your dog’s
-                reactivity and whether the Growly dog class is the appropriate next step for your dog.</p>
-            <p>Topics include:</p>
-            <ul>
-                <li>Reading dog body language.</li>
-                <li>Safe and less stressful leash handling skills.</li>
-                <li>How to do “set ups” to rehabilitate your dog.</li>
-                <li>REQUIRED Prerequisites: Leash Aggression 101</li>
-                <li>This class is required prior to pursuing Growly Dog</li>
-            </ul>
-        </div>
-        <div>
-            <h3>Growly Dog (6 months +) | 4 WEEKS | $249</h3>
-            <p>
-                If walking your dog has become stressful because of barking, lunging, or growling at other dogs, Growly
-                Dog
-                class can help. Get started on improving your dog’s coping skills so walks can become more enjoyable.
+                In Growly Dog classes or in private training, you will learn tactics to keep you and your dog safe right
+                away,
+                as well as how to teach your dog appropriate alternative behaviors. Our end goal is to help dogs learn to
+                manage
+                their social needs without aggression so that you don’t have to constantly keep them distracted from their
+                triggers.
             </p>
             <p>
-                Growly Dog classes are set up to give dogs individualized attention with only 4 to 5 dogs per class and
-                2
-                instructors. Get started on improving your dog’s coping skills so that walks can be less stressful and
-                more
-                enjoyable for both of you.
+                At Tailz we understand that Growly Dogs are not bad dogs, and their owners are not bad owners! Our trainers
+                are
+                highly educated and have experience with dog to dog aggression and dog to human aggression. We look forward
+                to
+                helping rehabilitate both your dog’s behavior and your relationship with them.
             </p>
             <p>
-                We’ll start these classes with a check in and answer any questions that came up over the course from the
-                past week. Next, we’ll have you practice the skills you’ve learned with the other students in the class
-                so
-                that your dog can be exposed to other dogs at a safe, controlled distance. The focus during these weeks
-                is
-                to hone your training technique and adjust our recommendations based on what’s working for you and your
-                dog,
-                and gradually shrink their “bubble” (the distance at which they’re comfortable with other dogs).
+                The first step for most Growly Dogs is to attend our Fear and Aggression 101 class, which will help you
+                understand why your dog might be growly, what to do about it, and what you’ll learn in the Growly Dog
+                classes.
+                If your dog has been aggressive with people, it may be most appropriate to start with private training to
+                keep
+                your dog and other students safe. Please contact us if you aren’t sure about where to start!
             </p>
-        </div>
-    </section>
+            <div>
+                <h3>
+                    Fear & Aggression (All Ages) | ONLINE | 2 Hours | $99
+                </h3>
+                <p>Is your dog a Feisty Fido? This class is for dog owners who have dogs that growl, bark, or lunge at other
+                    dogs on leash. Whether your dog is frustrated, fearful, or angry, this class will give you strategies to
+                    help you manage and train your dog. You will learn the basics of clicker training, why dogs exhibit
+                    aggression and the tools we use (and don’t use) to rehabilitate aggression and fear in dogs.
+                </p>
+                <p>
+                    Fear & Aggression meets the prerequisite requirement for: The Reactivity Evaluation Class and is
+                    recommended before Private Training for dogs with fear or aggression issues. </p>
+            </div>
+            <div>
+                <h3>Reactivity Evaluation (6 months +)</h3>
+                <p>The Reactivity Evaluation class is to teach people the skills they will need for the Growly Dog Class
+                    which addresses dog to dog reactivity and is not for dogs with aggression toward humans.
+                    Dogs over react to other dogs out of fear, frustration or aggression. The Reactivity Evaluation class
+                    includes the fake dog test which will help you understand more about the emotions underlying your dog’s
+                    reactivity and whether the Growly dog class is the appropriate next step for your dog.</p>
+                <p>Topics include:</p>
+                <ul>
+                    <li>Reading dog body language.</li>
+                    <li>Safe and less stressful leash handling skills.</li>
+                    <li>How to do “set ups” to rehabilitate your dog.</li>
+                    <li>REQUIRED Prerequisites: Leash Aggression 101</li>
+                    <li>This class is required prior to pursuing Growly Dog</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Growly Dog (6 months +) | 4 WEEKS | $249</h3>
+                <p>
+                    If walking your dog has become stressful because of barking, lunging, or growling at other dogs, Growly
+                    Dog
+                    class can help. Get started on improving your dog’s coping skills so walks can become more enjoyable.
+                </p>
+                <p>
+                    Growly Dog classes are set up to give dogs individualized attention with only 4 to 5 dogs per class and
+                    2
+                    instructors. Get started on improving your dog’s coping skills so that walks can be less stressful and
+                    more
+                    enjoyable for both of you.
+                </p>
+                <p>
+                    We’ll start these classes with a check in and answer any questions that came up over the course from the
+                    past week. Next, we’ll have you practice the skills you’ve learned with the other students in the class
+                    so
+                    that your dog can be exposed to other dogs at a safe, controlled distance. The focus during these weeks
+                    is
+                    to hone your training technique and adjust our recommendations based on what’s working for you and your
+                    dog,
+                    and gradually shrink their “bubble” (the distance at which they’re comfortable with other dogs).
+                </p>
+            </div>
+        </section>
+    </div>
     <section class="section-container">
         <h2>PRIVATE TRAINING (ONE-ON-ONE TRAINING)</h2>
         <p>One of our Certified Trainers will work with you and your family to improve your dog’s manners. Lessons can
@@ -444,12 +452,30 @@ get_header();
         </div>
         <p>*Off-site / In-home training is an additional $25 per session for travel time within Edmonton. Further
             distances will be assessed fees that reflect the travel distance. </p>
-            <a href="#" class="no-decoration"><div class="custom-button-bottom blue-colors"><div class="custom-button">BOOK TRAINING</div></div></a>
+        <a href="#" class="no-decoration">
+            <div class="custom-button-bottom blue-colors">
+                <div class="custom-button">BOOK TRAINING</div>
+            </div>
+        </a>
     </section>
     <section class="section-container">
-        <div>Hero Banner Here</div>
-        <h2>BEHAVIOUR MODIFICATIONS</h2>
-        <p>Taking a scientific approach to solving problem behaviours.</p>
+        <section class="hero-banner">
+
+            <?php if (get_field('')) : ?>
+
+                <div> <img src="<?php echo the_field(''); ?>"></div>
+
+            <?php else : ?>
+
+                <div> <img src="https://placehold.co/800x300" alt=""></div>
+
+            <?php endif; ?>
+
+        </section>
+        <div class="section-intro-text">
+            <h2>BEHAVIOUR MODIFICATIONS</h2>
+            <p>Taking a scientific approach to solving problem behaviours.</p>
+        </div>
         <p>
             When dog's behaviour is out of the "normal range", it requires extra guidance from skilled trainers who
             specialize in dog behaviour and owners who are devoted to the success of their companions.
@@ -530,7 +556,11 @@ get_header();
             We require a minimum of 24-hour notice for rescheduling any Canine Skill Building session - not doing so
             will result in a $50 late cancellation fee (less than 24 hours notice) or use of one session from the
             bundle.</p>
-            <a href="#" class="no-decoration"><div class="custom-button-bottom blue-colors"><div class="custom-button">BOOK TRAINING</div></div></a>
+        <a href="#" class="no-decoration">
+            <div class="custom-button-bottom blue-colors">
+                <div class="custom-button">BOOK TRAINING</div>
+            </div>
+        </a>
     </section>
 </div>
 
