@@ -78,11 +78,7 @@ get_header();
 
             <div class="package-card">
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
                 <div class="package-card-header">
-=======
-                <div>
->>>>>>> Stashed changes
 =======
                 <div>
 >>>>>>> Stashed changes
@@ -100,11 +96,7 @@ get_header();
 
             <div class="package-card">
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
                 <div class="package-card-header">
-=======
-                <div>
->>>>>>> Stashed changes
 =======
                 <div>
 >>>>>>> Stashed changes
@@ -123,11 +115,7 @@ get_header();
 
             <div class="package-card">
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
                 <div class="package-card-header">
-=======
-                <div>
->>>>>>> Stashed changes
 =======
                 <div>
 >>>>>>> Stashed changes

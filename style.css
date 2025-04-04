@@ -1440,12 +1440,9 @@ Pet Spa & grooming
 .package-card:nth-child(2){background-color: #BBC5F6;}
 .package-card:last-child{background-color: #CEF06F;}
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
 .package-card-header{background-color: var(--secondary-color);padding: 10px;border-radius: 10px 10px 0 0;}
 /* BRANCH COMMIT TEST */
 =======
-=======
->>>>>>> Stashed changes
 .package-card div:first-child{background-color: var(--secondary-color);padding: 10px;border-radius: 10px 10px 0 0;}
 
 /* =============
@@ -1456,9 +1453,6 @@ Pet Spa & grooming
 .training-card table{border-collapse: collapse;}
 .training-card th{padding: 7px 0;}
 .training-card tr:nth-child(2){background-color: #ffffff56;}
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
 >>>>>>> Stashed changes
 
 /* ==================
