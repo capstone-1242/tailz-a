@@ -53,7 +53,7 @@ $hero_image = get_field('doggy_daycare_hero_image');
             <p>Dogs looking to join us will be assessed through our Meet and Greet in order to ensure they are suitable for the program. To ensure the enjoyment and safety of all pups, some pups may not be accepted into the daycare program.</p>
             <p>Package/Passes Prices</p>
 
-            <button class="blue-btn paw">book your pup</button>
+            <a href="#" class="no-decoration"><div class="custom-button-bottom blue-colors"><div class="custom-button">BOOK YOUR PUP</div></div></a>
 
         </div>
 
@@ -167,8 +167,7 @@ $hero_image = get_field('doggy_daycare_hero_image');
 
             <p>Need training for your pup? Check out our Puppy Training and let our experts show your puppy tricks and etiquette!</p>
 
-            <button class="yellow-btn paw"><a class="paw" href="<?php echo get_permalink(get_page_by_title('dog training')); ?>">View Training</a></button>
-
+            <a href="<?php echo get_permalink(get_page_by_title('dog training')); ?>" class="no-decoration"><div class="custom-button-bottom yellow-colors"><div class="custom-button">View Training</div></div></a>
         </div>
 
         <?php $puppy_training_image = get_field('puppy_training_image'); ?>

@@ -35,11 +35,7 @@ get_header();
     <!-- banner image end -->
 
     <!-- Commented just in case these are used Later -->
-<<<<<<< Updated upstream
-    <!-- <section>
-=======
     <!-- <section class="section-container">
->>>>>>> Stashed changes
 
     <h2>Puppy Training</h2>
 
@@ -50,11 +46,7 @@ get_header();
     <p>These are programs that go beyond the traditional benefits of Doggy Daycare for our youngest pups. So whether you bring them once a week or every day, they will have the positive experiences that are pivotal in creating that healthy and happy member of your family.</p>
 
   </section>
-<<<<<<< Updated upstream
-  <section>
-=======
   <section class="section-container">
->>>>>>> Stashed changes
     <h2>Puppy pre school</h2>
 
     <p>
@@ -88,11 +80,7 @@ get_header();
         </ul>
 
     </section>
-<<<<<<< Updated upstream
-    <section>
-=======
     <section class="section-container">
->>>>>>> Stashed changes
 
         <img src="" alt="">
 
@@ -106,16 +94,12 @@ get_header();
             <p>Choosing to add an additional 2 weeks of Puppy Preschool training for a total of six weeks will allow your pup to become more well rounded and socialized.</p>
             <p>Putting you and your puppy on the same page ensures consistency in training, which is why we review the skills your pup is learning with you on a weekly basis, so that you can also teach and implement the same things at home. Let us do the hard work for you, so you can enjoy your happy puppy at home!</p>
 
-            <button>Book your pup</button>
+            <a href="#" class="no-decoration"><div class="custom-button-bottom blue-colors"><div class="custom-button">BOOK YOUR PUP</div></div></a>
 
         </div>
 
     </section>
-<<<<<<< Updated upstream
-    <section>
-=======
     <section class="section-container">
->>>>>>> Stashed changes
         <h2>Puppy Daycare</h2>
         <p>
             Helping to shape puppies, our Puppy Daycare program focuses on the socialization of puppies. We'll work on polite playtime, potty training, crate training, and socialization to help your puppy learn skills for everyday life.
@@ -137,18 +121,14 @@ get_header();
                 <p>Safe play and socialization skills</p>
                 <p>Puppy playtime</p>
 
-                <button>Book your pup</button>
+                <a href="#" class="no-decoration"><div class="custom-button-bottom blue-colors"><div class="custom-button">BOOK YOUR PUP</div></div></a>
 
             </div>
 
         </div>
 
     </section>
-<<<<<<< Updated upstream
-    <section>
-=======
     <section class="section-container">
->>>>>>> Stashed changes
 
         <h2>requirements</h2>
 
@@ -158,11 +138,7 @@ get_header();
         </p>
 
     </section>
-<<<<<<< Updated upstream
-    <section>
-=======
     <section class="section-container">
->>>>>>> Stashed changes
         <h2>FAQ</h2>
         <p>
             🦴 When do the Puppy Programs run?</p>
@@ -179,22 +155,14 @@ get_header();
         <p>Your puppy will have access to fresh, cold water during each structured playtime.</p>
 
     </section>
-<<<<<<< Updated upstream
-    <section>
-=======
     <section class="section-container">
->>>>>>> Stashed changes
 
         <h2>Adult training</h2>
 
         <p>Dog too rowdy for your household? We can help! We use positive reinforcement to help show your dog how to behave properly and to follow commands.</p>
 
     </section> -->
-<<<<<<< Updated upstream
-    <section>
-=======
     <section class="section-container">
->>>>>>> Stashed changes
         <h2>BETTER MANNERED PUPS</h2>
         <p>Positive training methods for positive results.</p>
         Humane handling and a positive approach are the foundation of our training philosophy. At Tailz, we believe in
@@ -205,11 +173,7 @@ get_header();
         inherent nature of private lessons will help you build a stronger bond with your dog while we provide direct
         guidance and direction specific to your pup's needs.
     </section>
-<<<<<<< Updated upstream
-    <section>
-=======
     <section class="section-container">
->>>>>>> Stashed changes
         <h2>CANINE CLASSES</h2>
         <p>PUPPY cLASSES</p>
         <div>
@@ -250,11 +214,7 @@ get_header();
             </p>
         </div>
     </section>
-<<<<<<< Updated upstream
-    <section>
-=======
     <section class="section-container">
->>>>>>> Stashed changes
         <h2>adult cLASSES</h2>
         <div>
             <h3>Basic Dog Manners (9 months +) | 4 WEEKS | $229</h3>
@@ -306,11 +266,7 @@ get_header();
             </p>
         </div>
     </section>
-<<<<<<< Updated upstream
-    <section>
-=======
     <section class="section-container">
->>>>>>> Stashed changes
         <h2>SPORTS & GAMES </h2>
         <div>
             <h3>Sports & Games Intro (9 months+) | 6 WEEKS | $229</h3>
@@ -352,11 +308,7 @@ get_header();
             </p>
         </div>
     </section>
-<<<<<<< Updated upstream
-    <section>
-=======
     <section class="section-container">
->>>>>>> Stashed changes
         <h2>GROWLY DOG CLASSES</h2>
         <p>
             Is your dog barking, growling, snapping, or snarling at other dogs or people out on walks? Do they
@@ -445,11 +397,7 @@ get_header();
             </p>
         </div>
     </section>
-<<<<<<< Updated upstream
-    <section>
-=======
     <section class="section-container">
->>>>>>> Stashed changes
         <h2>PRIVATE TRAINING (ONE-ON-ONE TRAINING)</h2>
         <p>One of our Certified Trainers will work with you and your family to improve your dog’s manners. Lessons can
             be done in-person (on-site or in home) or virtual. Your lessons will include working on basic manners and
@@ -467,35 +415,6 @@ get_header();
             <li>"Off!" (No jumping up)</li>
         </ul>
         Distance and distractions will be added along the way to help build upon the foundations.
-<<<<<<< Updated upstream
-        <div>
-
-            <table>
-                <caption>
-                    One-on-One Lessons
-                    On-Site / Online Training
-                </caption>
-                <tr>
-                    <th>One-hour Session</th>
-                    <td>$79.99</td>
-                </tr>
-                <tr>
-                    <th>3 Session Bundle</th>
-                    <td>$224.99</td>
-                </tr>
-                <tr>
-                    <th>6 Session Bundle</th>
-                    <td>$419.99</td>
-                </tr>
-            </table>
-            <img src="" alt="">
-        </div>
-        <p>*Off-site / In-home training is an additional $25 per session for travel time within Edmonton. Further
-            distances will be assessed fees that reflect the travel distance. </p>
-            <a href="#"><button>BOOK TRAINING</button></a>
-    </section>
-    <section>
-=======
         <div class="section-container">
 
             <div class="content-wrapper">
@@ -525,10 +444,9 @@ get_header();
         </div>
         <p>*Off-site / In-home training is an additional $25 per session for travel time within Edmonton. Further
             distances will be assessed fees that reflect the travel distance. </p>
-        <a href="#"><button>BOOK TRAINING</button></a>
+            <a href="#" class="no-decoration"><div class="custom-button-bottom blue-colors"><div class="custom-button">BOOK TRAINING</div></div></a>
     </section>
     <section class="section-container">
->>>>>>> Stashed changes
         <div>Hero Banner Here</div>
         <h2>BEHAVIOUR MODIFICATIONS</h2>
         <p>Taking a scientific approach to solving problem behaviours.</p>
@@ -582,28 +500,6 @@ get_header();
             <li>Poor Leash Manners</li>
             <li>Confidence Issues</li>
         </ul>
-<<<<<<< Updated upstream
-        <div>
-            <img src="" alt="">
-            <table>
-                <caption>
-                    CANINE SKILL BUILDING COST
-                    On-Site / Online Training
-                </caption>
-                <tr>
-                    <th>Initial Consult (60 Minutes)</th>
-                    <td>$149.99</td>
-                </tr>
-                <tr>
-                    <th>3 Session Bundle</th>
-                    <td>$409.99</td>
-                </tr>
-                <tr>
-                    <th>6 Session Bundle</th>
-                    <td>$749.99</td>
-                </tr>
-            </table>
-=======
         <div class="section-container">
             <div class="image-wrapper"><img src="https://placehold.co/600x400" alt=""></div>
             <div class="content-wrapper">
@@ -629,17 +525,12 @@ get_header();
                 </div>
             </div>
 
->>>>>>> Stashed changes
         </div>
         <p>Services must be pre-paid prior to commencing. Canine Skill Building Sessions are scheduled services.
             We require a minimum of 24-hour notice for rescheduling any Canine Skill Building session - not doing so
             will result in a $50 late cancellation fee (less than 24 hours notice) or use of one session from the
             bundle.</p>
-<<<<<<< Updated upstream
-            <a href="#"><button>BOOK TRAINING</button></a>
-=======
-        <a href="#"><button>BOOK TRAINING</button></a>
->>>>>>> Stashed changes
+            <a href="#" class="no-decoration"><div class="custom-button-bottom blue-colors"><div class="custom-button">BOOK TRAINING</div></div></a>
     </section>
 </div>
 

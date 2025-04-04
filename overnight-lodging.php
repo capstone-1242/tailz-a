@@ -77,11 +77,7 @@ get_header();
         <div class="package-card-container">
 
             <div class="package-card">
-<<<<<<< Updated upstream
-                <div class="package-card-header">
-=======
                 <div>
->>>>>>> Stashed changes
                     <h2>Bronze Package</h2>
                     <p>$51.99/night</p>
                 </div>
@@ -95,11 +91,7 @@ get_header();
             </div>
 
             <div class="package-card">
-<<<<<<< Updated upstream
-                <div class="package-card-header">
-=======
                 <div>
->>>>>>> Stashed changes
                     <h2>Silver Package</h2>
                     <p>$57.99/night</p>
                 </div>
@@ -114,11 +106,7 @@ get_header();
             </div>
 
             <div class="package-card">
-<<<<<<< Updated upstream
-                <div class="package-card-header">
-=======
                 <div>
->>>>>>> Stashed changes
                     <h2>Gold Package</h2>
                     <p>$69.99/night</p>
                 </div>
@@ -134,7 +122,10 @@ get_header();
             </div>
 
         </div>
-        <button>BOOK LODGINGS</button>
+        <a href="#" class="no-decoration"><div class="custom-button-bottom blue-colors"><div class="custom-button">BOOK LODGINGS</div></div></a>
+        <a href="#" class="no-decoration"><div class="custom-button-bottom"><div class="custom-button">BOOK LODGINGS</div></div></a>
+        <a href="#" class="no-decoration"><div class="custom-button-bottom yellow-colors"><div class="custom-button">BOOK LODGINGS</div></div></a>
+        <a href="#" class="no-decoration"><div class="custom-button-bottom yellow-colors"><div class="custom-button">BOOK LODGINGS</div></div></a>
     </section>
 
     <section class="section-container">
@@ -148,7 +139,7 @@ get_header();
         <img src="" alt="">
 
 
-        <button>BOOK LODGINGS</button>
+        <a href="#" class="no-decoration"><div class="custom-button-bottom blue-colors"><div class="custom-button">BOOK LODGINGS</div></div></a>
 
     </section>
 
@@ -165,7 +156,8 @@ get_header();
         <img src="" alt="">
 
 
-        <button>BOOK YOUR CAT</button>
+        <a href="#" class="no-decoration"><div class="custom-button-bottom blue-colors"><div class="custom-button">BOOK YOUR CAT</div></div></a>
+        
 
     </section>
 

@@ -1439,10 +1439,6 @@ Pet Spa & grooming
 .package-card:first-child{background-color: #FFDCA2;}
 .package-card:nth-child(2){background-color: #BBC5F6;}
 .package-card:last-child{background-color: #CEF06F;}
-<<<<<<< Updated upstream
-.package-card-header{background-color: var(--secondary-color);padding: 10px;border-radius: 10px 10px 0 0;}
-/* BRANCH COMMIT TEST */
-=======
 .package-card div:first-child{background-color: var(--secondary-color);padding: 10px;border-radius: 10px 10px 0 0;}
 
 /* =============
@@ -1453,7 +1449,6 @@ Pet Spa & grooming
 .training-card table{border-collapse: collapse;}
 .training-card th{padding: 7px 0;}
 .training-card tr:nth-child(2){background-color: #ffffff56;}
->>>>>>> Stashed changes
 
 /* ==================
 Contact page
@@ -1543,6 +1538,28 @@ Contact page
   /* overflow: hidden; */
 }
 
+/* ======== 3D Buttons ========
+BUTTON TEMPLATES:
+<a href="#" class="no-decoration"><div class="custom-button-bottom"><div class="custom-button">Book Now</div></div></a>
+<a href="#" class="no-decoration"><div class="custom-button-bottom yellow-colors"><div class="custom-button">Book Now</div></div></a>
+<a href="#" class="no-decoration"><div class="custom-button-bottom blue-colors"><div class="custom-button">Book Now</div></div></a>
+ */
+
+.no-decoration{text-decoration: none;}
+
+.custom-button{transition: 0.25s ease-in;position: relative;padding: 10px 16px;background-color: var(--third-color-grey);transform: translatey(-6px);border-radius: 8px;
+  color: var(--text-color-light);font-family: "League Spartan", sans-serif;font-size: 1.2rem;font-weight: 500;text-decoration: none;
+text-transform: uppercase;}
+.custom-button-bottom{transition: 0.25s ease-in;background: linear-gradient(#00000090), linear-gradient(var(--third-color-grey));width: fit-content;cursor: pointer;margin: 1rem;border-radius: 8px;box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.381);}
+.custom-button:active, .custom-button-bottom:active .custom-button{transform: translateY(0);}
+.custom-button-bottom:active{box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.381);}
+
+.blue-colors .custom-button{background: url(images/svg/blue-button-paw.svg) no-repeat, linear-gradient(var(--primary-color));color: var(--text-color-light);}
+.custom-button-bottom.blue-colors{background: linear-gradient(#00000047), linear-gradient(var(--primary-color));}
+.yellow-colors .custom-button{background: url(images/svg/orange-button-paw.svg) no-repeat, linear-gradient(var(--secondary-color));color: var(--third-color-darkest);}
+.custom-button-bottom.yellow-colors{background: linear-gradient(#0000006c), linear-gradient(var(--secondary-color));}
+
+
 /* =====================Yellow button===================================== */
 .yellow-btn {
   display: inline-block;
@@ -1565,11 +1582,11 @@ Contact page
 
 .yellow-btn:hover {
   background: var(--light-secondary-color);
-}
+} 
 /* =================yellow button end============================= */
 
 /* ===================Blue Button============================================= */
-.blue-btn {
+ .blue-btn {
   display: inline-block;
   background: var(--primary-color);
   color: var(--text-color-light);
@@ -1589,7 +1606,7 @@ Contact page
 
 .blue-btn:hover {
   background: var(--dark-primary-color);
-}
+} 
 /* ===================Blue Button end============================================= */
 
 /* ======================Grey button=========================================================== */

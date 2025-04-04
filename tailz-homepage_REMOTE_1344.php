@@ -31,8 +31,9 @@ get_header();
 
         <div>
             <p>Come visit our resort! give your pet the luxury they deserve.</p>
-            <a href="<?php echo home_url('/amenities/'); ?>"><button class="blue-btn paw">VIEW NEW AMENITIES</button></a>
-
+            <a href="<?php echo home_url('/amenities/'); ?>" class="no-decoration"><div class="custom-button-bottom blue-colors"><div class="custom-button">VIEW NEW AMENITIES</div></div></a>
+            
+            
         </div>
 
 
@@ -73,9 +74,7 @@ get_header();
                 <?php else: ?>
                     <p>Mental and physical enjoyment for social dogs, and Puppy Preschool for teaching young pups!</p>
                 <?php endif; ?>
-
-                <a href="<?php echo home_url('/doggy-daycare/'); ?>"><button class="yellow-btn paw">View
-                        Daycare</button></a>
+            <a href="<?php echo home_url('/doggy-daycare/'); ?>" class="no-decoration"><div class="custom-button-bottom yellow-colors"><div class="custom-button">View Daycare</div></div></a>
             </div>
 
         </div>
@@ -109,8 +108,7 @@ get_header();
                 <?php else: ?>
                     <p>Pampering pups from head to tail with the aid of professional pet stylists and products.</p> <!-- Default fallback content -->
                 <?php endif; ?>
-
-                <a href="#services"><button class="blue-btn paw">Book a Bath</button></a>
+                <a href="#services" class="no-decoration"><div class="custom-button-bottom blue-colors"><div class="custom-button">Book A Bath</div></div></a>
                 <!-- set up booking -->
             </div>
 
@@ -158,7 +156,7 @@ get_header();
                 <p>Can’t bring your pet on a trip?</p>
                 <p>Treat them to a crate-less luxury overnight stay with us!</p>
 
-                <a href="#services"><button class="yellow-btn paw">VIEW LODGINGS</button></a>
+                <a href="#services" class="no-decoration"><div class="custom-button-bottom yellow-colors"><div class="custom-button">View Lodgings</div></div></a>
 
             </div>
 
@@ -185,7 +183,7 @@ get_header();
             <div class="content-wrapper">
                 <h2>Cat SERVICES</h2>
                 <p>New cat services are coming to Tailz! Bring your cat in for a spa day, or bring them in for luxury lodgings!</p>
-                <a href="<?php echo home_url('/contact-us/'); ?>"><button class="blue-btn paw">BOOK NOW</button></a>
+                <a href="<?php echo home_url('/contact-us/'); ?>" class="no-decoration"><div class="custom-button-bottom blue-colors"><div class="custom-button">Book Now</div></div></a>
             </div>
 
         </div>
@@ -220,7 +218,7 @@ get_header();
                     <p>Come visit our resort! Give your pet the luxury they deserve.</p> <!-- Default fallback content -->
                 <?php endif; ?>
 
-                <a href="<?php echo home_url('/contact-us/'); ?>"><button class="yellow-btn paw">Visit Us</button></a>
+                <a href="<?php echo home_url('/contact-us/'); ?>" class="no-decoration"><div class="custom-button-bottom yellow-colors"><div class="custom-button">Visit Us</div></div></a>
 
             </div>
 
