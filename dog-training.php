@@ -36,7 +36,11 @@ get_header();
 
     <!-- Commented just in case these are used Later -->
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     <!-- <section>
+=======
+    <!-- <section class="section-container">
+>>>>>>> Stashed changes
 =======
     <!-- <section class="section-container">
 >>>>>>> Stashed changes
@@ -51,7 +55,11 @@ get_header();
 
   </section>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   <section>
+=======
+  <section class="section-container">
+>>>>>>> Stashed changes
 =======
   <section class="section-container">
 >>>>>>> Stashed changes
@@ -89,7 +97,11 @@ get_header();
 
     </section>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     <section>
+=======
+    <section class="section-container">
+>>>>>>> Stashed changes
 =======
     <section class="section-container">
 >>>>>>> Stashed changes
@@ -112,7 +124,11 @@ get_header();
 
     </section>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     <section>
+=======
+    <section class="section-container">
+>>>>>>> Stashed changes
 =======
     <section class="section-container">
 >>>>>>> Stashed changes
@@ -145,7 +161,11 @@ get_header();
 
     </section>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     <section>
+=======
+    <section class="section-container">
+>>>>>>> Stashed changes
 =======
     <section class="section-container">
 >>>>>>> Stashed changes
@@ -159,7 +179,11 @@ get_header();
 
     </section>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     <section>
+=======
+    <section class="section-container">
+>>>>>>> Stashed changes
 =======
     <section class="section-container">
 >>>>>>> Stashed changes
@@ -180,7 +204,11 @@ get_header();
 
     </section>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     <section>
+=======
+    <section class="section-container">
+>>>>>>> Stashed changes
 =======
     <section class="section-container">
 >>>>>>> Stashed changes
@@ -191,7 +219,11 @@ get_header();
 
     </section> -->
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     <section>
+=======
+    <section class="section-container">
+>>>>>>> Stashed changes
 =======
     <section class="section-container">
 >>>>>>> Stashed changes
@@ -206,7 +238,11 @@ get_header();
         guidance and direction specific to your pup's needs.
     </section>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     <section>
+=======
+    <section class="section-container">
+>>>>>>> Stashed changes
 =======
     <section class="section-container">
 >>>>>>> Stashed changes
@@ -251,7 +287,11 @@ get_header();
         </div>
     </section>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     <section>
+=======
+    <section class="section-container">
+>>>>>>> Stashed changes
 =======
     <section class="section-container">
 >>>>>>> Stashed changes
@@ -307,7 +347,11 @@ get_header();
         </div>
     </section>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     <section>
+=======
+    <section class="section-container">
+>>>>>>> Stashed changes
 =======
     <section class="section-container">
 >>>>>>> Stashed changes
@@ -353,7 +397,11 @@ get_header();
         </div>
     </section>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     <section>
+=======
+    <section class="section-container">
+>>>>>>> Stashed changes
 =======
     <section class="section-container">
 >>>>>>> Stashed changes
@@ -446,7 +494,11 @@ get_header();
         </div>
     </section>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     <section>
+=======
+    <section class="section-container">
+>>>>>>> Stashed changes
 =======
     <section class="section-container">
 >>>>>>> Stashed changes
@@ -467,6 +519,7 @@ get_header();
             <li>"Off!" (No jumping up)</li>
         </ul>
         Distance and distractions will be added along the way to help build upon the foundations.
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
         <div>
 
@@ -498,6 +551,10 @@ get_header();
 =======
         <div class="section-container">
 
+=======
+        <div class="section-container">
+
+>>>>>>> Stashed changes
             <div class="content-wrapper">
                 <div class="training-card">
                     <div>
@@ -528,6 +585,9 @@ get_header();
         <a href="#"><button>BOOK TRAINING</button></a>
     </section>
     <section class="section-container">
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
         <div>Hero Banner Here</div>
         <h2>BEHAVIOUR MODIFICATIONS</h2>
@@ -583,6 +643,7 @@ get_header();
             <li>Confidence Issues</li>
         </ul>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         <div>
             <img src="" alt="">
             <table>
@@ -604,6 +665,8 @@ get_header();
                 </tr>
             </table>
 =======
+=======
+>>>>>>> Stashed changes
         <div class="section-container">
             <div class="image-wrapper"><img src="https://placehold.co/600x400" alt=""></div>
             <div class="content-wrapper">
@@ -629,6 +692,9 @@ get_header();
                 </div>
             </div>
 
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
         </div>
         <p>Services must be pre-paid prior to commencing. Canine Skill Building Sessions are scheduled services.
@@ -636,7 +702,11 @@ get_header();
             will result in a $50 late cancellation fee (less than 24 hours notice) or use of one session from the
             bundle.</p>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             <a href="#"><button>BOOK TRAINING</button></a>
+=======
+        <a href="#"><button>BOOK TRAINING</button></a>
+>>>>>>> Stashed changes
 =======
         <a href="#"><button>BOOK TRAINING</button></a>
 >>>>>>> Stashed changes
