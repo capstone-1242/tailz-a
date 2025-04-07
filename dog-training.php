@@ -167,13 +167,19 @@ get_header();
             <h2>BETTER MANNERED PUPS</h2>
             <p>Positive training methods for positive results.</p>
         </div>
-        Humane handling and a positive approach are the foundation of our training philosophy. At Tailz, we believe in
-        building relationships based on scientifically-backed training techniques.
-        Having a well-trained dog is very important for your dog’s safety and your own peace of mind. We provide a wide
-        range of training options for both puppies and older dogs who need to brush up on their obedience.
-        We teach you how to train your dog to make good choices that result in positive outcomes for your pup. The
-        inherent nature of private lessons will help you build a stronger bond with your dog while we provide direct
-        guidance and direction specific to your pup's needs.
+        <p>
+            Humane handling and a positive approach are the foundation of our training philosophy. At Tailz, we believe in
+            building relationships based on scientifically-backed training techniques.
+        </p>
+        <p>
+            Having a well-trained dog is very important for your dog’s safety and your own peace of mind. We provide a wide
+            range of training options for both puppies and older dogs who need to brush up on their obedience.
+        </p>
+        <p>
+            We teach you how to train your dog to make good choices that result in positive outcomes for your pup. The
+            inherent nature of private lessons will help you build a stronger bond with your dog while we provide direct
+            guidance and direction specific to your pup's needs.
+        </p>
     </section>
     <section>
         <nav>

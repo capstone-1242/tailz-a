@@ -33,7 +33,7 @@ $hero_image = get_field('doggy_daycare_hero_image');
     </section>
 
     <div class="section-secondary">
-        <section class="get-started">
+        <section class="get-started section-container">
             <?php
             $get_started_image = get_field('get_started_image');
             ?>
