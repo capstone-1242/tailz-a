@@ -119,11 +119,14 @@ html {
 /* Sections
 	 ========================================================================== */
 
-   
+
 .section-secondary {
   background: url(images/bg/paw-background.png), linear-gradient(var(--light-secondary-color));
 }
-.section-secondary h2{color: var(--dark-primary-color);}
+
+.section-secondary h2 {
+  color: var(--dark-primary-color);
+}
 
 .section-intro-text {
   text-align: center;
@@ -1333,7 +1336,7 @@ Doggy Daycare
   line-height: 1.5;
 } */
 
-.get-started > div:last-child {
+.get-started>div:last-child {
   max-width: 50%;
   padding: 0 2rem;
 }
@@ -1418,8 +1421,15 @@ Doggy Daycare
 
 
 
-.tailz-dog-training-content > .section-container{flex-flow: column;align-items: start;}
-.tailz-dog-training-content h2{text-align: center;margin: 20px auto;}
+.tailz-dog-training-content>.section-container {
+  flex-flow: column;
+  align-items: start;
+}
+
+.tailz-dog-training-content h2 {
+  text-align: center;
+  margin: 20px auto;
+}
 
 
 
@@ -1471,7 +1481,7 @@ Doggy Daycare
   margin: 0;
 }
 
-.puppy-training-banner > div {
+.puppy-training-banner>div {
   width: 50%;
   margin: auto;
   padding: 2rem;
@@ -1519,7 +1529,9 @@ Pet Spa & grooming
 /* =============
    Lodgings Page
    ============= */
-.tailz-overnight-lodging-content ul{margin-left: 0;}
+.tailz-overnight-lodging-content ul {
+  margin-left: 0;
+}
 
 .overnight-lodging-packages {
   flex-flow: column;
@@ -1567,10 +1579,12 @@ Pet Spa & grooming
   position: relative;
   text-align: left;
 }
+
 .hero-banner img {
   width: 100%;
   height: auto;
 }
+
 .page-heading {
   position: absolute;
   bottom: 20px;
@@ -1586,6 +1600,7 @@ Pet Spa & grooming
   gap: 1.5rem;
   padding: 2rem 1rem;
 }
+
 .amenity-block.reverse {
   flex-direction: column-reverse;
 }
@@ -1600,6 +1615,7 @@ Pet Spa & grooming
   padding: 1.25rem;
   border-radius: 8px;
 }
+
 .amenity-text.beige {
   background: #f9e4b7;
 }
@@ -1629,15 +1645,17 @@ Pet Spa & grooming
 /* Tablet/Desktop */
 @media (min-width: 768px) {
   .amenity-block {
-      flex-direction: row;
-      align-items: center;
+    flex-direction: row;
+    align-items: center;
   }
+
   .amenity-block.reverse {
-      flex-direction: row-reverse;
+    flex-direction: row-reverse;
   }
+
   .amenity-image,
   .amenity-text {
-      flex: 1;
+    flex: 1;
   }
 }
 
@@ -1740,14 +1758,18 @@ BUTTON TEMPLATES:
 .no-decoration {
   text-decoration: none;
   margin: 1rem;
+  width: fit-content;
 }
-.max-margin-left{margin-left: auto;}
+
+.max-margin-left {
+  margin-left: auto;
+}
 
 .custom-button {
   transition: 0.07s ease-in;
   position: relative;
   padding: 10px 16px;
-  background: linear-gradient( var(--third-color-grey));
+  background: linear-gradient(var(--third-color-grey));
   transform: translatey(-6px);
   border-radius: 8px;
   color: var(--text-color-light);
@@ -1759,17 +1781,24 @@ BUTTON TEMPLATES:
 }
 
 .custom-button-bottom {
+  min-width: 15ch;
+  text-align: center;
   transition: 0.07s ease-in;
   background: linear-gradient(#00000090), linear-gradient(var(--third-color-grey));
   width: fit-content;
   cursor: pointer;
-  
+
   border-radius: 8px;
   box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.381);
 }
 
-.custom-button:hover{background: linear-gradient(#ffffff25), no-repeat, linear-gradient(var(--third-color-grey));}
-.custom-button-bottom:hover {background: linear-gradient(#00000020), linear-gradient(var(--third-color-grey));}
+.custom-button:hover {
+  background: linear-gradient(#ffffff25), no-repeat, linear-gradient(var(--third-color-grey));
+}
+
+.custom-button-bottom:hover {
+  background: linear-gradient(#00000020), linear-gradient(var(--third-color-grey));
+}
 
 
 .custom-button:active,
@@ -1790,8 +1819,13 @@ BUTTON TEMPLATES:
   background: linear-gradient(#00000047), linear-gradient(var(--primary-color));
 }
 
-.blue-colors .custom-button:hover{background: linear-gradient(#ffffff10), url(images/svg/blue-button-paw.svg) no-repeat, linear-gradient(var(--primary-color));}
-.custom-button-bottom.blue-colors:hover {background: linear-gradient(#00000030), linear-gradient(var(--primary-color));}
+.blue-colors .custom-button:hover {
+  background: linear-gradient(#ffffff10), url(images/svg/blue-button-paw.svg) no-repeat, linear-gradient(var(--primary-color));
+}
+
+.custom-button-bottom.blue-colors:hover {
+  background: linear-gradient(#00000030), linear-gradient(var(--primary-color));
+}
 
 .yellow-colors .custom-button {
   background: url(images/svg/orange-button-paw.svg) no-repeat, linear-gradient(var(--secondary-color));
@@ -1802,8 +1836,13 @@ BUTTON TEMPLATES:
   background: linear-gradient(#0000006c), linear-gradient(var(--secondary-color));
 }
 
-.yellow-colors .custom-button:hover{background: linear-gradient(#ffffff25), url(images/svg/orange-button-paw.svg) no-repeat, linear-gradient(var(--secondary-color));}
-.custom-button-bottom.yellow-colors:hover {background: linear-gradient(#00000020), linear-gradient(var(--secondary-color));}
+.yellow-colors .custom-button:hover {
+  background: linear-gradient(#ffffff25), url(images/svg/orange-button-paw.svg) no-repeat, linear-gradient(var(--secondary-color));
+}
+
+.custom-button-bottom.yellow-colors:hover {
+  background: linear-gradient(#00000020), linear-gradient(var(--secondary-color));
+}
 
 /* =====================Yellow button===================================== */
 .yellow-btn {
@@ -1827,11 +1866,12 @@ BUTTON TEMPLATES:
 
 .yellow-btn:hover {
   background: var(--light-secondary-color);
-} 
+}
+
 /* =================yellow button end============================= */
 
 /* ===================Blue Button============================================= */
- .blue-btn {
+.blue-btn {
   display: inline-block;
   background: var(--primary-color);
   color: var(--text-color-light);
@@ -1851,7 +1891,8 @@ BUTTON TEMPLATES:
 
 .blue-btn:hover {
   background: var(--dark-primary-color);
-} 
+}
+
 /* ===================Blue Button end============================================= */
 
 /* ======================Grey button=========================================================== */

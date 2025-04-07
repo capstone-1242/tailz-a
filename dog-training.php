@@ -187,7 +187,7 @@ get_header();
                 <li><a href="#puppy-classes">Puppy Classes</a></li>
                 <li><a href="#adult-classes">Adult Classes</a></li>
                 <li><a href="#sports-&-games">Sports & Games</a></li>
-                <li><a href="#growly-dog">Growly Dog Training</a></li>
+                <li><a href="#growly-dog">Growly Dog Classes</a></li>
                 <li><a href="#private-training">Private Training</a></li>
                 <li><a href="#behaviour-modifications">Behaviour Modifications</a></li>
             </ul>
@@ -392,8 +392,7 @@ get_header();
                     <li>Reading dog body language.</li>
                     <li>Safe and less stressful leash handling skills.</li>
                     <li>How to do “set ups” to rehabilitate your dog.</li>
-                    <li>REQUIRED Prerequisites: Leash Aggression 101</li>
-                    <li>This class is required prior to pursuing Growly Dog</li>
+                    <li>REQUIRED Prerequisites prior to pursuing Growly Dog Classes: Leash Aggression 101</li>
                 </ul>
             </div>
             <div>
@@ -478,9 +477,9 @@ get_header();
     <section class="section-container" id="behaviour-modifications">
         <section class="hero-banner">
 
-            <?php if (get_field('')) : ?>
+            <?php if (get_field('tailz-behaviour-modifications-hero')) : ?>
 
-                <div> <img src="<?php echo the_field(''); ?>"></div>
+                <div> <img src="<?php echo the_field('tailz-behaviour-modifications-hero'); ?>"></div>
 
             <?php else : ?>
 
