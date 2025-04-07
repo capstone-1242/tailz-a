@@ -470,7 +470,7 @@ get_header();
         <p>*Off-site / In-home training is an additional $25 per session for travel time within Edmonton. Further
             distances will be assessed fees that reflect the travel distance. </p>
         <a href="#" class="no-decoration">
-            <div class="custom-button-bottom blue-colors">
+            <div class="custom-button-bottom yellow-colors">
                 <div class="custom-button">BOOK TRAINING</div>
             </div>
         </a>
@@ -574,7 +574,7 @@ get_header();
             will result in a $50 late cancellation fee (less than 24 hours notice) or use of one session from the
             bundle.</p>
         <a href="#" class="no-decoration">
-            <div class="custom-button-bottom blue-colors">
+            <div class="custom-button-bottom yellow-colors">
                 <div class="custom-button">BOOK TRAINING</div>
             </div>
         </a>

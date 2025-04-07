@@ -15,9 +15,9 @@ get_header();
 
     <section class="hero-banner">
 
-        <?php if (get_field('')) : ?>
+        <?php if (get_field('tailz-lodging-hero-banner')) : ?>
 
-            <div> <img src="<?php echo the_field(''); ?>"></div>
+            <div> <img src="<?php echo the_field('tailz-lodging-hero-banner'); ?>"></div>
 
         <?php else : ?>
 
@@ -124,7 +124,7 @@ get_header();
 
         </div>
         <a href="#" class="no-decoration">
-            <div class="custom-button-bottom blue-colors">
+            <div class="custom-button-bottom yellow-colors">
                 <div class="custom-button">BOOK LODGINGS</div>
             </div>
         </a>
@@ -166,7 +166,7 @@ get_header();
 
 
         <a href="#" class="no-decoration">
-            <div class="custom-button-bottom blue-colors">
+            <div class="custom-button-bottom yellow-colors">
                 <div class="custom-button">BOOK YOUR CAT</div>
             </div>
         </a>

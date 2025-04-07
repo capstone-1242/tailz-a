@@ -455,7 +455,7 @@ input,
 select,
 optgroup,
 textarea {
-  color: #404040;
+  color: var(--text-color-dark);
   font-family: "Montserrat", sans-serif;
   font-size: 1rem;
   line-height: 1.5;
@@ -1405,6 +1405,8 @@ Doggy Daycare
 }
 .section-secondary h2{color: var(--dark-primary-color);}
 
+
+
 .tailz-dog-training-content > .section-container{flex-flow: column;align-items: start;}
 .tailz-dog-training-content h2{text-align: center;margin: 20px auto;}
 .tailz-dog-training-content .no-decoration{margin: 0 0 0 auto;}
@@ -1736,10 +1738,11 @@ BUTTON TEMPLATES:
 
 .no-decoration {
   text-decoration: none;
+  margin: 1rem;
 }
 
 .custom-button {
-  transition: 0.15s ease-in;
+  transition: 0.07s ease-in;
   position: relative;
   padding: 10px 16px;
   background: linear-gradient( var(--third-color-grey));
@@ -1754,11 +1757,11 @@ BUTTON TEMPLATES:
 }
 
 .custom-button-bottom {
-  transition: 0.15s ease-in;
+  transition: 0.07s ease-in;
   background: linear-gradient(#00000090), linear-gradient(var(--third-color-grey));
   width: fit-content;
   cursor: pointer;
-  margin: 1rem;
+  
   border-radius: 8px;
   box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.381);
 }
