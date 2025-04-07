@@ -1403,10 +1403,11 @@ Doggy Daycare
 .section-secondary {
   background-color: var(--light-secondary-color);
 }
+.section-secondary h2{color: var(--dark-primary-color);}
 
-.tailz-dog-training-content > .section-container{flex-flow: column;}
+.tailz-dog-training-content > .section-container{flex-flow: column;align-items: start;}
 .tailz-dog-training-content h2{text-align: center;margin: 20px auto;}
-
+.tailz-dog-training-content .no-decoration{margin: 0 0 0 auto;}
 
 
 .section-intro-text {
@@ -1525,6 +1526,8 @@ Pet Spa & grooming
 .package-card-container {
   display: flex;
   gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .package-card {
@@ -1657,10 +1660,10 @@ BUTTON TEMPLATES:
 }
 
 .custom-button {
-  transition: 0.25s ease-in;
+  transition: 0.15s ease-in;
   position: relative;
   padding: 10px 16px;
-  background-color: var(--third-color-grey);
+  background: linear-gradient( var(--third-color-grey));
   transform: translatey(-6px);
   border-radius: 8px;
   color: var(--text-color-light);
@@ -1672,7 +1675,7 @@ BUTTON TEMPLATES:
 }
 
 .custom-button-bottom {
-  transition: 0.25s ease-in;
+  transition: 0.15s ease-in;
   background: linear-gradient(#00000090), linear-gradient(var(--third-color-grey));
   width: fit-content;
   cursor: pointer;
@@ -1680,6 +1683,10 @@ BUTTON TEMPLATES:
   border-radius: 8px;
   box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.381);
 }
+
+.custom-button:hover{background: linear-gradient(#ffffff25), no-repeat, linear-gradient(var(--third-color-grey));}
+.custom-button-bottom:hover {background: linear-gradient(#00000020), linear-gradient(var(--third-color-grey));}
+
 
 .custom-button:active,
 .custom-button-bottom:active .custom-button {
@@ -1699,6 +1706,9 @@ BUTTON TEMPLATES:
   background: linear-gradient(#00000047), linear-gradient(var(--primary-color));
 }
 
+.blue-colors .custom-button:hover{background: linear-gradient(#ffffff10), url(images/svg/blue-button-paw.svg) no-repeat, linear-gradient(var(--primary-color));}
+.custom-button-bottom.blue-colors:hover {background: linear-gradient(#00000030), linear-gradient(var(--primary-color));}
+
 .yellow-colors .custom-button {
   background: url(images/svg/orange-button-paw.svg) no-repeat, linear-gradient(var(--secondary-color));
   color: var(--third-color-darkest);
@@ -1708,6 +1718,8 @@ BUTTON TEMPLATES:
   background: linear-gradient(#0000006c), linear-gradient(var(--secondary-color));
 }
 
+.yellow-colors .custom-button:hover{background: linear-gradient(#ffffff25), url(images/svg/orange-button-paw.svg) no-repeat, linear-gradient(var(--secondary-color));}
+.custom-button-bottom.yellow-colors:hover {background: linear-gradient(#00000020), linear-gradient(var(--secondary-color));}
 
 /* =====================Yellow button===================================== */
 .yellow-btn {
