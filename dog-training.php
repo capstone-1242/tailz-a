@@ -175,7 +175,25 @@ get_header();
         inherent nature of private lessons will help you build a stronger bond with your dog while we provide direct
         guidance and direction specific to your pup's needs.
     </section>
-    <section class="section-container">
+    <section>
+        
+        
+        
+        
+        
+        
+        <nav>
+            <ul>
+                <li><a href="#puppy-classes">Puppy Classes</a></li>
+                <li><a href="#adult-classes">Adult Classes</a></li>
+                <li><a href="#sports-&-games">Sports & Games</a></li>
+                <li><a href="#growly-dog">Growly Dog Training</a></li>
+                <li><a href="#private-training">Private Training</a></li>
+                <li><a href="#behaviour-modifications">Behaviour Modifications</a></li>
+            </ul>
+        </nav>
+    </section>
+    <section class="section-container" id="puppy-classes">
         <div class="section-intro-text">
             <h2>CANINE CLASSES</h2>
             <p>PUPPY cLASSES</p>
@@ -218,9 +236,9 @@ get_header();
             </p>
         </div>
     </section>
-    <div class="section-secondary">
+    <div class="section-secondary" id="adult-classes">
         <section class="section-container">
-            <h2>adult cLASSES</h2>
+            <h2>Adult Classes</h2>
             <div>
                 <h3>Basic Dog Manners (9 months +) | 4 WEEKS | $229</h3>
                 <p>This class teaches the foundations of obedience training to help build training skills, manners, and
@@ -272,7 +290,7 @@ get_header();
             </div>
         </section>
     </div>
-    <section class="section-container">
+    <section class="section-container" id="sports-&-games">
         <h2>SPORTS & GAMES </h2>
         <div>
             <h3>Sports & Games Intro (9 months+) | 6 WEEKS | $229</h3>
@@ -315,7 +333,7 @@ get_header();
         </div>
     </section>
     <div class="section-secondary">
-        <section class="section-container">
+        <section class="section-container" id="growly-dog-classes">
             <h2>GROWLY DOG CLASSES</h2>
             <p>
                 Is your dog barking, growling, snapping, or snarling at other dogs or people out on walks? Do they
@@ -405,7 +423,7 @@ get_header();
             </div>
         </section>
     </div>
-    <section class="section-container">
+    <section class="section-container" id="private-training">
         <h2>PRIVATE TRAINING (ONE-ON-ONE TRAINING)</h2>
         <p>One of our Certified Trainers will work with you and your family to improve your dog’s manners. Lessons can
             be done in-person (on-site or in home) or virtual. Your lessons will include working on basic manners and
@@ -424,7 +442,6 @@ get_header();
         </ul>
         Distance and distractions will be added along the way to help build upon the foundations.
         <div class="section-container">
-
             <div class="content-wrapper">
                 <div class="training-card">
                     <div>
@@ -458,7 +475,7 @@ get_header();
             </div>
         </a>
     </section>
-    <section class="section-container">
+    <section class="section-container" id="behaviour-modifications">
         <section class="hero-banner">
 
             <?php if (get_field('')) : ?>
