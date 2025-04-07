@@ -1741,6 +1741,7 @@ BUTTON TEMPLATES:
   text-decoration: none;
   margin: 1rem;
 }
+.max-margin-left{margin-left: auto;}
 
 .custom-button {
   transition: 0.07s ease-in;
