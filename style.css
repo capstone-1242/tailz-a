@@ -1758,6 +1758,7 @@ BUTTON TEMPLATES:
 .no-decoration {
   text-decoration: none;
   margin: 1rem;
+  display: block;
   width: fit-content;
 }
 
@@ -1792,7 +1793,7 @@ BUTTON TEMPLATES:
   box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.381);
 }
 
-.custom-button:hover {
+.custom-button:hover, .custom-button-bottom:hover .custom-button {
   background: linear-gradient(#ffffff25), no-repeat, linear-gradient(var(--third-color-grey));
 }
 
@@ -1819,7 +1820,7 @@ BUTTON TEMPLATES:
   background: linear-gradient(#00000047), linear-gradient(var(--primary-color));
 }
 
-.blue-colors .custom-button:hover {
+.blue-colors .custom-button:hover, .blue-colors:hover .custom-button {
   background: linear-gradient(#ffffff10), url(images/svg/blue-button-paw.svg) no-repeat, linear-gradient(var(--primary-color));
 }
 
@@ -1836,7 +1837,7 @@ BUTTON TEMPLATES:
   background: linear-gradient(#0000006c), linear-gradient(var(--secondary-color));
 }
 
-.yellow-colors .custom-button:hover {
+.yellow-colors .custom-button:hover, .yellow-colors:hover .custom-button {
   background: linear-gradient(#ffffff25), url(images/svg/orange-button-paw.svg) no-repeat, linear-gradient(var(--secondary-color));
 }
 

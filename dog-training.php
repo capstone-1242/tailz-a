@@ -176,12 +176,6 @@ get_header();
         guidance and direction specific to your pup's needs.
     </section>
     <section>
-        
-        
-        
-        
-        
-        
         <nav>
             <ul>
                 <li><a href="#puppy-classes">Puppy Classes</a></li>
@@ -464,7 +458,13 @@ get_header();
                 </div>
 
             </div>
-            <div class="image-wrapper"><img src="https://placehold.co/600x400" alt=""></div>
+            <div class="image-wrapper">
+                <?php if (get_field('private-training-image')) : ?>
+                    <div> <img src="<?php echo the_field('private-training-image'); ?>"></div>
+                <?php else : ?>
+                    <div> <img src="https://placehold.co/600x400" alt=""></div>
+                <?php endif; ?>
+            </div>
         </div>
         <p>*Off-site / In-home training is an additional $25 per session for travel time within Edmonton. Further
             distances will be assessed fees that reflect the travel distance. </p>
@@ -476,17 +476,11 @@ get_header();
     </section>
     <section class="section-container" id="behaviour-modifications">
         <section class="hero-banner">
-
             <?php if (get_field('tailz-behaviour-modifications-hero')) : ?>
-
                 <div> <img src="<?php echo the_field('tailz-behaviour-modifications-hero'); ?>"></div>
-
             <?php else : ?>
-
                 <div> <img src="https://placehold.co/800x300" alt=""></div>
-
             <?php endif; ?>
-
         </section>
         <div class="section-intro-text">
             <h2>BEHAVIOUR MODIFICATIONS</h2>
@@ -543,7 +537,13 @@ get_header();
             <li>Confidence Issues</li>
         </ul>
         <div class="section-container">
-            <div class="image-wrapper"><img src="https://placehold.co/600x400" alt=""></div>
+            <div class="image-wrapper">
+                <?php if (get_field('tailz-canine-skill-image')) : ?>
+                    <div> <img src="<?php echo the_field('tailz-canine-skill-image'); ?>"></div>
+                <?php else : ?>
+                    <div> <img src="https://placehold.co/600x400" alt=""></div>
+                <?php endif; ?>
+            </div>
             <div class="content-wrapper">
                 <div class="training-card">
                     <div>
