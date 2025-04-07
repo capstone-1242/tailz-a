@@ -54,7 +54,9 @@ get_header();
 
     <div class="section-secondary">
         <section class="section-container">
-            <h2>Requirements</h2>
+            <div class="section-intro-text">
+                <h2>Requirements</h2>
+            </div>
             <ul>
                 <li>Only social, dog friendly dogs are accepted into our lodging. We do not take aggressive dogs.</li>
                 <li>All dogs must pass a Meet & Greet prior to lodging.</li>
@@ -123,7 +125,7 @@ get_header();
             </div>
 
         </div>
-        <a href="#" class="no-decoration">
+        <a href="#" class="no-decoration max-margin-left">
             <div class="custom-button-bottom yellow-colors">
                 <div class="custom-button">BOOK LODGINGS</div>
             </div>
@@ -141,7 +143,7 @@ get_header();
                 <img src="https://placehold.co/300x300" alt="">
                 <img src="https://placehold.co/300x300" alt="">
             </div>
-            <a href="#" class="no-decoration">
+            <a href="#" class="no-decoration max-margin-left">
                 <div class="custom-button-bottom blue-colors">
                     <div class="custom-button">BOOK LODGINGS</div> 
                 </div>
@@ -165,7 +167,7 @@ get_header();
         </div>
 
 
-        <a href="#" class="no-decoration">
+        <a href="#" class="no-decoration max-margin-left">
             <div class="custom-button-bottom yellow-colors">
                 <div class="custom-button">BOOK YOUR CAT</div>
             </div>

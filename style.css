@@ -119,6 +119,23 @@ html {
 /* Sections
 	 ========================================================================== */
 
+   
+.section-secondary {
+  background: url(images/bg/paw-background.png), linear-gradient(var(--light-secondary-color));
+}
+.section-secondary h2{color: var(--dark-primary-color);}
+
+.section-intro-text {
+  text-align: center;
+  margin: 0 auto;
+  text-transform: uppercase;
+}
+
+.section-intro-text p {
+  color: var(--dark-primary-color);
+  font-weight: bold;
+}
+
 /**
  * Remove the margin in all browsers.
  */
@@ -1304,7 +1321,6 @@ Doggy Daycare
   max-width: 980px;
   height: fit-content;
   margin: auto;
-  background-color: var(--light-secondary-color);
 }
 
 .get-started h2 {
@@ -1312,12 +1328,12 @@ Doggy Daycare
   color: var(--primary-color);
 }
 
-.get-started p {
+/* .get-started p {
   font-size: 0.8rem;
   line-height: 1.5;
-}
+} */
 
-.get-started div:last-child {
+.get-started > div:last-child {
   max-width: 50%;
   padding: 0 2rem;
 }
@@ -1400,28 +1416,13 @@ Doggy Daycare
    Training Page
    ============= */
 
-.section-secondary {
-  background: url(images/bg/paw-background.png), linear-gradient(var(--light-secondary-color));
-}
-.section-secondary h2{color: var(--dark-primary-color);}
-
 
 
 .tailz-dog-training-content > .section-container{flex-flow: column;align-items: start;}
 .tailz-dog-training-content h2{text-align: center;margin: 20px auto;}
-.tailz-dog-training-content .no-decoration{margin: 0 0 0 auto;}
 
 
-.section-intro-text {
-  text-align: center;
-  margin: 0 auto;
-  text-transform: uppercase;
-}
 
-.section-intro-text p {
-  color: var(--dark-primary-color);
-  font-weight: bold;
-}
 
 
 .training-card {
@@ -1470,7 +1471,7 @@ Doggy Daycare
   margin: 0;
 }
 
-.puppy-training-banner div {
+.puppy-training-banner > div {
   width: 50%;
   margin: auto;
   padding: 2rem;

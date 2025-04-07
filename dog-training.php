@@ -469,7 +469,7 @@ get_header();
         </div>
         <p>*Off-site / In-home training is an additional $25 per session for travel time within Edmonton. Further
             distances will be assessed fees that reflect the travel distance. </p>
-        <a href="#" class="no-decoration">
+        <a href="#" class="no-decoration max-margin-left">
             <div class="custom-button-bottom yellow-colors">
                 <div class="custom-button">BOOK TRAINING</div>
             </div>
@@ -573,7 +573,7 @@ get_header();
             We require a minimum of 24-hour notice for rescheduling any Canine Skill Building session - not doing so
             will result in a $50 late cancellation fee (less than 24 hours notice) or use of one session from the
             bundle.</p>
-        <a href="#" class="no-decoration">
+        <a href="#" class="no-decoration max-margin-left">
             <div class="custom-button-bottom yellow-colors">
                 <div class="custom-button">BOOK TRAINING</div>
             </div>
