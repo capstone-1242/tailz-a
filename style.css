@@ -102,6 +102,26 @@ html {
 /* Sections
 	 ========================================================================== */
 
+
+.section-secondary {
+  background: url(images/bg/paw-background.png), linear-gradient(var(--light-secondary-color));
+}
+
+.section-secondary h2 {
+  color: var(--dark-primary-color);
+}
+
+.section-intro-text {
+  text-align: center;
+  margin: 0 auto;
+  text-transform: uppercase;
+}
+
+.section-intro-text p {
+  color: var(--dark-primary-color);
+  font-weight: bold;
+}
+
 /**
  * Remove the margin in all browsers.
  */
@@ -1105,8 +1125,13 @@ Tailz home page
   .section-container {
     flex-direction: column;
     align-items: center;
+    /* text-align: center; */
+  }
+
+  .section-container h3 {
     text-align: center;
   }
+
 
   .image-wrapper,
   .content-wrapper {
@@ -1278,22 +1303,11 @@ Doggy Daycare
   max-width: 980px;
   height: fit-content;
   margin: auto;
-  background-color: var(--light-secondary-color);
 }
 
 .get-started h2 {
   text-align: center;
   color: var(--primary-color);
-}
-
-.get-started p {
-  font-size: 0.8rem;
-  line-height: 1.5;
-}
-
-.get-started div:last-child {
-  max-width: 50%;
-  padding: 0 2rem;
 }
 
 .get-started img {
@@ -1370,6 +1384,60 @@ Doggy Daycare
   color: var(--primary-color);
 }
 
+/* =============
+   Training Page
+   ============= */
+
+.section-secondary {
+  background: url(images/bg/paw-background.png), linear-gradient(var(--light-secondary-color));
+}
+.section-secondary h2{color: var(--dark-primary-color);}
+
+
+
+.tailz-dog-training-content > .section-container{flex-flow: column;align-items: start;}
+.tailz-dog-training-content h2{text-align: center;margin: 20px auto;}
+.tailz-dog-training-content .no-decoration{margin: 0 0 0 auto;}
+
+
+.section-intro-text {
+  text-align: center;
+  margin: 0 auto;
+  text-transform: uppercase;
+}
+
+.section-intro-text p {
+  color: var(--dark-primary-color);
+  font-weight: bold;
+}
+
+
+.training-card {
+  background-color: var(--light-primary-color);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.training-card div:first-child {
+  background-color: var(--dark-primary-color);
+  color: var(--light-secondary-color);
+  padding: 10px;
+  border-radius: 10px 10px 0 0;
+}
+
+.training-card table {
+  border-collapse: collapse;
+}
+
+.training-card th {
+  padding: 7px 0;
+}
+
+.training-card tr:nth-child(2) {
+  background-color: #ffffff56;
+}
+
+
 /* --------puppy-training-banner-------------------- */
 
 .puppy-training-banner {
@@ -1390,7 +1458,7 @@ Doggy Daycare
   margin: 0;
 }
 
-.puppy-training-banner div {
+.puppy-training-banner>div {
   width: 50%;
   margin: auto;
   padding: 2rem;
@@ -1428,6 +1496,132 @@ Pet Spa & grooming
   /* background-color: rgba(255, 255, 255, 0.6); Light overlay for better text readability */
   padding: 20px;
   border-radius: 10px;
+}
+
+
+/* =============
+   Lodgings Page
+   ============= */
+.tailz-overnight-lodging-content ul{margin-left: 0;}
+
+.overnight-lodging-packages {
+  flex-flow: column;
+  margin: 0 auto;
+}
+
+.package-card-container {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.package-card {
+  border-radius: 10px;
+  text-align: center;
+}
+
+.package-card ul {
+  margin-left: 0;
+  padding-right: 40px;
+}
+
+.package-card:first-child {
+  background-color: #FFDCA2;
+}
+
+.package-card:nth-child(2) {
+  background-color: #BBC5F6;
+}
+
+.package-card:last-child {
+  background-color: #CEF06F;
+}
+
+.package-card div:first-child {
+  background-color: var(--secondary-color);
+  padding: 10px;
+  border-radius: 10px 10px 0 0;
+}
+
+
+/* Amenities page */
+.hero-banner {
+  position: relative;
+  text-align: left;
+}
+.hero-banner img {
+  width: 100%;
+  height: auto;
+}
+.page-heading {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+.amenity-block {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem 1rem;
+}
+.amenity-block.reverse {
+  flex-direction: column-reverse;
+}
+
+.amenity-image img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.amenity-text {
+  background: white;
+  padding: 1.25rem;
+  border-radius: 8px;
+}
+.amenity-text.beige {
+  background: #f9e4b7;
+}
+
+.btn-yellow {
+  background-color: #FFD700;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+  border-radius: 4px;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.btn-purple {
+  background-color: #3b2b84;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+/* Tablet/Desktop */
+@media (min-width: 768px) {
+  .amenity-block {
+      flex-direction: row;
+      align-items: center;
+  }
+  .amenity-block.reverse {
+      flex-direction: row-reverse;
+  }
+  .amenity-image,
+  .amenity-text {
+      flex: 1;
+  }
 }
 
 /* ==================
@@ -1518,6 +1712,80 @@ Contact page
   /* overflow: hidden; */
 }
 
+/* ======== 3D Buttons ========
+BUTTON TEMPLATES:
+<a href="#" class="no-decoration"><div class="custom-button-bottom"><div class="custom-button">Book Now</div></div></a>
+<a href="#" class="no-decoration"><div class="custom-button-bottom yellow-colors"><div class="custom-button">Book Now</div></div></a>
+<a href="#" class="no-decoration"><div class="custom-button-bottom blue-colors"><div class="custom-button">Book Now</div></div></a>
+ */
+
+.no-decoration {
+  text-decoration: none;
+  margin: 1rem;
+}
+
+.custom-button {
+  transition: 0.07s ease-in;
+  position: relative;
+  padding: 10px 16px;
+  background: linear-gradient( var(--third-color-grey));
+  transform: translatey(-6px);
+  border-radius: 8px;
+  color: var(--text-color-light);
+  font-family: "League Spartan", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.custom-button-bottom {
+  transition: 0.07s ease-in;
+  background: linear-gradient(#00000090), linear-gradient(var(--third-color-grey));
+  width: fit-content;
+  cursor: pointer;
+  
+  border-radius: 8px;
+  box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.381);
+}
+
+.custom-button:hover{background: linear-gradient(#ffffff25), no-repeat, linear-gradient(var(--third-color-grey));}
+.custom-button-bottom:hover {background: linear-gradient(#00000020), linear-gradient(var(--third-color-grey));}
+
+
+.custom-button:active,
+.custom-button-bottom:active .custom-button {
+  transform: translateY(0);
+}
+
+.custom-button-bottom:active {
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.381);
+}
+
+.blue-colors .custom-button {
+  background: url(images/svg/blue-button-paw.svg) no-repeat, linear-gradient(var(--primary-color));
+  color: var(--text-color-light);
+}
+
+.custom-button-bottom.blue-colors {
+  background: linear-gradient(#00000047), linear-gradient(var(--primary-color));
+}
+
+.blue-colors .custom-button:hover{background: linear-gradient(#ffffff10), url(images/svg/blue-button-paw.svg) no-repeat, linear-gradient(var(--primary-color));}
+.custom-button-bottom.blue-colors:hover {background: linear-gradient(#00000030), linear-gradient(var(--primary-color));}
+
+.yellow-colors .custom-button {
+  background: url(images/svg/orange-button-paw.svg) no-repeat, linear-gradient(var(--secondary-color));
+  color: var(--third-color-darkest);
+}
+
+.custom-button-bottom.yellow-colors {
+  background: linear-gradient(#0000006c), linear-gradient(var(--secondary-color));
+}
+
+.yellow-colors .custom-button:hover{background: linear-gradient(#ffffff25), url(images/svg/orange-button-paw.svg) no-repeat, linear-gradient(var(--secondary-color));}
+.custom-button-bottom.yellow-colors:hover {background: linear-gradient(#00000020), linear-gradient(var(--secondary-color));}
+
 /* =====================Yellow button===================================== */
 .yellow-btn {
   display: inline-block;
@@ -1545,7 +1813,7 @@ Contact page
 
 .yellow-btn:hover {
   background: var(--light-secondary-color);
-}
+} 
 /* =================yellow button end============================= */
 
 /* ===================Blue Button============================================= */
@@ -1569,7 +1837,7 @@ Contact page
 
 .blue-btn:hover {
   background: var(--dark-primary-color);
-}
+} 
 /* ===================Blue Button end============================================= */
 
 /* ======================Grey button=========================================================== */

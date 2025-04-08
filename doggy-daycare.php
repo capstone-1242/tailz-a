@@ -32,32 +32,27 @@ $hero_image = get_field('doggy_daycare_hero_image');
         <p>Closed Sundays and Holiday</p>
     </section>
 
-
-    <section class="get-started">
-
-        <?php
-        $get_started_image = get_field('get_started_image');
-        ?>
-
-        <div>
-            <img src="<?php echo esc_url($get_started_image); ?>" alt="">
-        </div>
-
-        <div>
-
-            <h2>get started </h2>
-            <p>Our daycare offers a rich environment for your dog to exercise, socialize, and rest. With a carefully designed and unique program, your dog will have the best daycare experience the resort has to offer!</p>
-
-            <p>Play-groups are carefully chosen, ensuring the best experience for your dog, keeping them in a safe play environment as well as a paced schedule with regular downtime keeping them from becoming cranky.</p>
-
-            <p>Dogs looking to join us will be assessed through our Meet and Greet in order to ensure they are suitable for the program. To ensure the enjoyment and safety of all pups, some pups may not be accepted into the daycare program.</p>
-            <p>Package/Passes Prices</p>
-
-            <button class="blue-btn paw">book your pup</button>
-
-        </div>
-
-    </section>
+    <div class="section-secondary">
+        <section class="get-started section-container">
+            <?php
+            $get_started_image = get_field('get_started_image');
+            ?>
+            <div class="image-wrapper">
+                <img src="<?php echo esc_url($get_started_image); ?>" alt="">
+            </div>
+            <div class="content-wrapper">
+                <h2>get started </h2>
+                <p>Our daycare offers a rich environment for your dog to exercise, socialize, and rest. With a carefully designed and unique program, your dog will have the best daycare experience the resort has to offer!</p>
+                <p>Play-groups are carefully chosen, ensuring the best experience for your dog, keeping them in a safe play environment as well as a paced schedule with regular downtime keeping them from becoming cranky.</p>
+                <p>Dogs looking to join us will be assessed through our Meet and Greet in order to ensure they are suitable for the program. To ensure the enjoyment and safety of all pups, some pups may not be accepted into the daycare program.</p>
+                <a href="#" class="no-decoration">
+                    <div class="custom-button-bottom blue-colors">
+                        <div class="custom-button">BOOK YOUR PUP</div>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </div>
 
 
     <section class="rates">
@@ -129,9 +124,7 @@ $hero_image = get_field('doggy_daycare_hero_image');
         </div>
 
     </section>
-
-
-    <section class="requirements">
+    <section class="requirements section-secondary">
 
         <div class="requirements-content">
             <h2>Requirements</h2>
@@ -167,8 +160,11 @@ $hero_image = get_field('doggy_daycare_hero_image');
 
             <p>Need training for your pup? Check out our Puppy Training and let our experts show your puppy tricks and etiquette!</p>
 
-            <button class="yellow-btn paw"><a class="paw" href="<?php echo get_permalink(get_page_by_title('dog training')); ?>">View Training</a></button>
-
+            <a href="<?php echo get_permalink(get_page_by_title('dog training')); ?>" class="no-decoration">
+                <div class="custom-button-bottom yellow-colors">
+                    <div class="custom-button">View Training</div>
+                </div>
+            </a>
         </div>
 
         <?php $puppy_training_image = get_field('puppy_training_image'); ?>
