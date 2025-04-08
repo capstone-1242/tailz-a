@@ -35,40 +35,22 @@ get_header();
 
 
     <!-- first section -->
-  <!-- Contact Section -->
-  <div class="contact-wrapper">
+  <div class="contact-page">
 
-        <!-- Info & Form -->
-        <div class="contact-info-form">
-            <div class="info-box">
-                <h2>Email</h2>
-                <p>wags@tailz.ca</p>
 
-                <h2>Phone</h2>
-                <p>+1 (780) 988-0089</p>
+        <section class="contact-info">
 
-                <h2>Location</h2>
-                <p>11204 119 Street</p>
-            </div>
+    
+            <h2>Contact</h2>
 
-            <div class="contact-form-box">
-                <form action="#" method="post">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required>
-
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email"         required>
-
-                    <label for="phone">Phone Number</label>
-                    <input type="text" id="phone" name="phone">
-
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="4"      required></textarea>
-
-                    <button type="submit" class="btn-yellow">Send Message</button>
-                </form>
-            </div>
-        </div>
+            <ul>
+                <li> wawawa@wawa.wa</li>
+                <li> +1 780-988-0089</li>
+                <li> 123 wawa street</li>
+            </ul>
+    
+    
+        </section>
     
       
         <section class="google-map-container">
@@ -77,39 +59,12 @@ get_header();
 
         </section>
 
+
   </div>
 
  
+
 </div>
-
-<!--   Newsletter -->
-<article class="newsletter ">
-    <div class="newsletter-container">
-
-        <div class="newsletter-image">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/hero/dogs-on-chair.webp" alt="Newsletter Image">
-        </div>
-
-        <div class="newsletter-content">
-
-            <h2>tailz newsletter</h2>
-
-            <p>
-                What’s the bark around Tailz? Find out for yourself!
-                Sign up for our mailing services for updates, alerts, special offers and more!
-            </p>
-
-            <div class="sign-up">
-                <input type="email" placeholder="Enter your email address">
-                <button class="">Subscribe</button>
-            </div>
-
-        </div>
-
-    </div>
-
-</article>
-
 
 <?=
 get_footer();

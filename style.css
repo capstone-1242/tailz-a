@@ -56,46 +56,29 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 /* Tailz color scheme */
 :root {
-  --primary-color: #273ca5;
-  /* Main Theme Color (Blue) */
-  --primary-color-transperant: #273ca5a0;
-  /* Main Theme Color (Blue) */
-  --dark-primary-color: #11216e;
-  /* Dark shade of primary */
-  --light-primary-color: #c2caea;
-  /* light shade of primary */
+  --primary-color: #273ca5; /* Main Theme Color (Blue) */
+  --primary-color-transperant: #273ca5a0; /* Main Theme Color (Blue) */
+  --dark-primary-color: #11216e; /* Dark shade of primary */
+  --light-primary-color: #c2caea; /* light shade of primary */
 
-  --secondary-color: #fea91d;
-  /* Secondary Theme Color (Yellow) */
-  --light-secondary-color: #f4e3c6;
-  /* light shade of secondary */
+  --secondary-color: #fea91d; /* Secondary Theme Color (Yellow) */
+  --light-secondary-color: #f4e3c6; /* light shade of secondary */
 
-  --tailz-green: #d1eb89;
-  /* Tailz Green */
-  --wall-paint-light-blue: #bbc5f6;
-  /* Wall Paint Light Blue */
-  --wall-paint-tan: #ffdca2;
-  /* Wall Paint Tan */
+  --tailz-green: #d1eb89; /* Tailz Green */
+  --wall-paint-light-blue: #bbc5f6; /* Wall Paint Light Blue */
+  --wall-paint-tan: #ffdca2; /* Wall Paint Tan */
 
-  --light-third-color: #f4f2eb;
-  /* Third Theme Color (Grey) */
-  --third-color-blue-grey: #b4adbb;
-  /* Third Theme Color (Grey) */
-  --third-color-grey: #514b58;
-  /* Third Theme Color (Grey) */
-  --third-color-darkest: #15042b;
-  /* Third Theme Color (Grey) */
+  --light-third-color: #f4f2eb; /* Third Theme Color (Grey) */
+  --third-color-blue-grey: #b4adbb; /* Third Theme Color (Grey) */
+  --third-color-grey: #514b58; /* Third Theme Color (Grey) */
+  --third-color-darkest: #15042b; /* Third Theme Color (Grey) */
 
-  --warning-color: #900000;
-  /* Warning Color */
+  --warning-color: #900000; /* Warning Color */
 
-  --text-color-dark: black;
-  /* Main Text Color */
-  --text-color-light: #fffdfd;
-  /* Main Text Color */
+  --text-color-dark: rgb(6, 6, 6); /* Main Text Color */
+  --text-color-light: #fffdfd; /* Main Text Color */
 
-  --background-color: #f8f8f8;
-  /* Background */
+  --background-color: #f8f8f8; /* Background */
 }
 
 /* Normalize
@@ -463,6 +446,10 @@ html {
   /* margin: 0 !important; */
 }
 
+body{
+  margin : 0 !important;
+}
+
 /*--------------------------------------------------------------
 # Base
 --------------------------------------------------------------*/
@@ -475,7 +462,7 @@ input,
 select,
 optgroup,
 textarea {
-  color: var(--text-color-dark);
+  color: #404040;
   font-family: "Montserrat", sans-serif;
   font-size: 1rem;
   line-height: 1.5;
@@ -573,8 +560,8 @@ ol {
   list-style: decimal;
 }
 
-li>ul,
-li>ol {
+li > ul,
+li > ol {
   margin-bottom: 0;
   margin-left: 1.5em;
 }
@@ -653,7 +640,6 @@ input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
   /* border-color: #ccc #bbb #aaa; */
-  cursor: pointer;
 }
 
 button:active,
@@ -715,7 +701,6 @@ select {
 textarea {
   width: 100%;
 }
-
 /* ------------------------------------------------------------- */
 /*--------------------------------------------------------------
 # Layouts
@@ -796,7 +781,7 @@ textarea {
 }
 
 /* Show Dropdown on Hover */
-.main-menu li:hover>.sub-menu {
+.main-menu li:hover > .sub-menu {
   display: block;
 }
 
@@ -806,10 +791,8 @@ textarea {
 
 /* Footer */
 .site-footer {
-  color: var(--text-color-light);
-  /* Light text color for footer */
-  background-color: var(--third-color-grey);
-  /* Dark background for footer */
+  color: var(--text-color-light); /* Light text color for footer */
+  background-color: var(--third-color-grey); /* Dark background for footer */
   padding: 4rem;
 }
 
@@ -923,8 +906,7 @@ textarea {
 }
 
 .footer-contact a:hover {
-  color: #ff5722;
-  /* Add hover effect to contact links */
+  color: #ff5722; /* Add hover effect to contact links */
 }
 
 /* Newsletter Section */
@@ -1022,7 +1004,6 @@ textarea {
     width: 100%;
     height: auto;
   }
-
   .sign-up {
     width: 320px;
     margin: 0 auto;
@@ -1039,18 +1020,16 @@ textarea {
 .footer-bottom p {
   font-size: 1rem;
 }
-
-.page-footer {}
+.page-footer {
+}
 
 /* Responsive Footer Layout */
 @media (max-width: 768px) {
-
   .footer-logo,
   .footer-promise,
   .footer-services,
   .footer-contact {
-    width: 100%;
-    /* Stack all sections vertically on smaller screens */
+    width: 100%; /* Stack all sections vertically on smaller screens */
     text-align: center;
   }
 
@@ -1086,7 +1065,6 @@ Tailz home page
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  padding: 0.5rem;
 }
 
 /* IMAGE WRAPPER */
@@ -1124,7 +1102,6 @@ Tailz home page
   align-self: flex-end;
   margin-top: 2rem;
 }
-
 .content-wrapper button a {
   text-decoration: none;
   color: var(--text-color-light);
@@ -1190,7 +1167,6 @@ Tailz home page
   background-color: var(--light-secondary-color);
   color: var(--text-color-light);
 }
-
 .homepage-products h2 {
   font-size: 24px;
   margin: 0;
@@ -1269,7 +1245,6 @@ masonry for photography
   max-width: 820px;
   margin: 0 auto;
 }
-
 .gallery-container {
   background-color: var(--light-secondary-color);
   padding: 2rem 2rem 1rem;
@@ -1298,7 +1273,6 @@ masonry for photography
     /* 1 item per row */
   }
 }
-
 /* =========================
 Masonry end
 ============================ */
@@ -1414,20 +1388,28 @@ Doggy Daycare
    Training Page
    ============= */
 
-
-
-.tailz-dog-training-content>.section-container {
-  flex-flow: column;
-  align-items: start;
+.section-secondary {
+  background: url(images/bg/paw-background.png), linear-gradient(var(--light-secondary-color));
 }
+.section-secondary h2{color: var(--dark-primary-color);}
 
-.tailz-dog-training-content h2 {
+
+
+.tailz-dog-training-content > .section-container{flex-flow: column;align-items: start;}
+.tailz-dog-training-content h2{text-align: center;margin: 20px auto;}
+.tailz-dog-training-content .no-decoration{margin: 0 0 0 auto;}
+
+
+.section-intro-text {
   text-align: center;
-  margin: 20px auto;
+  margin: 0 auto;
+  text-transform: uppercase;
 }
 
-
-
+.section-intro-text p {
+  color: var(--dark-primary-color);
+  font-weight: bold;
+}
 
 
 .training-card {
@@ -1483,7 +1465,7 @@ Doggy Daycare
   text-align: center;
 }
 
-.puppy-training-banner div>img {
+.puppy-training-banner div > img {
   width: 100%;
   height: 290px;
   object-fit: cover;
@@ -1494,7 +1476,6 @@ Doggy Daycare
   -ms-border-radius: 26px;
   -o-border-radius: 26px;
 }
-
 /* ===============================
 ====================================
 Pet Spa & grooming
@@ -1502,14 +1483,11 @@ Pet Spa & grooming
 =================================== */
 
 .loyalty-program {
-  background-color: var(--light-secondary-color);
-  /* Main background */
+  background-color: var(--light-secondary-color); /* Main background */
   background-image: url("images/svg/paw-black-shape-svgrepo-com.svg");
 
-  background-repeat: repeat;
-  /* Ensures tiling */
-  background-size: 50px 50px;
-  /* Adjust size of each tile */
+  background-repeat: repeat; /* Ensures tiling */
+  background-size: 50px 50px; /* Adjust size of each tile */
   position: relative;
   padding: 40px;
 }
@@ -1524,9 +1502,7 @@ Pet Spa & grooming
 /* =============
    Lodgings Page
    ============= */
-.tailz-overnight-lodging-content ul {
-  margin-left: 0;
-}
+.tailz-overnight-lodging-content ul{margin-left: 0;}
 
 .overnight-lodging-packages {
   flex-flow: column;
@@ -1574,12 +1550,10 @@ Pet Spa & grooming
   position: relative;
   text-align: left;
 }
-
 .hero-banner img {
   width: 100%;
   height: auto;
 }
-
 .page-heading {
   position: absolute;
   bottom: 20px;
@@ -1595,7 +1569,6 @@ Pet Spa & grooming
   gap: 1.5rem;
   padding: 2rem 1rem;
 }
-
 .amenity-block.reverse {
   flex-direction: column-reverse;
 }
@@ -1610,7 +1583,6 @@ Pet Spa & grooming
   padding: 1.25rem;
   border-radius: 8px;
 }
-
 .amenity-text.beige {
   background: #f9e4b7;
 }
@@ -1640,17 +1612,15 @@ Pet Spa & grooming
 /* Tablet/Desktop */
 @media (min-width: 768px) {
   .amenity-block {
-    flex-direction: row;
-    align-items: center;
+      flex-direction: row;
+      align-items: center;
   }
-
   .amenity-block.reverse {
-    flex-direction: row-reverse;
+      flex-direction: row-reverse;
   }
-
   .amenity-image,
   .amenity-text {
-    flex: 1;
+      flex: 1;
   }
 }
 
@@ -1725,7 +1695,6 @@ Contact page
   background-color: var(--light-warning-color);
   border-radius: 10px;
 }
-
 .warning-text p {
   margin: 0;
   /* padding: 1rem; */
@@ -1753,19 +1722,13 @@ BUTTON TEMPLATES:
 .no-decoration {
   text-decoration: none;
   margin: 1rem;
-  display: block;
-  width: fit-content;
-}
-
-.max-margin-left {
-  margin-left: auto;
 }
 
 .custom-button {
   transition: 0.07s ease-in;
   position: relative;
   padding: 10px 16px;
-  background: linear-gradient(var(--third-color-grey));
+  background: linear-gradient( var(--third-color-grey));
   transform: translatey(-6px);
   border-radius: 8px;
   color: var(--text-color-light);
@@ -1774,29 +1737,20 @@ BUTTON TEMPLATES:
   font-weight: 500;
   text-decoration: none;
   text-transform: uppercase;
-  cursor: url("http://tailz.local/wp-content/themes/themelet/images/cursor/paw-inflate-38.png"), auto !important;
 }
 
 .custom-button-bottom {
-  min-width: 15ch;
-  text-align: center;
   transition: 0.07s ease-in;
   background: linear-gradient(#00000090), linear-gradient(var(--third-color-grey));
   width: fit-content;
   cursor: pointer;
+  
   border-radius: 8px;
   box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.381);
-  cursor: url("http://tailz.local/wp-content/themes/themelet/images/cursor/paw-inflate-38.png"), auto !important;
 }
 
-.custom-button:hover,
-.custom-button-bottom:hover .custom-button {
-  background: linear-gradient(#ffffff25), no-repeat, linear-gradient(var(--third-color-grey));
-}
-
-.custom-button-bottom:hover {
-  background: linear-gradient(#00000020), linear-gradient(var(--third-color-grey));
-}
+.custom-button:hover{background: linear-gradient(#ffffff25), no-repeat, linear-gradient(var(--third-color-grey));}
+.custom-button-bottom:hover {background: linear-gradient(#00000020), linear-gradient(var(--third-color-grey));}
 
 
 .custom-button:active,
@@ -1817,14 +1771,8 @@ BUTTON TEMPLATES:
   background: linear-gradient(#00000047), linear-gradient(var(--primary-color));
 }
 
-.blue-colors .custom-button:hover,
-.blue-colors:hover .custom-button {
-  background: linear-gradient(#ffffff10), url(images/svg/blue-button-paw.svg) no-repeat, linear-gradient(var(--primary-color));
-}
-
-.custom-button-bottom.blue-colors:hover {
-  background: linear-gradient(#00000030), linear-gradient(var(--primary-color));
-}
+.blue-colors .custom-button:hover{background: linear-gradient(#ffffff10), url(images/svg/blue-button-paw.svg) no-repeat, linear-gradient(var(--primary-color));}
+.custom-button-bottom.blue-colors:hover {background: linear-gradient(#00000030), linear-gradient(var(--primary-color));}
 
 .yellow-colors .custom-button {
   background: url(images/svg/orange-button-paw.svg) no-repeat, linear-gradient(var(--secondary-color));
@@ -1835,14 +1783,8 @@ BUTTON TEMPLATES:
   background: linear-gradient(#0000006c), linear-gradient(var(--secondary-color));
 }
 
-.yellow-colors .custom-button:hover,
-.yellow-colors:hover .custom-button {
-  background: linear-gradient(#ffffff25), url(images/svg/orange-button-paw.svg) no-repeat, linear-gradient(var(--secondary-color));
-}
-
-.custom-button-bottom.yellow-colors:hover {
-  background: linear-gradient(#00000020), linear-gradient(var(--secondary-color));
-}
+.yellow-colors .custom-button:hover{background: linear-gradient(#ffffff25), url(images/svg/orange-button-paw.svg) no-repeat, linear-gradient(var(--secondary-color));}
+.custom-button-bottom.yellow-colors:hover {background: linear-gradient(#00000020), linear-gradient(var(--secondary-color));}
 
 /* =====================Yellow button===================================== */
 .yellow-btn {
@@ -1863,11 +1805,15 @@ BUTTON TEMPLATES:
   -o-border-radius: 10px;
   box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.381);
 }
+/* 
+.yellow-btn a{
+  text-decoration: none;
+  color: var(--text-color-light);
+} */
 
 .yellow-btn:hover {
   background: var(--light-secondary-color);
-}
-
+} 
 /* =================yellow button end============================= */
 
 /* ===================Blue Button============================================= */
@@ -1891,8 +1837,7 @@ BUTTON TEMPLATES:
 
 .blue-btn:hover {
   background: var(--dark-primary-color);
-}
-
+} 
 /* ===================Blue Button end============================================= */
 
 /* ======================Grey button=========================================================== */
@@ -1947,8 +1892,7 @@ BUTTON TEMPLATES:
   font-size: 3rem;
   margin-bottom: 1rem;
 }
-
-.hero-content>div {
+.hero-content > div {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -1966,7 +1910,6 @@ BUTTON TEMPLATES:
   .hero-content h2 {
     font-size: 2rem;
   }
-
   .hero-content p {
     font-size: 1rem;
   }
@@ -1997,8 +1940,7 @@ BUTTON TEMPLATES:
 }
 
 .main-navigation ul {
-  display: none;
-  /* Keep main menu hidden by default */
+  display: none; /* Keep main menu hidden by default */
   list-style: none;
   margin: 0;
   padding-left: 0;
@@ -2018,8 +1960,8 @@ BUTTON TEMPLATES:
   top: 0;
 }
 
-.main-navigation ul ul li:hover>ul,
-.main-navigation ul ul li.focus>ul {
+.main-navigation ul ul li:hover > ul,
+.main-navigation ul ul li.focus > ul {
   display: block;
   left: auto;
 }
@@ -2028,8 +1970,8 @@ BUTTON TEMPLATES:
   width: 200px;
 }
 
-.main-navigation ul li:hover>ul,
-.main-navigation ul li.focus>ul {
+.main-navigation ul li:hover > ul,
+.main-navigation ul li.focus > ul {
   left: auto;
 }
 
@@ -2072,7 +2014,7 @@ BUTTON TEMPLATES:
 
 /* Mobile Styles */
 @media screen and (max-width: 770px) {
-
+ 
   .mobile-view-menu {
     display: flex;
     justify-content: space-between;
@@ -2113,11 +2055,10 @@ BUTTON TEMPLATES:
   /* Links inside menu */
   .main-menu a {
     display: block;
-    padding: 10px;
+    /* padding: 10px; */
     color: var(--text-color-light);
     text-decoration: none;
   }
-
   .main-menu li:hover {
     background: var(--dark-primary-color);
     color: var(--secondary-color);
@@ -2148,7 +2089,7 @@ BUTTON TEMPLATES:
     -moz-transition: all 0.3s ease;
     -ms-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
-  }
+}
 
   .menu-toggle:hover .hamburger-icon rect {
     fill: var(--secondary-color);
@@ -2172,8 +2113,12 @@ BUTTON TEMPLATES:
     display: block;
   }
 
-  .main-menu li.active>.sub-menu {
+  .main-menu li.active > .sub-menu {
     display: flex;
+  }
+
+  .site-header{
+    padding: 0;
   }
 }
 
@@ -2182,74 +2127,71 @@ Booking pages
 ======================================= */
 /* Booking Page Container */
 .booking-container {
-  max-width: 800px;
-  margin: 30px auto;
-  padding: 20px;
-  background-color: var(--primary-color);
-  border-radius: 8px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Booking Header */
 .booking-header {
-  text-align: center;
-  margin-bottom: 30px;
-  color: var(--text-color-light);
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--text-color-light);
 }
-
 .booking-header h2::first-letter {
-  color: var(--secondary-color);
+    color: var(--secondary-color);
 }
 
 .booking-header h2 {
-  font-size: 2rem;
-  color: var(--text-color-light);
-  margin-bottom: 10px;
+    font-size: 2rem;
+    color: var(--text-color-light);
+    margin-bottom: 10px;
 }
 
 .booking-header p {
-  font-size: 1rem;
+    font-size: 1rem;
 }
 
 /* Booking Form */
 .booking-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .booking-form-content {
-  width: 100%;
-  padding: 20px;
-  background-color: var(--text-color-light);
-  border-radius: 8px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  justify-content: center !important;
+    width: 100%;
+    padding: 20px;
+    background-color: var(--text-color-light);
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    justify-content: center !important;
 }
 
 /* Customize form fields */
-.booking-form-content input,
-.booking-form-content select,
-.booking-form-content button {
-  /* width: 100%; */
-  padding: 12px;
-  margin: 8px 0;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  font-size: 1rem;
-  box-sizing: border-box;
+.booking-form-content input, .booking-form-content select, .booking-form-content button {
+    /* width: 100%; */
+    padding: 12px;
+    margin: 8px 0;
+    border: 3px solid var(--secondary-color);
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
 }
 
 /* Add hover effect for buttons */
 .booking-form-content button:hover {
-  background-color: #3498db;
-  color: white;
-  cursor: pointer;
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
 }
 
 .cpp_form {
   display: flex;
-  justify-content: center;
+justify-content: center;
 }
 
 
