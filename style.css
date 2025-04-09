@@ -102,9 +102,9 @@ html {
 /* Sections
 	 ========================================================================== */
 
-
 .section-secondary {
-  background: url(images/bg/paw-background.png), linear-gradient(var(--light-secondary-color));
+  background: url(images/bg/paw-background.png),
+    linear-gradient(var(--light-secondary-color));
 }
 
 .section-secondary h2 {
@@ -127,7 +127,6 @@ html {
  */
 body {
   margin-bottom: 0 !important;
-
 }
 
 /**
@@ -446,8 +445,8 @@ html {
   /* margin: 0 !important; */
 }
 
-body{
-  margin : 0 !important;
+body {
+  margin: 0 !important;
 }
 
 /*--------------------------------------------------------------
@@ -909,12 +908,15 @@ textarea {
   color: #ff5722; /* Add hover effect to contact links */
 }
 
+
+
 /* Newsletter Section */
 
 .newsletter {
   width: 100%;
   background-color: var(--third-color-darkest);
   color: var(--text-color-light);
+
 }
 
 .newsletter h2 {
@@ -924,29 +926,40 @@ textarea {
 
 .newsletter p {
   margin: 0;
+  font-size: 1rem; /* Make the text smaller on mobile */
 }
 
 .newsletter-container {
   max-width: 980px;
   margin: 0 auto;
   display: flex;
-  align-items: top;
-  padding: 0;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  align-items: center; /* Vertically center content */
+  /* padding: 0 20px; */
+}
+
+.newsletter-image {
+  flex: 1 1 50%; /* Image takes up 50% */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center the content inside the image */
+  height: 100%; /* Ensures the image fills the height of the container */
 }
 
 .newsletter-image img {
   width: 100%;
-  height: auto;
-  object-fit: cover;
+  height: 100%; /* Make the image fill the entire height */
+  object-fit: cover; /* Ensures the image covers the space while maintaining its aspect ratio */
   display: block;
 }
 
 .newsletter-content {
+  flex: 1 1 50%; /* Content takes up the other 50% */
   text-align: center;
   padding: 1rem 2rem;
   gap: 1rem;
   justify-content: center;
-  width: 60%;
 }
 
 .newsletter-content .sign-up {
@@ -954,18 +967,16 @@ textarea {
   flex-direction: row;
   border: 4px solid var(--secondary-color);
   border-radius: 5px;
-  width: fit-content;
+  width: 100%;
+  max-width: 400px; /* Limit the width of the sign-up form */
   margin: 2rem auto;
 }
 
 .newsletter-content .sign-up input {
   padding: 15px;
   border: none;
-  border-radius: none !important;
-  -webkit-border-radius: none !important;
-  -moz-border-radius: none !important;
-  -ms-border-radius: none !important;
-  -o-border-radius: none !important;
+  border-radius: 5px; /* Added rounded corners */
+  width: 100%; /* Make the input take up the remaining space */
 }
 
 .newsletter-content .sign-up button {
@@ -978,11 +989,7 @@ textarea {
   text-decoration: none;
   transition: background 0.3s;
   border: none;
-  border-radius: none !important;
-  -webkit-border-radius: none !important;
-  -moz-border-radius: none !important;
-  -ms-border-radius: none !important;
-  -o-border-radius: none !important;
+  border-radius: 5px; /* Rounded button corners */
   height: 54px;
 }
 
@@ -991,24 +998,39 @@ textarea {
   color: var(--primary-color);
 }
 
+/* Responsive adjustments for smaller screens */
 @media screen and (max-width: 768px) {
-  .newsletter-content {
-    justify-content: center;
+  .newsletter-container {
+    flex-direction: column; /* Stack image and content */
+    /* padding: 0 15px; */
   }
 
   .newsletter-image {
-    width: 100%;
+    flex: 1 1 100%; /* Image takes full width on smaller screens */
+    margin-bottom: 20px;
+    height: 200px; /* Set a fixed height for the image on smaller screens */
   }
 
-  .newsletter-image img {
-    width: 100%;
-    height: auto;
+  .newsletter-content {
+    flex: 1 1 100%; /* Content takes full width on smaller screens */
+    text-align: center;
   }
+
+  .newsletter h2 {
+    font-size: 1.8rem;
+  }
+
+  .newsletter p {
+    font-size: 1rem;
+  }
+
   .sign-up {
-    width: 320px;
+    width: 100%; /* Make the sign-up form full width */
+    max-width: 320px;
     margin: 0 auto;
   }
 }
+
 
 /* Footer Bottom */
 .footer-bottom {
@@ -1116,6 +1138,8 @@ Tailz home page
   background-color: var(--light-secondary-color);
 }
 
+
+
 @media screen and (max-width: 720px) {
   .tailz-homepage-content section {
     flex-direction: column;
@@ -1126,12 +1150,12 @@ Tailz home page
     flex-direction: column;
     align-items: center;
     /* text-align: center; */
+
   }
 
   .section-container h3 {
     text-align: center;
   }
-
 
   .image-wrapper,
   .content-wrapper {
@@ -1139,21 +1163,31 @@ Tailz home page
     max-width: 100%;
     height: auto;
   }
-
   .image-wrapper img {
-    height: auto;
+    width: 100%; /* Ensures the image fills the container's width */
+    height: 220px; /* Fixed height of 220px */
+    object-fit: cover; /* Ensures the image covers the container without distorting */
+    object-position: center; /* Centers the image within the container */
   }
-
   .content-wrapper {
     align-items: center;
     text-align: center;
     justify-content: flex-start;
+    padding: 1rem; /* Reduce padding for smaller screens */
   }
 
   .content-wrapper a {
     align-self: center;
+    margin-top: 1rem; /* Adjust button margin for a better mobile layout */
+  }
+
+  /* Optional: Make the button larger on mobile */
+  .content-wrapper button {
+    padding: 12px 24px;
+    font-size: 1rem;
   }
 }
+
 
 /* ------------------------------------ */
 
@@ -1202,7 +1236,6 @@ Tailz home page
   width: 100%;
   height: auto;
 }
-
 
 /* ============================================
 ================================================
@@ -1389,16 +1422,24 @@ Doggy Daycare
    ============= */
 
 .section-secondary {
-  background: url(images/bg/paw-background.png), linear-gradient(var(--light-secondary-color));
+  background: url(images/bg/paw-background.png),
+    linear-gradient(var(--light-secondary-color));
 }
-.section-secondary h2{color: var(--dark-primary-color);}
+.section-secondary h2 {
+  color: var(--dark-primary-color);
+}
 
-
-
-.tailz-dog-training-content > .section-container{flex-flow: column;align-items: start;}
-.tailz-dog-training-content h2{text-align: center;margin: 20px auto;}
-.tailz-dog-training-content .no-decoration{margin: 0 0 0 auto;}
-
+.tailz-dog-training-content > .section-container {
+  flex-flow: column;
+  align-items: start;
+}
+.tailz-dog-training-content h2 {
+  text-align: center;
+  margin: 20px auto;
+}
+.tailz-dog-training-content .no-decoration {
+  margin: 0 0 0 auto;
+}
 
 .section-intro-text {
   text-align: center;
@@ -1410,7 +1451,6 @@ Doggy Daycare
   color: var(--dark-primary-color);
   font-weight: bold;
 }
-
 
 .training-card {
   background-color: var(--light-primary-color);
@@ -1437,7 +1477,6 @@ Doggy Daycare
   background-color: #ffffff56;
 }
 
-
 /* --------puppy-training-banner-------------------- */
 
 .puppy-training-banner {
@@ -1458,7 +1497,7 @@ Doggy Daycare
   margin: 0;
 }
 
-.puppy-training-banner>div {
+.puppy-training-banner > div {
   width: 50%;
   margin: auto;
   padding: 2rem;
@@ -1498,11 +1537,12 @@ Pet Spa & grooming
   border-radius: 10px;
 }
 
-
 /* =============
    Lodgings Page
    ============= */
-.tailz-overnight-lodging-content ul{margin-left: 0;}
+.tailz-overnight-lodging-content ul {
+  margin-left: 0;
+}
 
 .overnight-lodging-packages {
   flex-flow: column;
@@ -1527,15 +1567,15 @@ Pet Spa & grooming
 }
 
 .package-card:first-child {
-  background-color: #FFDCA2;
+  background-color: #ffdca2;
 }
 
 .package-card:nth-child(2) {
-  background-color: #BBC5F6;
+  background-color: #bbc5f6;
 }
 
 .package-card:last-child {
-  background-color: #CEF06F;
+  background-color: #cef06f;
 }
 
 .package-card div:first-child {
@@ -1543,7 +1583,6 @@ Pet Spa & grooming
   padding: 10px;
   border-radius: 10px 10px 0 0;
 }
-
 
 /* Amenities page */
 .hero-banner {
@@ -1588,7 +1627,7 @@ Pet Spa & grooming
 }
 
 .btn-yellow {
-  background-color: #FFD700;
+  background-color: #ffd700;
   padding: 0.75rem 1.5rem;
   border: none;
   font-weight: bold;
@@ -1612,15 +1651,15 @@ Pet Spa & grooming
 /* Tablet/Desktop */
 @media (min-width: 768px) {
   .amenity-block {
-      flex-direction: row;
-      align-items: center;
+    flex-direction: row;
+    align-items: center;
   }
   .amenity-block.reverse {
-      flex-direction: row-reverse;
+    flex-direction: row-reverse;
   }
   .amenity-image,
   .amenity-text {
-      flex: 1;
+    flex: 1;
   }
 }
 
@@ -1683,7 +1722,6 @@ Contact page
 
 /* moved it into header : head>style  for loading with wp*/
 
-
 /* =========warning text============== */
 .warning-text {
   color: var(--warning-color);
@@ -1728,7 +1766,7 @@ BUTTON TEMPLATES:
   transition: 0.07s ease-in;
   position: relative;
   padding: 10px 16px;
-  background: linear-gradient( var(--third-color-grey));
+  background: linear-gradient(var(--third-color-grey));
   transform: translatey(-6px);
   border-radius: 8px;
   color: var(--text-color-light);
@@ -1741,17 +1779,23 @@ BUTTON TEMPLATES:
 
 .custom-button-bottom {
   transition: 0.07s ease-in;
-  background: linear-gradient(#00000090), linear-gradient(var(--third-color-grey));
+  background: linear-gradient(#00000090),
+    linear-gradient(var(--third-color-grey));
   width: fit-content;
   cursor: pointer;
-  
+
   border-radius: 8px;
   box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.381);
 }
 
-.custom-button:hover{background: linear-gradient(#ffffff25), no-repeat, linear-gradient(var(--third-color-grey));}
-.custom-button-bottom:hover {background: linear-gradient(#00000020), linear-gradient(var(--third-color-grey));}
-
+.custom-button:hover {
+  background: linear-gradient(#ffffff25), no-repeat,
+    linear-gradient(var(--third-color-grey));
+}
+.custom-button-bottom:hover {
+  background: linear-gradient(#00000020),
+    linear-gradient(var(--third-color-grey));
+}
 
 .custom-button:active,
 .custom-button-bottom:active .custom-button {
@@ -1763,7 +1807,8 @@ BUTTON TEMPLATES:
 }
 
 .blue-colors .custom-button {
-  background: url(images/svg/blue-button-paw.svg) no-repeat, linear-gradient(var(--primary-color));
+  background: url(images/svg/blue-button-paw.svg) no-repeat,
+    linear-gradient(var(--primary-color));
   color: var(--text-color-light);
 }
 
@@ -1771,20 +1816,35 @@ BUTTON TEMPLATES:
   background: linear-gradient(#00000047), linear-gradient(var(--primary-color));
 }
 
-.blue-colors .custom-button:hover{background: linear-gradient(#ffffff10), url(images/svg/blue-button-paw.svg) no-repeat, linear-gradient(var(--primary-color));}
-.custom-button-bottom.blue-colors:hover {background: linear-gradient(#00000030), linear-gradient(var(--primary-color));}
+.blue-colors .custom-button:hover {
+  background: linear-gradient(#ffffff10),
+    url(images/svg/blue-button-paw.svg) no-repeat,
+    linear-gradient(var(--primary-color));
+}
+.custom-button-bottom.blue-colors:hover {
+  background: linear-gradient(#00000030), linear-gradient(var(--primary-color));
+}
 
 .yellow-colors .custom-button {
-  background: url(images/svg/orange-button-paw.svg) no-repeat, linear-gradient(var(--secondary-color));
+  background: url(images/svg/orange-button-paw.svg) no-repeat,
+    linear-gradient(var(--secondary-color));
   color: var(--third-color-darkest);
 }
 
 .custom-button-bottom.yellow-colors {
-  background: linear-gradient(#0000006c), linear-gradient(var(--secondary-color));
+  background: linear-gradient(#0000006c),
+    linear-gradient(var(--secondary-color));
 }
 
-.yellow-colors .custom-button:hover{background: linear-gradient(#ffffff25), url(images/svg/orange-button-paw.svg) no-repeat, linear-gradient(var(--secondary-color));}
-.custom-button-bottom.yellow-colors:hover {background: linear-gradient(#00000020), linear-gradient(var(--secondary-color));}
+.yellow-colors .custom-button:hover {
+  background: linear-gradient(#ffffff25),
+    url(images/svg/orange-button-paw.svg) no-repeat,
+    linear-gradient(var(--secondary-color));
+}
+.custom-button-bottom.yellow-colors:hover {
+  background: linear-gradient(#00000020),
+    linear-gradient(var(--secondary-color));
+}
 
 /* =====================Yellow button===================================== */
 .yellow-btn {
@@ -1813,7 +1873,7 @@ BUTTON TEMPLATES:
 
 .yellow-btn:hover {
   background: var(--light-secondary-color);
-} 
+}
 /* =================yellow button end============================= */
 
 /* ===================Blue Button============================================= */
@@ -1837,7 +1897,7 @@ BUTTON TEMPLATES:
 
 .blue-btn:hover {
   background: var(--dark-primary-color);
-} 
+}
 /* ===================Blue Button end============================================= */
 
 /* ======================Grey button=========================================================== */
@@ -1927,7 +1987,7 @@ BUTTON TEMPLATES:
 }
 
 /* =================hero image end=========================== */
-
+/* --------------------------------------- */
 /* Navigation
 --------------------------------------------- */
 
@@ -1938,59 +1998,14 @@ BUTTON TEMPLATES:
   justify-content: space-between;
   padding: 0 2rem;
 }
+/* 
 
-.main-navigation ul {
-  display: none; /* Keep main menu hidden by default */
-  list-style: none;
-  margin: 0;
-  padding-left: 0;
-}
-
-.main-navigation ul ul {
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-  float: left;
-  position: absolute;
-  top: 100%;
-  left: -999em;
-  z-index: 99999;
-}
-
-.main-navigation ul ul ul {
-  left: -999em;
-  top: 0;
-}
-
-.main-navigation ul ul li:hover > ul,
-.main-navigation ul ul li.focus > ul {
-  display: block;
-  left: auto;
-}
-
-.main-navigation ul ul a {
-  width: 200px;
-}
-
-.main-navigation ul li:hover > ul,
-.main-navigation ul li.focus > ul {
-  left: auto;
-}
-
-.main-navigation li {
-  position: relative;
-}
-
-.main-navigation a {
-  display: block;
-  text-decoration: none;
-}
 
 /* Small menu. */
 
-.header {
-  display: flex;
-  justify-items: space-between;
-  align-items: center;
-  align-items: center;
+.main-menu .menu-item-has-children > a {
+  text-decoration: none;
+  pointer-events: none;
 }
 
 .menu-toggle,
@@ -2001,6 +2016,34 @@ BUTTON TEMPLATES:
 .mobile-view-menu {
   display: none;
 }
+
+.mobile-nav-bar {
+  display: flex;
+}
+
+.mobile-nav-bar a {
+  width: 2rem;
+  fill: var(--text-color-light);
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  margin: 0 0.5rem;
+}
+
+
+.mobile-nav-bar a img {
+  width: 32px;
+  height: 32px;
+
+}
+.mobile-nav-bar a:hover img {
+  filter: brightness(0) saturate(100%) invert(83%) sepia(29%) saturate(5387%) hue-rotate(344deg) brightness(102%) contrast(99%);
+}
+
+
+
 
 @media screen and (min-width: 770px) {
   .menu-toggle {
@@ -2014,15 +2057,20 @@ BUTTON TEMPLATES:
 
 /* Mobile Styles */
 @media screen and (max-width: 770px) {
- 
   .mobile-view-menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 2rem;
   }
 
-  /* Main Navigation Layout */
+  .main-menu > li > a {
+    display: none;
+  }
+
+  .main-menu li.active > .sub-menu {
+    display: flex;
+  }
+
   .main-navigation {
     position: relative;
     display: flex;
@@ -2031,7 +2079,6 @@ BUTTON TEMPLATES:
     padding: 10px 20px;
   }
 
-  /* Main Menu: Initially hidden from the get go */
   .main-menu {
     display: none;
     flex-direction: column;
@@ -2040,7 +2087,7 @@ BUTTON TEMPLATES:
     right: 10px;
     width: 200px;
     background: var(--primary-color);
-    padding: 10px;
+
     border-radius: 5px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 1000;
@@ -2075,10 +2122,21 @@ BUTTON TEMPLATES:
     background: none;
     border: none;
     cursor: pointer;
-    /* padding: 10px; */
+    padding: 10px;
     position: absolute;
-    top: 15px;
+    top: 10px;
     right: 20px;
+    z-index: 1001;
+  }
+
+  .mobile-nav-bar{
+    display: block;
+    background: none;
+    border: none;
+    padding: 10px;
+    position: absolute;
+    top: 8px;
+    right: 60px;
     z-index: 1001;
   }
 
@@ -2089,7 +2147,7 @@ BUTTON TEMPLATES:
     -moz-transition: all 0.3s ease;
     -ms-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
-}
+  }
 
   .menu-toggle:hover .hamburger-icon rect {
     fill: var(--secondary-color);
@@ -2117,7 +2175,7 @@ BUTTON TEMPLATES:
     display: flex;
   }
 
-  .site-header{
+  .site-header {
     padding: 0;
   }
 }
@@ -2125,75 +2183,79 @@ BUTTON TEMPLATES:
 /* ==================================
 Booking pages
 ======================================= */
+
 /* Booking Page Container */
+
 .booking-container {
-    max-width: 800px;
-    margin: 30px auto;
-    padding: 20px;
-    background-color: var(--primary-color);
-    border-radius: 8px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: var(--primary-color);
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Booking Header */
 .booking-header {
-    text-align: center;
-    margin-bottom: 30px;
-    color: var(--text-color-light);
+  text-align: center;
+  margin-bottom: 30px;
+  color: var(--text-color-light);
 }
+
 .booking-header h2::first-letter {
-    color: var(--secondary-color);
+  color: var(--secondary-color);
 }
 
 .booking-header h2 {
-    font-size: 2rem;
-    color: var(--text-color-light);
-    margin-bottom: 10px;
+  font-size: 2rem;
+  color: var(--text-color-light);
+  margin-bottom: 10px;
 }
 
 .booking-header p {
-    font-size: 1rem;
+  font-size: 1rem;
 }
 
 /* Booking Form */
 .booking-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .booking-form-content {
-    width: 100%;
-    padding: 20px;
-    background-color: var(--text-color-light);
-    border-radius: 8px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    justify-content: center !important;
+  width: 100%;
+  padding: 20px;
+  background-color: var(--text-color-light);
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  justify-content: center !important;
 }
 
 /* Customize form fields */
-.booking-form-content input, .booking-form-content select, .booking-form-content button {
-    /* width: 100%; */
-    padding: 12px;
-    margin: 8px 0;
-    border: 3px solid var(--secondary-color);
-    border-radius: 4px;
-    font-size: 1rem;
-    box-sizing: border-box;
+.booking-form-content input,
+.booking-form-content select,
+.booking-form-content button {
+  /* width: 100%; */
+  padding: 12px;
+  margin: 8px 0;
+  border: 3px solid var(--secondary-color);
+  border-radius: 4px;
+  font-size: 1rem;
+  box-sizing: border-box;
 }
 
 /* Add hover effect for buttons */
 .booking-form-content button:hover {
-    background-color: #3498db;
-    color: white;
-    cursor: pointer;
+  background-color: #3498db;
+  color: white;
+  cursor: pointer;
 }
 
 .cpp_form {
   display: flex;
-justify-content: center;
+  justify-content: center;
 }
-
 
 /* ---------------------------------------------------- */
 .site-main .comment-navigation,
