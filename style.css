@@ -462,7 +462,7 @@ input,
 select,
 optgroup,
 textarea {
-  color: #404040;
+  color: var(--text-color-dark);
   font-family: "Montserrat", sans-serif;
   font-size: 1rem;
   line-height: 1.5;
@@ -640,6 +640,7 @@ input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
   /* border-color: #ccc #bbb #aaa; */
+  cursor: pointer;
 }
 
 button:active,
@@ -1065,6 +1066,7 @@ Tailz home page
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  padding: 0.5rem;
 }
 
 /* IMAGE WRAPPER */
@@ -1387,56 +1389,41 @@ Doggy Daycare
 /* =============
    Training Page
    ============= */
-
-.section-secondary {
-  background: url(images/bg/paw-background.png), linear-gradient(var(--light-secondary-color));
-}
-.section-secondary h2{color: var(--dark-primary-color);}
-
-
-
-.tailz-dog-training-content > .section-container{flex-flow: column;align-items: start;}
-.tailz-dog-training-content h2{text-align: center;margin: 20px auto;}
-.tailz-dog-training-content .no-decoration{margin: 0 0 0 auto;}
-
-
-.section-intro-text {
-  text-align: center;
-  margin: 0 auto;
-  text-transform: uppercase;
-}
-
-.section-intro-text p {
-  color: var(--dark-primary-color);
-  font-weight: bold;
-}
-
-
-.training-card {
-  background-color: var(--light-primary-color);
-  border-radius: 10px;
-  text-align: center;
-}
-
-.training-card div:first-child {
-  background-color: var(--dark-primary-color);
-  color: var(--light-secondary-color);
-  padding: 10px;
-  border-radius: 10px 10px 0 0;
-}
-
-.training-card table {
-  border-collapse: collapse;
-}
-
-.training-card th {
-  padding: 7px 0;
-}
-
-.training-card tr:nth-child(2) {
-  background-color: #ffffff56;
-}
-
+   .tailz-dog-training-content>.section-container {
+    flex-flow: column;
+    align-items: start;
+  }
+  
+  .tailz-dog-training-content h2 {
+    text-align: center;
+    margin: 20px auto;
+  }
+  
+  .training-card {
+    background-color: var(--light-primary-color);
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .training-card div:first-child {
+    background-color: var(--dark-primary-color);
+    color: var(--light-secondary-color);
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .training-card table {
+    border-collapse: collapse;
+  }
+  
+  .training-card th {
+    padding: 7px 0;
+  }
+  
+  .training-card tr:nth-child(2) {
+    background-color: #ffffff56;
+  }
+  
 
 /* --------puppy-training-banner-------------------- */
 
@@ -1719,16 +1706,23 @@ BUTTON TEMPLATES:
 <a href="#" class="no-decoration"><div class="custom-button-bottom blue-colors"><div class="custom-button">Book Now</div></div></a>
  */
 
-.no-decoration {
+ .no-decoration {
   text-decoration: none;
   margin: 1rem;
+  display: block;
+  width: fit-content;
 }
+
+.max-margin-left {
+  margin-left: auto;
+}
+
 
 .custom-button {
   transition: 0.07s ease-in;
   position: relative;
   padding: 10px 16px;
-  background: linear-gradient( var(--third-color-grey));
+  background: linear-gradient(var(--third-color-grey));
   transform: translatey(-6px);
   border-radius: 8px;
   color: var(--text-color-light);
@@ -1737,16 +1731,19 @@ BUTTON TEMPLATES:
   font-weight: 500;
   text-decoration: none;
   text-transform: uppercase;
+  cursor: url("http://tailz.local/wp-content/themes/themelet/images/cursor/paw-inflate-38.png"), auto !important;
 }
 
 .custom-button-bottom {
+  min-width: 15ch;
+  text-align: center;
   transition: 0.07s ease-in;
   background: linear-gradient(#00000090), linear-gradient(var(--third-color-grey));
   width: fit-content;
   cursor: pointer;
-  
   border-radius: 8px;
   box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.381);
+  cursor: url("http://tailz.local/wp-content/themes/themelet/images/cursor/paw-inflate-38.png"), auto !important;
 }
 
 .custom-button:hover{background: linear-gradient(#ffffff25), no-repeat, linear-gradient(var(--third-color-grey));}

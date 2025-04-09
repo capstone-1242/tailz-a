@@ -15,13 +15,13 @@ get_header();
 
     <section class="hero-banner">
 
-        <?php if (get_field('')) : ?>
+        <?php if (get_field('tailz-lodging-hero-banner')) : ?>
 
-            <div> <img src="<?php echo the_field(''); ?>"></div>
+            <div> <img src="<?php echo the_field('tailz-lodging-hero-banner'); ?>"></div>
 
         <?php else : ?>
 
-            <div> <img src="" alt=""></div>
+            <div> <img src="https://placehold.co/800x300" alt=""></div>
 
         <?php endif; ?>
 
@@ -31,24 +31,21 @@ get_header();
 
 
     <!-- first section -->
-    <section>
+    <section class="section-container">
 
-        <h2>Luxury Lodges</h2>
-
-        <p>Off on a vacation? Business trip? Let us help take care of your pet while you’re gone with our luxury lodgings!</p>
+        <div class="section-intro-text">
+            <h2>Luxury Lodges</h2>
+            <p>Off on a vacation? Business trip? Let us help take care of your pet while you’re gone with our luxury lodgings!</p>
+        </div>
         <p>When it comes to overnight care, we’ve redefined the experience. Our new sleepover nights offer a resort-style stay in ample-spaced lodges that goes beyond traditional day care.</p>
         <p>Each day of restful sleep offers the benefits of Doggy Daycare, meaning your pet will never be left alone while they’re with us. You may also sign your dog up for a departure bath on their last day so they come home fresh and squeaky clean!</p>
 
-        <div>
+        <div class="section-container">
+            <div class="image-wrapper"><img src="https://placehold.co/600x400" alt=""></div>
 
-            <div>
-
-                <img src="" alt="">
-
+            <div class="content-wrapper">
                 <p>We provide all the toys, beds, blankets and love that your dog needs; all you need to do is bring some dog food! We will feed your dog two to three times a day with the provided food. Bring all items in a marked reusable shopping bag. Pre-portioned food is appreciated.</p>
-
             </div>
-
         </div>
 
     </section>
@@ -76,42 +73,54 @@ get_header();
     </div>
 
     <!-- third section -->
-    <section class="overnight-lodging-packages">
+    <section class="overnight-lodging-packages section-container">
 
         <h3>Packages</h3>
 
         <div class="package-card-container">
 
             <div class="package-card">
-                <h2></h2>
+                <div>
+                    <h2>Bronze Package</h2>
+                    <p>$51.99/night</p>
+                </div>
+                <p>LOWEST COST</p>
                 <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <li>Morning Play Session</li>
+                    <li>Bedtime Story</li>
+                    <li>Extra Cuddles</li>
+                    <li>Gourmet Bedtime Treat</li>
                 </ul>
             </div>
 
             <div class="package-card">
-                <h2></h2>
+                <div>
+                    <h2>Silver Package</h2>
+                    <p>$57.99/night</p>
+                </div>
+                <p>MOST PUP-ULAR</p>
                 <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <li>Morning Play Session</li>
+                    <li>Afternoon Play Session</li>
+                    <li>Bedtime Story</li>
+                    <li>Extra Cuddles</li>
+                    <li>Gourmet Bedtime Treat</li>
                 </ul>
             </div>
 
             <div class="package-card">
-                <h2></h2>
+                <div>
+                    <h2>Gold Package</h2>
+                    <p>$69.99/night</p>
+                </div>
+                <p>ULTI-MUTT VALUE</p>
                 <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <li>Morning Play Session</li>
+                    <li>Afternoon Play Session</li>
+                    <li>Evening Stroll</li>
+                    <li>Bedtime Story</li>
+                    <li>Extra Cuddles</li>
+                    <li>Gourmet Bedtime Treat</li>
                 </ul>
             </div>
 
@@ -143,9 +152,19 @@ get_header();
     </div>
 
 
-        <button></button>
+    <section class="section-container">
 
-    </section>
+        <div class="section-intro-text">
+            <h2>Cat hotel</h2>
+            <p>Need a safe place for your cat while you’re off on a trip?
+                Our cat hotel offers a secure location for cats to stay overnight.</p>
+        </div>
+
+        <div class="package-card-container">
+            <img src="https://placehold.co/300x300" alt="">
+            <img src="https://placehold.co/300x300" alt="">
+            <img src="https://placehold.co/300x300" alt="">
+        </div>
 
 
         <a href="#" class="no-decoration max-margin-left">
@@ -154,17 +173,6 @@ get_header();
             </div>
         </a>
 
-        <h2>Cat hotel</h2>
-
-        <p>Need a safe place for your cat while you’re off on a trip? 
-        Our cat hotel offers a secure location for cats to stay overnight.</p>
-
-        <img src="" alt="">
-        <img src="" alt="">
-        <img src="" alt="">
-
-
-        <button></button>
 
     </section>
 
