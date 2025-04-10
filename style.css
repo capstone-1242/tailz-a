@@ -1650,6 +1650,73 @@ Doggy Daycare
 Pet Spa & grooming
 =====================================
 =================================== */
+.tailz-pet-spa-content {
+  padding: 2rem 1rem;
+}
+
+.hero-banner {
+  color: white;
+  padding: 5rem 1rem;
+  text-align: center;
+}
+
+.spa-block {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 4rem 0;
+}
+
+.two-column-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.two-column-block .block-text,
+.two-column-block .block-image {
+  flex: 1;
+}
+
+.two-column-block img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.two-column-block.reverse {
+  flex-direction: column-reverse;
+}
+
+/* Desktop layout */
+@media (min-width: 768px) {
+  .two-column-block {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .two-column-block.reverse {
+    flex-direction: row-reverse;
+  }
+
+  .block-text {
+    padding: 2rem;
+  }
+
+  .block-image {
+    padding: 2rem;
+  }
+}
+
+.tail-loyalty {
+  background-color: #fde9c9;
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+.yellow-btn,
+.blue-btn {
+  margin-top: 1rem;
+}
 
 .loyalty-program {
   background-color: var(--light-secondary-color); /* Main background */
