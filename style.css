@@ -130,10 +130,11 @@ body {
 }
 
 /**
- * Render the `main` element consistently in IE.
- */
+* Render the `main` element consistently in IE.
+*/
 main {
   display: block;
+
 }
 
 /**
@@ -461,7 +462,7 @@ input,
 select,
 optgroup,
 textarea {
-  color: var(--text-color-dark);
+  color: #404040;
   font-family: "Montserrat", sans-serif;
   font-size: 1rem;
   line-height: 1.5;
@@ -639,7 +640,6 @@ input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
   /* border-color: #ccc #bbb #aaa; */
-  cursor: pointer;
 }
 
 button:active,
@@ -715,6 +715,12 @@ textarea {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1005;
+
 }
 
 .header-logo {
@@ -746,7 +752,6 @@ textarea {
 }
 
 .main-menu a:hover {
-  /* cursor: url('/wp-content/themes/tailz/images/cursor/paw-64.png'), auto;  */
   color: var(--secondary-color);
 }
 
@@ -761,7 +766,7 @@ textarea {
   padding: 0;
   margin: 0;
   min-width: 150px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.527);
   z-index: 1000;
 }
 
@@ -964,6 +969,7 @@ textarea {
   display: flex;
   flex-direction: row;
   border: 4px solid var(--secondary-color);
+  background-color: var(--secondary-color);
   border-radius: 5px;
   width: 100%;
   max-width: 400px; /* Limit the width of the sign-up form */
@@ -1084,7 +1090,6 @@ Tailz home page
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  padding: 0.5rem;
 }
 
 /* IMAGE WRAPPER */
@@ -1133,7 +1138,8 @@ Tailz home page
 }
 
 .tailz-homepage-content section:nth-child(even) .section-container {
-  background-color: var(--light-secondary-color);
+  background: url(images/bg/paw-background.png),
+    linear-gradient(var(--light-secondary-color));
 }
 
 @media screen and (max-width: 720px) {
@@ -1187,25 +1193,31 @@ Tailz home page
 
 /* ---------------Product cards homepage----------------------------------- */
 
-.homepage-products {
-  text-align: center;
-  justify-content: center;
-  width: 100%;
-  padding: 1rem 0 2rem;
-  background-color: var(--light-secondary-color);
-  color: var(--text-color-light);
-}
-.homepage-products h2 {
-  font-size: 24px;
-  margin: 0;
-  color: var(--primary-color);
-}
-
 .product-cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
+  padding: 2rem 0;
+  text-decoration: none;
+}
+
+.product-cards a {
+ 
+  text-decoration: none;
+}
+
+.homepage-products {
+  background: url(images/bg/paw-background.png),
+    linear-gradient(var(--light-secondary-color));
+    padding-top:1rem;
+}
+
+.homepage-products h2 {
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+
 }
 
 .homepage-product-card {
@@ -1213,23 +1225,31 @@ Tailz home page
   color: var(--text-color-dark);
   padding: 0.5rem;
   border-radius: 10px;
-  max-width: 100px;
+  width: 160px; 
+  height: 200px; 
   box-shadow: 2px 8px 8px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
 }
 
 .homepage-product-card h3 {
   font-size: 1rem;
-  margin: 0;
+  margin: 0.5rem 0;
   color: var(--text-color-light);
+  flex-shrink: 0;
 }
 
 .homepage-product-card img {
   width: 100%;
   height: auto;
+  max-height: 135px; 
+  object-fit: cover;
 }
+
 
 /* ============================================
 ================================================
@@ -1292,12 +1312,20 @@ masonry for photography
     width: 48%;
     /* 2 items per row */
   }
+  .homepage-product-card {
+ 
+    max-width: 100px; 
+    max-height: 200px; 
+ 
+  }
+  
+
 }
 
 @media (max-width: 480px) {
   .grid-item {
     width: 100%;
-    /* 1 item per row */
+    
   }
 }
 /* =========================
@@ -1734,17 +1762,10 @@ BUTTON TEMPLATES:
 <a href="#" class="no-decoration"><div class="custom-button-bottom blue-colors"><div class="custom-button">Book Now</div></div></a>
  */
 
- .no-decoration {
+.no-decoration {
   text-decoration: none;
   margin: 1rem;
-  display: block;
-  width: fit-content;
 }
-
-.max-margin-left {
-  margin-left: auto;
-}
-
 
 .custom-button {
   transition: 0.07s ease-in;
@@ -1759,20 +1780,17 @@ BUTTON TEMPLATES:
   font-weight: 500;
   text-decoration: none;
   text-transform: uppercase;
-  cursor: url("http://tailz.local/wp-content/themes/themelet/images/cursor/paw-inflate-38.png"), auto !important;
 }
 
 .custom-button-bottom {
-  min-width: 15ch;
-  text-align: center;
   transition: 0.07s ease-in;
   background: linear-gradient(#00000090),
     linear-gradient(var(--third-color-grey));
   width: fit-content;
   cursor: pointer;
+
   border-radius: 8px;
   box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.381);
-  cursor: url("http://tailz.local/wp-content/themes/themelet/images/cursor/paw-inflate-38.png"), auto !important;
 }
 
 .custom-button:hover {
@@ -1921,6 +1939,8 @@ BUTTON TEMPLATES:
   justify-content: center;
   color: #fff;
   padding: 0 20px;
+  margin-top: 1.5rem;
+ 
 }
 
 .short-hero-banner {
@@ -1932,6 +1952,8 @@ BUTTON TEMPLATES:
   justify-content: center;
   color: #fff;
   padding: 0 20px;
+  margin-top: 1.5rem;
+
 }
 
 .hero-content {
@@ -1973,6 +1995,8 @@ BUTTON TEMPLATES:
     justify-content: center;
     color: #fff;
     padding: 0 20px 2rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
   }
 }
 

@@ -12,11 +12,9 @@ get_header();
 
 
 
-    <h1>
-        <?php echo 'Tailz' . Get_the_title(); ?>
-    </h1>
+    <h1><?php echo 'Tailz' . Get_the_title(); ?></h1>
 
-    <!-- banner image -->
+    <!--  banner image -->
 
     <section class="non-background-hero">
 
@@ -29,25 +27,27 @@ get_header();
 
     <!-- banner image end -->
 
-    <!-- Commented just in case these are used Later -->
-    <!-- <section class="section-container">
 
-    <h2>Puppy Training</h2>
+   
+    <section>
 
-    <p>The early months of a puppy are critical to them, as early socialization and care will heavily reduce fears and anxieties affecting them in the future.</p>
+        <h2>Puppy Training</h2>
 
-    <p>Early socialization and desensitization leads to decreased fears and anxieties down the road. Whether your puppy visits us once a week, or every day, they will get to experience our structured curriculum that focuses on socialization to sights, sounds, and experiences that they'll need to navigate life as an adult.</p>
+        <p>The early months of a puppy are critical to them, as early socialization and care will heavily reduce fears and anxieties affecting them in the future.</p>
 
-    <p>These are programs that go beyond the traditional benefits of Doggy Daycare for our youngest pups. So whether you bring them once a week or every day, they will have the positive experiences that are pivotal in creating that healthy and happy member of your family.</p>
+        <p>Early socialization and desensitization leads to decreased fears and anxieties down the road. Whether your puppy visits us once a week, or every day, they will get to experience our structured curriculum that focuses on socialization to sights, sounds, and experiences that they'll need to navigate life as an adult.</p>
 
-  </section>
-  <section class="section-container">
-    <h2>Puppy pre school</h2>
+        <p>These are programs that go beyond the traditional benefits of Doggy Daycare for our youngest pups. So whether you bring them once a week or every day, they will have the positive experiences that are pivotal in creating that healthy and happy member of your family.</p>
 
-    <p>
-      Our Puppy Preschool is our signature 4- or 6-week puppy training program and socialization curriculum designed for young puppies aged 8-20 weeks.
-      During their days at Puppy Preschool we focus on:
-    </p>
+    </section>
+
+    <section>
+        <h2>Puppy pre school</h2>
+
+        <p>
+            Our Puppy Preschool is our signature 4- or 6-week puppy training program and socialization curriculum designed for young puppies aged 8-20 weeks.
+            During their days at Puppy Preschool we focus on:
+        </p>
 
         <ul>
 
@@ -75,7 +75,8 @@ get_header();
         </ul>
 
     </section>
-    <section class="section-container">
+
+    <section>
 
         <img src="" alt="">
 
@@ -89,12 +90,13 @@ get_header();
             <p>Choosing to add an additional 2 weeks of Puppy Preschool training for a total of six weeks will allow your pup to become more well rounded and socialized.</p>
             <p>Putting you and your puppy on the same page ensures consistency in training, which is why we review the skills your pup is learning with you on a weekly basis, so that you can also teach and implement the same things at home. Let us do the hard work for you, so you can enjoy your happy puppy at home!</p>
 
-            <a href="#" class="no-decoration"><div class="custom-button-bottom blue-colors"><div class="custom-button">BOOK YOUR PUP</div></div></a>
+            <button>Book your pup</button>
 
         </div>
 
     </section>
-    <section class="section-container">
+
+    <section>
         <h2>Puppy Daycare</h2>
         <p>
             Helping to shape puppies, our Puppy Daycare program focuses on the socialization of puppies. We'll work on polite playtime, potty training, crate training, and socialization to help your puppy learn skills for everyday life.
@@ -116,24 +118,27 @@ get_header();
                 <p>Safe play and socialization skills</p>
                 <p>Puppy playtime</p>
 
-                <a href="#" class="no-decoration"><div class="custom-button-bottom blue-colors"><div class="custom-button">BOOK YOUR PUP</div></div></a>
+                <button>Book your pup</button>
 
             </div>
 
         </div>
 
     </section>
-    <section class="section-container">
+
+
+    <section>
 
         <h2>requirements</h2>
 
         <p>
-            Puppies must have their first Distemper Combination and Bordetella vaccination at least 7 days prior to their first day of Puppy Preschool, and must be kept up to date during their time at Tailz.​ 
+            Puppies must have their first Distemper Combination and Bordetella vaccination at least 7 days prior to their first day of Puppy Preschool, and must be kept up to date during their time at Tailz.​ 
             While it used to be recommended that puppies not be socialized until after their third set of puppy vaccines at 16 weeks, research now shows us that waiting this long can be at the detriment of their social skills, and the risk of diseases is quite low if they have received their first or second set of vaccinations.
         </p>
 
     </section>
-    <section class="section-container">
+
+    <section>
         <h2>FAQ</h2>
         <p>
             🦴 When do the Puppy Programs run?</p>
@@ -150,7 +155,9 @@ get_header();
         <p>Your puppy will have access to fresh, cold water during each structured playtime.</p>
 
     </section>
-    <section class="section-container">
+
+
+    <section>
 
         <h2>Adult training</h2>
 
