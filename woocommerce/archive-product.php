@@ -1,97 +1,94 @@
 <?php
+
 /**
- * The Template for displaying product archives, including the main shop page which is a post type archive
+ * The Template for displaying product archives (shop page)
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/archive-product.php.
- *
- * HOWEVER, on occasion WooCommerce will need to update template files and you
- * (the theme developer) will need to copy the new files to your theme to
- * maintain compatibility. We try to do this as little as possible, but it does
- * happen. When this occurs the version of the template file will be bumped and
- * the readme will list any important changes.
- *
- * @see https://woocommerce.com/document/template-structure/
  * @package WooCommerce\Templates
- * @version 8.6.0
+ * @version 3.4.0
  */
 
-defined( 'ABSPATH' ) || exit;
+defined('ABSPATH') || exit;
 
-get_header(  );
+get_header('shop');
+?>
 
-/**
- * Hook: woocommerce_before_main_content.
- *
- * @hooked woocommerce_output_content_wrapper - 10 (outputs opening divs for the content)
- * @hooked woocommerce_breadcrumb - 20
- * @hooked WC_Structured_Data::generate_website_data() - 30
- */
-do_action( 'woocommerce_before_main_content' );
+<section class="short-hero-banner"
+    style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.15)), 
+           url('<?php echo get_template_directory_uri(); ?>/images/hero/dogs-on-chair.webp') center/cover no-repeat;">
+    <div class="hero-content">
+        <h2>Shop Tailz</h2>
+    </div>
+</section>
 
-/**
- * Hook: woocommerce_shop_loop_header.
- *
- * @since 8.6.0
- *
- * @hooked woocommerce_product_taxonomy_archive_header - 10
- */
-do_action( 'woocommerce_shop_loop_header' );
+<div class="shop-welcome-intro" >
+	<p >Welcome to Tailz Pet Store—your go-to spot for premium pet products. From food to accessories, we have everything your furry friends need. Shop now and treat your pets to the best!</p>
+	
+	<h2>Products</h2>
+</div>
 
-if ( woocommerce_product_loop() ) {
+<div class="shop-container">
 
-	/**
-	 * Hook: woocommerce_before_shop_loop.
-	 *
-	 * @hooked woocommerce_output_all_notices - 10
-	 * @hooked woocommerce_result_count - 20
-	 * @hooked woocommerce_catalog_ordering - 30
-	 */
-	do_action( 'woocommerce_before_shop_loop' );
+	<!-- Sidebar with Filters -->
+	<aside class="shop-sidebar">
+		<!-- <h2>Filters</h2> -->
 
-	woocommerce_product_loop_start();
+		<!-- Product Categories -->
+		<div class="widget">
+			<!-- <h3 class="widget-title">Categories</h3> -->
+			<?php the_widget('WC_Widget_Product_Categories'); ?>
+		</div>
 
-	if ( wc_get_loop_prop( 'total' ) ) {
-		while ( have_posts() ) {
-			the_post();
+		<!-- Price Filter -->
+		<div class="widget">
+			<!-- <h3 class="widget-title">Price</h3> -->
+			<?php the_widget('WC_Widget_Price_Filter'); ?>
+		</div>
+	</aside>
 
-			/**
-			 * Hook: woocommerce_shop_loop.
-			 */
-			do_action( 'woocommerce_shop_loop' );
+	<!-- Main Content -->
+	<main class="shop-main">
+		<!-- Shop Toolbar (Sort and Results) -->
+		<div class="shop-toolbar">
+			<div class="results-count">
+				<?php // Show result count
+				woocommerce_result_count();
+				?>
+			</div>
+			<div class="sort-dropdown">
+				<?php // Show sort by dropdown
+				woocommerce_catalog_ordering();
+				?>
+			</div>
+		</div>
 
-			wc_get_template_part( 'content', 'product' );
-		}
-	}
+		<?php
+if (woocommerce_product_loop()) :
 
-	woocommerce_product_loop_end();
+    // do_action( 'woocommerce_before_shop_loop' );
 
-	/**
-	 * Hook: woocommerce_after_shop_loop.
-	 *
-	 * @hooked woocommerce_pagination - 10
-	 */
-	do_action( 'woocommerce_after_shop_loop' );
-} else {
-	/**
-	 * Hook: woocommerce_no_products_found.
-	 *
-	 * @hooked wc_no_products_found - 10
-	 */
-	do_action( 'woocommerce_no_products_found' );
-}
+    echo '<div class="products-grid">';
 
-/**
- * Hook: woocommerce_after_main_content.
- *
- * @hooked woocommerce_output_content_wrapper_end - 10 (outputs closing divs for the content)
- */
-do_action( 'woocommerce_after_main_content' );
+    while (have_posts()) :
+        the_post();
+        
+        // Get product details
+        wc_get_template_part('content', 'product');
 
-/**
- * Hook: woocommerce_sidebar.
- *
- * @hooked woocommerce_get_sidebar - 10
- */
-do_action( 'woocommerce_sidebar' );
 
-get_footer( 'shop' );
+    endwhile;
+
+    echo '</div>';
+
+    do_action('woocommerce_after_shop_loop');
+
+else :
+    do_action('woocommerce_no_products_found');
+endif;
+
+do_action('woocommerce_after_main_content');
+?>
+
+	</main>
+</div>
+
+<?php get_footer('shop'); ?>

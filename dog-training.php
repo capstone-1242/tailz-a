@@ -18,13 +18,18 @@ get_header();
 
     <!-- banner image -->
 
-    <section class="non-background-hero">
+    <section class="hero-banner">
 
         <?php if (get_field('')) : ?>
+
             <div> <img src="<?php echo the_field(''); ?>"></div>
+
         <?php else : ?>
-            <div> <img src="<?php echo get_template_directory_uri(); ?>/images/hero/dog-training-hero.webp" alt=""></div>
+
+            <div> <img src="https://placehold.co/800x300" alt=""></div>
+
         <?php endif; ?>
+
     </section>
 
     <!-- banner image end -->
@@ -463,7 +468,7 @@ get_header();
                 <?php if (get_field('private-training-image')) : ?>
                     <div> <img src="<?php echo the_field('private-training-image'); ?>"></div>
                 <?php else : ?>
-                    <div> <img src="<?php echo get_template_directory_uri(); ?>/images/one-on-one-lessons-dog.webp" alt=""></div>
+                    <div> <img src="https://placehold.co/600x400" alt=""></div>
                 <?php endif; ?>
             </div>
         </div>
@@ -475,14 +480,14 @@ get_header();
             </div>
         </a>
     </section>
-    <section class="non-background-hero">
-        <?php if (get_field('')) : ?>
-            <div> <img src="<?php echo the_field(''); ?>"></div>
-        <?php else : ?>
-            <div> <img src="<?php echo get_template_directory_uri(); ?>/images/hero/canine-skill-building.webp" alt=""></div>
-        <?php endif; ?>
-    </section>
     <section class="section-container" id="behaviour-modifications">
+        <section class="hero-banner">
+            <?php if (get_field('tailz-behaviour-modifications-hero')) : ?>
+                <div> <img src="<?php echo the_field('tailz-behaviour-modifications-hero'); ?>"></div>
+            <?php else : ?>
+                <div> <img src="https://placehold.co/800x300" alt=""></div>
+            <?php endif; ?>
+        </section>
         <div class="section-intro-text">
             <h2>BEHAVIOUR MODIFICATIONS</h2>
             <p>Taking a scientific approach to solving problem behaviours.</p>
@@ -542,7 +547,7 @@ get_header();
                 <?php if (get_field('tailz-canine-skill-image')) : ?>
                     <div> <img src="<?php echo the_field('tailz-canine-skill-image'); ?>"></div>
                 <?php else : ?>
-                    <div> <img src="<?php echo get_template_directory_uri(); ?>/images/canine-skill-dog.webp" alt=""></div>
+                    <div> <img src="https://placehold.co/600x400" alt=""></div>
                 <?php endif; ?>
             </div>
             <div class="content-wrapper">

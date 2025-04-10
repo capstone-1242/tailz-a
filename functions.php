@@ -235,3 +235,4 @@ function mytheme_enqueue_woocommerce_styles() {
 add_action('wp_enqueue_scripts', 'mytheme_enqueue_woocommerce_styles');
 
 
+// --------------nav stuff-------------------------------------

@@ -215,9 +215,17 @@ get_header();
             </div>
 
             <div class="content-wrapper">
+
+
                 <h2>THE NEW LO'CAT'ION</h2> <!-- Default fallback heading -->
+
+
+
                 <p>Come visit our resort! Give your pet the luxury they deserve.</p> <!-- Default fallback content -->
-                <a href="<?php echo get_permalink(get_page_by_title('contact us')); ?>" class="no-decoration"><div class="custom-button-bottom yellow-colors"><div class="custom-button">VISIT US</div></div></a>
+
+
+                <a href="<?php echo get_permalink(get_page_by_title('contact us')); ?>"><button class="yellow-btn paw">Visit Us</button></a>
+
             </div>
 
         </div>
