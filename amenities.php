@@ -19,7 +19,7 @@ $hero_image = get_field('doggy_daycare_hero_image');
     </div>
 </section>
 
-<!-- Amenities Content Sections ------>
+<!-- Amenities Content Sections -->
 <div class="tailz-homepage-content">
 
     <!-- Barkery -->
