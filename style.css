@@ -2716,6 +2716,7 @@ Booking pages
 */
 
 .tailz-services-content .section-secondary .section-container{flex-flow: row-reverse;}
+.tailz-services-content .image-wrapper img{height: inherit;}
 
 /* Posts and pages
 --------------------------------------------- */
