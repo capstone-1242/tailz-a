@@ -248,7 +248,7 @@ get_header();
 
         <a href="<?php echo get_term_link('dog-food', 'product_cat'); ?>">
 
-            <div class="product-card">
+            <div class="homepage-product-card">
 
                 <h3>DOG FOOD</h3>
 
@@ -263,7 +263,7 @@ get_header();
 
         <a href="<?php echo get_term_link('dog-food', 'product_cat'); ?>">
             
-            <div class="product-card">
+            <div class="homepage-product-card">
 
                 <h3>DOG TREATS</h3>
 
@@ -278,7 +278,7 @@ get_header();
 
         <a href="<?php echo get_term_link('dog-food', 'product_cat'); ?>">
 
-            <div class="product-card">
+            <div class="homepage-product-card">
 
                 <h3>WET FOOD</h3>
 
@@ -294,7 +294,7 @@ get_header();
 
         <as href="<?php echo get_term_link('dog-food', 'product_cat'); ?>">
 
-            <div class="product-card">
+            <div class="homepage-product-card">
 
                 <h3>BULK TREATS</h3>
 
@@ -310,7 +310,7 @@ get_header();
 
         <a href="<?php echo get_term_link('dog-food', 'product_cat'); ?>">
 
-            <div class="product-card">
+            <div class="homepage-product-card">
 
                 <h3>CAT TREATS</h3>
 
@@ -326,7 +326,7 @@ get_header();
 
         <a href="<?php echo get_term_link('dog-food', 'product_cat'); ?>">
 
-            <div class="product-card">
+            <div class="homepage-product-card">
 
                 <h3>CAT FOOD</h3>
 
