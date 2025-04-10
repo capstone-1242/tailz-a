@@ -30,18 +30,13 @@ get_header();
         <h2>TAILZ: Grooming to furfection</h2>
 
         <div>
-
             <p>Come visit our resort! give your pet the luxury they deserve.</p>
-
-            <a href="<?php echo get_permalink(get_page_by_title('amenities')); ?>" class="no-decoration">
-
-                <div class="custom-button-bottom blue-colors">
-                    <div class="custom-button">VIEW NEW AMMENITIES</div>
-                </div>
-            </a>
-
+            <a href="<?php echo get_permalink(get_page_by_title('amenities')); ?>" class="no-decoration"><div class="custom-button-bottom blue-colors"><div class="custom-button">VIEW NEW AMENITIES</div></div></a>
 
         </div>
+
+
+
 
 
     </div>
@@ -79,11 +74,7 @@ get_header();
                     <p>Mental and physical enjoyment for social dogs, and Puppy Preschool for teaching young pups!</p>
                 <?php endif; ?>
 
-                <a href="<?php echo get_permalink(get_page_by_title('doggy daycare')); ?>" class="no-decoration">
-                <div class="custom-button-bottom yellow-colors">
-                    <div class="custom-button">VIEW DAYCARE</div>
-                </div>
-            </a>
+                <a href="<?php echo get_permalink(get_page_by_title('doggy daycare')); ?>" class="no-decoration"><div class="custom-button-bottom yellow-colors"><div class="custom-button">View Daycare</div></div></a>
             </div>
 
         </div>
@@ -120,12 +111,7 @@ get_header();
                     <p>Pampering pups from head to tail with the aid of professional pet stylists and products.</p> <!-- Default fallback content -->
                 <?php endif; ?>
 
-                <a href="<?php echo get_permalink(get_page_by_title('booking')); ?>" class="no-decoration">
-
-                    <div class="custom-button-bottom blue-colors">
-                        <div class="custom-button">BOOK A BATH</div>
-                    </div>
-                </a>
+                <a href="<?php echo get_permalink(get_page_by_title('booking')); ?>" class="no-decoration"><div class="custom-button-bottom blue-colors"><div class="custom-button">Book a Bath</div></div></a>
                 <!-- set up booking -->
             </div>
 
@@ -176,11 +162,8 @@ get_header();
                 <p>Can’t bring your pet on a trip?</p>
                 <p>Treat them to a crate-less luxury overnight stay with us!</p>
 
-                <a href="<?php echo get_permalink(get_page_by_title('overnight lodgings')); ?>" class="no-decoration">
-                <div class="custom-button-bottom yellow-colors">
-                    <div class="custom-button">VIEW LODGINGS</div>
-                </div>
-            </a>
+                <a href="<?php echo get_permalink(get_page_by_title('overnight lodgings')); ?>" class="no-decoration"><div class="custom-button-bottom yellow-colors"><div class="custom-button">VIEW LODGINGS</div></div></a>
+
             </div>
 
 
@@ -208,12 +191,7 @@ get_header();
             <div class="content-wrapper">
                 <h2>Cat SERVICES</h2>
                 <p>New cat services are coming to Tailz! Bring your cat in for a spa day, or bring them in for luxury lodgings!</p>
-                <a href="<?php echo get_permalink(get_page_by_title('booking')); ?>" class="no-decoration">
-
-                    <div class="custom-button-bottom blue-colors">
-                        <div class="custom-button">BOOK NOW</div>
-                    </div>
-                </a>
+                <a href="<?php echo get_permalink(get_page_by_title('booking')); ?>" class="no-decoration"><div class="custom-button-bottom blue-colors"><div class="custom-button">BOOK NOW</div></div></a>
             </div>
 
         </div>
@@ -246,11 +224,7 @@ get_header();
                 <p>Come visit our resort! Give your pet the luxury they deserve.</p> <!-- Default fallback content -->
 
 
-                <a href="<?php echo get_permalink(get_page_by_title('contact us')); ?>" class="no-decoration">
-                <div class="custom-button-bottom yellow-colors">
-                    <div class="custom-button">VISIT US</div>
-                </div>
-            </a>
+                <a href="<?php echo get_permalink(get_page_by_title('contact us')); ?>" class="no-decoration"><div class="custom-button-bottom yellow-colors"><div class="custom-button">VISIT US</div></div></a>
 
             </div>
 
@@ -286,8 +260,8 @@ get_header();
             </div>
         </a>
 
-        <a href="<?php echo get_term_link('dog-treats', 'product_cat'); ?>">
-
+        <a href="<?php echo get_term_link('dog-food', 'product_cat'); ?>">
+            
             <div class="homepage-product-card">
 
                 <h3>DOG TREATS</h3>
@@ -301,11 +275,11 @@ get_header();
             </div>
         </a>
 
-        <a href="<?php echo get_term_link('raw-food', 'product_cat'); ?>">
+        <a href="<?php echo get_term_link('dog-food', 'product_cat'); ?>">
 
             <div class="homepage-product-card">
 
-                <h3>RAW FOOD</h3>
+                <h3>WET FOOD</h3>
 
                 <?php
                 $third_category_image = get_field('third_category_image');
@@ -317,7 +291,7 @@ get_header();
 
         </a>
 
-        <a href="<?php echo get_term_link('bulk-treats', 'product_cat'); ?>">
+        <as href="<?php echo get_term_link('dog-food', 'product_cat'); ?>">
 
             <div class="homepage-product-card">
 
@@ -331,9 +305,9 @@ get_header();
 
             </div>
 
-        </a>
+        </as>
 
-        <a href="<?php echo get_term_link('cat-treats', 'product_cat'); ?>">
+        <a href="<?php echo get_term_link('dog-food', 'product_cat'); ?>">
 
             <div class="homepage-product-card">
 
@@ -349,7 +323,7 @@ get_header();
 
         </a>
 
-        <a href="<?php echo get_term_link('cat-food', 'product_cat'); ?>">
+        <a href="<?php echo get_term_link('dog-food', 'product_cat'); ?>">
 
             <div class="homepage-product-card">
 
