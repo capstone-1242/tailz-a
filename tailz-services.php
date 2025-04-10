@@ -42,10 +42,12 @@ $hero_image = get_field('doggy_daycare_hero_image');
         <div class="section-container">
 
             <div class="image-wrapper">
-                <?php if (get_field('tailz-canine-skill-image')) : ?>
-                    <div> <img src="<?php echo the_field('tailz-canine-skill-image'); ?>"></div>
+                <?php
+                $second_block_image = get_field('second_block_image');
+                if (get_field('second_block_image')) : ?>
+                    <div> <img src="<?php echo the_field('second_block_image'); ?>"></div>
                 <?php else : ?>
-                    <div> <img src="<?php echo get_template_directory_uri(); ?>/images/hero/puppy-programs-hero.webp" alt=""></div>
+                    <div> <img src="<?php echo get_template_directory_uri(); ?>/images/hero/hero-preview/doggy-daycare-hero.webp" alt=""></div>
                 <?php endif; ?>
             </div>
 
@@ -85,6 +87,8 @@ $hero_image = get_field('doggy_daycare_hero_image');
                 $third_block_image = get_field('third_block_image'); // Get image URL
                 if ($third_block_image): ?>
                     <img src="<?php echo esc_url($third_block_image); ?>" alt="third block Image">
+                <?php else : ?>
+                    <div> <img src="<?php echo get_template_directory_uri(); ?>/images/hero/hero-preview/pet-spa-hero.webp" alt=""></div>
                 <?php endif; ?>
 
             </div>
@@ -123,32 +127,13 @@ $hero_image = get_field('doggy_daycare_hero_image');
         <div class="section-container">
 
             <div class="image-wrapper">
-
                 <?php
-                $images = array(
-                    get_field('carousel_1'),
-                    get_field('carousel_2'),
-                    get_field('carousel_3'),
-                    get_field('carousel_4'),
-                    get_field('carousel_5'),
-                );
-
-                $images = array_filter($images);
-
-                if (!empty($images)): ?>
-                    <div class="swiper-container">
-                        <div class="swiper-wrapper">
-                            <?php foreach ($images as $image): ?>
-                                <div class="swiper-slide">
-                                    <img src="<?php echo esc_url($image); ?>" alt="Carousel Image">
-                                </div>
-                            <?php endforeach; ?>
-
-                        </div>
-
-                    </div>
+                $fourth_block_image = get_field('fourth_block_image'); // Get image URL
+                if ($fourth_block_image): ?>
+                    <img src="<?php echo esc_url($fourth_block_image); ?>" alt="fourth_block_image">
+                <?php else : ?>
+                    <div> <img src="<?php echo get_template_directory_uri(); ?>/images/hero/hero-preview/overnight-lodgings-hero.webp" alt=""></div>
                 <?php endif; ?>
-
             </div>
 
             <div class="content-wrapper">
@@ -184,6 +169,8 @@ $hero_image = get_field('doggy_daycare_hero_image');
                 $fourth_block_image = get_field('fourth_block_image'); // Get image URL
                 if ($fourth_block_image): ?>
                     <img src="<?php echo esc_url($fourth_block_image); ?>" alt="fourth_block_image">
+                <?php else : ?>
+                    <div> <img src="<?php echo get_template_directory_uri(); ?>/images/hero/hero-preview/puppy-programs-hero.webp" alt=""></div>
                 <?php endif; ?>
 
             </div>
@@ -214,6 +201,8 @@ $hero_image = get_field('doggy_daycare_hero_image');
                 $fifth_block_image = get_field('fifth_block_image'); // Get image URL
                 if ($fifth_block_image): ?>
                     <img src="<?php echo esc_url($fifth_block_image); ?>" alt="fifth_block_image">
+                <?php else : ?>
+                    <div> <img src="<?php echo get_template_directory_uri(); ?>/images/hero/hero-preview/dog-on-bench.webp" alt=""></div>
                 <?php endif; ?>
 
             </div>
@@ -228,9 +217,9 @@ $hero_image = get_field('doggy_daycare_hero_image');
                 <p>Come visit our resort! Give your pet the luxury they deserve.</p> <!-- Default fallback content -->
 
 
-                <a href="<?php echo get_permalink(get_page_by_title('contact us')); ?>" class="no-decoration">
+                <a href="<?php echo get_permalink(get_page_by_title('amenities')); ?>" class="no-decoration">
                     <div class="custom-button-bottom yellow-colors">
-                        <div class="custom-button">VISIT US</div>
+                        <div class="custom-button">View Amenities</div>
                     </div>
                 </a>
             </div>
@@ -240,17 +229,18 @@ $hero_image = get_field('doggy_daycare_hero_image');
         <div class="section-container">
             <div class="image-wrapper">
                 <?php
-                $fourth_block_image = get_field('fourth_block_image'); // Get image URL
-                if ($fourth_block_image): ?>
-                    <img src="<?php echo esc_url($fourth_block_image); ?>" alt="fourth_block_image">
+                $sixth_block_image = get_field('sixth_block_image'); // Get image URL
+                if ($sixth_block_image): ?>
+                    <img src="<?php echo esc_url($sixth_block_image); ?>" alt="sixth_block_image">
+                <?php else : ?>
+                    <div> <img src="<?php echo get_template_directory_uri(); ?>/images/hero/puppy-programs-hero.webp" alt=""></div>
                 <?php endif; ?>
-
             </div>
 
             <div class="content-wrapper">
                 <h2>Pet Photography</h2>
                 <p>New cat services are coming to Tailz! Bring your cat in for a spa day, or bring them in for luxury lodgings!</p>
-                <a href="<?php echo get_permalink(get_page_by_title('booking')); ?>" class="no-decoration">
+                <a href="<?php echo get_permalink(get_page_by_title('pet photography')); ?>" class="no-decoration">
                     <div class="custom-button-bottom blue-colors">
                         <div class="custom-button">BOOK NOW</div>
                     </div>
