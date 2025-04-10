@@ -42,8 +42,10 @@ $hero_image = get_field('doggy_daycare_hero_image');
         <div class="section-container">
 
             <div class="image-wrapper">
-                <?php if (get_field('tailz-canine-skill-image')) : ?>
-                    <div> <img src="<?php echo the_field('tailz-canine-skill-image'); ?>"></div>
+                <?php
+                $second_block_image = get_field('second_block_image');
+                if (get_field('second_block_image')) : ?>
+                    <div> <img src="<?php echo the_field('second_block_image'); ?>"></div>
                 <?php else : ?>
                     <div> <img src="<?php echo get_template_directory_uri(); ?>/images/hero/hero-preview/doggy-daycare-hero.webp" alt=""></div>
                 <?php endif; ?>
@@ -227,9 +229,9 @@ $hero_image = get_field('doggy_daycare_hero_image');
         <div class="section-container">
             <div class="image-wrapper">
                 <?php
-                $fourth_block_image = get_field('fourth_block_image'); // Get image URL
-                if ($fourth_block_image): ?>
-                    <img src="<?php echo esc_url($fourth_block_image); ?>" alt="fourth_block_image">
+                $sixth_block_image = get_field('sixth_block_image'); // Get image URL
+                if ($sixth_block_image): ?>
+                    <img src="<?php echo esc_url($sixth_block_image); ?>" alt="sixth_block_image">
                 <?php else : ?>
                     <div> <img src="<?php echo get_template_directory_uri(); ?>/images/hero/puppy-programs-hero.webp" alt=""></div>
                 <?php endif; ?>
