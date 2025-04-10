@@ -23,7 +23,7 @@ $hero_image = get_field('doggy_daycare_hero_image');
     <!-- Pet Grooming Section -->
     <section class="spa-block two-column-block">
         <div class="block-text">
-            <h2>Pet Grooming</h2>
+            <h2 style="text-align: center;">Pet Grooming</h2>
             <p>
                 With the help of our expert pet stylists, your pets will be the cleanest they’ll ever be at our pet spa!
             </p>
@@ -33,7 +33,10 @@ $hero_image = get_field('doggy_daycare_hero_image');
             <p>
                 On top of all that, our Head-To-Tailz loyalty program ensures your pet will be able to stay looking and feeling great at a more affordable price!
             </p>
-            <a href="#booking"><button class="yellow-btn">Book Your Dog</button></a>
+            <div style="text-align: right;">
+                <a href="#booking"><button class="yellow-btn">Book Your Dog</button></a>
+            </div>
+
         </div>
 
         <div class="block-image">
@@ -48,7 +51,7 @@ $hero_image = get_field('doggy_daycare_hero_image');
     </div>
 
     <div class="block-text">
-        <h2>Cat Care</h2>
+        <h2 style="text-align: center;">Cat Care</h2>
         <p>
             Friendly felines can also get treated to a lion cut at Tailz by select Pet Stylists. As one of our mandates is to minimize stress on the animals in our care, we ask that an owner or guardian accompany their feline friend for the grooming.
         </p>
