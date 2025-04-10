@@ -2346,12 +2346,12 @@ BUTTON TEMPLATES:
 }
 
 /* General Reset for List Markers */
-ul,
+/* ul,
 ol {
   list-style: none;
   margin: 0;
   padding: 0;
-}
+} */
 
 /* Remove Markers for Product List Items */
 ul.products li.product::marker,
