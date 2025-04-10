@@ -1423,7 +1423,11 @@ Doggy Daycare
     text-align: center;
     margin: 20px auto;
   }
+
+  .tailz-dog-training-content .image-wrapper img{width: inherit;margin: 0 auto;}
   
+  .tailz-dog-training-content .section-container ul{list-style-type: disc;margin-left: 16px;}
+
   .training-card {
     background-color: var(--light-primary-color);
     border-radius: 10px;
@@ -1904,6 +1908,9 @@ BUTTON TEMPLATES:
 }
 
 /* =================hero image=========================== */
+.non-background-hero{
+  max-width: 1000px;margin: 0 auto;width: 100%;
+}
 
 .hero-banner {
   position: relative;

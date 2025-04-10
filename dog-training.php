@@ -176,7 +176,7 @@ get_header();
             guidance and direction specific to your pup's needs.
         </p>
     </section>
-    <section>
+    <section class="section-container">
         <nav>
             <ul>
                 <li><a href="#puppy-classes">Puppy Classes</a></li>
