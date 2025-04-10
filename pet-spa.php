@@ -18,19 +18,20 @@ get_header();
 
     <!--  banner image -->
 
-    <section class="hero-banner">
+    <!--  banner image -->
 
-        <?php if (get_field('')) : ?>
+    <?php
+    $pet_spa_hero_image = get_field('pet_spa_hero_image');
+    ?>
 
-            <div> <img src="<?php echo the_field(''); ?>"></div>
-
-        <?php else : ?>
-
-            <div> <img src="" alt=""></div>
-
-        <?php endif; ?>
-
+    <section class="short-hero-banner"
+        style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0, 0, 0, 0.15)), 
+           url('<?php echo esc_url($pet_spa_hero_image); ?>') center/cover no-repeat;">
+        <div class="hero-content">
+            <h2>Pet Spa & Grooming</h2>
+        </div>
     </section>
+    <!-- banner image end -->
 
     <!-- banner image end -->
 
@@ -40,9 +41,10 @@ get_header();
 
     <!-- ACF section -->
 
-    <div>
+    <div class="section-container">
 
-        <div>
+        <div class="content-wrapper">
+
             <?php if (get_field('pet_spa_first_block_heading')) : ?>
 
                 <h2><?php the_field('pet_spa_first_block_heading'); ?></h2>
@@ -67,22 +69,42 @@ get_header();
                     On top of all that, our Head-To-Tailz loyalty program ensures your pet will be able to stay looking and feeling great at a more affordable price!
                 </p>
 
-                <button>Book your dog</button>
 
             <?php endif; ?>
+            <button class="yellow-btn paw">Book your dog</button>
 
         </div>
 
-        <img src="" alt="">
+        <div class="image-wrapper">
+
+            <?php
+            $pet_grooming_image = get_field('pet_grooming_image');
+            ?>
+
+            <img src="<?php echo esc_url($pet_grooming_image); ?>" alt="">
+
+        </div>
+
 
     </div>
 
     <!-- end acf section -->
 
 
-    <section cclass="cat-care">
+    <section class="cat-care section-container">
 
-        <div>
+        <div class="image-wrapper">
+
+            <?php
+            $cat_care_image = get_field('cat_care_image');
+            ?>
+
+            <img src="<?php echo esc_url($cat_care_image); ?>" alt="">
+
+        </div>
+
+
+        <div class="content-wrapper">
             <h2>cat care</h2>
 
             <p> Friendly felines can also get treated to a lion cut at Tailz by select Pet Stylists. As one of our mandates is to minimize stress on the animals in our care, we ask that an owner or guardian accompany their feline friend for the grooming.* We book them as the first appointment of the day for the Pet Stylist to ensure as less dogs will be around or on specialized Feline Furball Days, minimizing stress on your cat.</p>
@@ -92,18 +114,19 @@ get_header();
             <button>Book your cat</button>
         </div>
 
-        <img src="" alt="">
-
     </section>
 
-    <section class="tail-loyalty">
+    <section class="loyalty-program ">
 
-        <h2>Head-To-Tailz Loyalty Program</h2>
+        <div class="loyalty-program-scrim">
+            
+            <h2>Head-To-Tailz Loyalty Program</h2>
+            
+            <p> Ensure your pup gets priority booking. With our Head-To-Tailz Loyalty Program we offer the added flexibility of choosing a 4-Week or 8-Week maintenance schedule for your dog to suit your needs and lifestyle!</p>
+            
+            <button>Book your pet</button>
+        </div>
 
-        <p> Ensure your pup gets priority booking. With our Head-To-Tailz Loyalty Program we offer the added flexibility of choosing a 4-Week or 8-Week maintenance schedule for your dog to suit your needs and lifestyle!</p>
-
-        <button>Book your pet</button>
- 
     </section>
 
 </div>

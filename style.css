@@ -64,6 +64,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   --secondary-color: #fea91d; /* Secondary Theme Color (Yellow) */
   --light-secondary-color: #f4e3c6; /* light shade of secondary */
 
+  --tailz-green: #d1eb89; /* Tailz Green */
+  --wall-paint-light-blue: #bbc5f6; /* Wall Paint Light Blue */
+  --wall-paint-tan: #ffdca2; /* Wall Paint Tan */
+
   --light-third-color: #f4f2eb; /* Third Theme Color (Grey) */
   --third-color-blue-grey: #b4adbb; /* Third Theme Color (Grey) */
   --third-color-grey: #514b58; /* Third Theme Color (Grey) */
@@ -71,7 +75,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
   --warning-color: #900000; /* Warning Color */
 
-  --text-color-dark: black; /* Main Text Color */
+  --text-color-dark: rgb(6, 6, 6); /* Main Text Color */
   --text-color-light: #fffdfd; /* Main Text Color */
 
   --background-color: #f8f8f8; /* Background */
@@ -98,19 +102,39 @@ html {
 /* Sections
 	 ========================================================================== */
 
+.section-secondary {
+  background: url(images/bg/paw-background.png),
+    linear-gradient(var(--light-secondary-color));
+}
+
+.section-secondary h2 {
+  color: var(--dark-primary-color);
+}
+
+.section-intro-text {
+  text-align: center;
+  margin: 0 auto;
+  text-transform: uppercase;
+}
+
+.section-intro-text p {
+  color: var(--dark-primary-color);
+  font-weight: bold;
+}
+
 /**
  * Remove the margin in all browsers.
  */
 body {
   margin-bottom: 0 !important;
-  /* cursor: url("/wp-content/themes/tailz/images/cursor/paw-border.png"), auto; */
 }
 
 /**
- * Render the `main` element consistently in IE.
- */
+* Render the `main` element consistently in IE.
+*/
 main {
   display: block;
+
 }
 
 /**
@@ -419,6 +443,11 @@ template {
 
 html {
   box-sizing: border-box;
+  /* margin: 0 !important; */
+}
+
+body {
+  margin: 0 !important;
 }
 
 /*--------------------------------------------------------------
@@ -686,10 +715,16 @@ textarea {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1005;
+
 }
 
 .header-logo {
-  max-width: 3rem;
+  max-width: 2.5rem !important;
 }
 
 /* Basic Menu Styling */
@@ -717,7 +752,6 @@ textarea {
 }
 
 .main-menu a:hover {
-  /* cursor: url('/wp-content/themes/tailz/images/cursor/paw-64.png'), auto;  */
   color: var(--secondary-color);
 }
 
@@ -732,7 +766,7 @@ textarea {
   padding: 0;
   margin: 0;
   min-width: 150px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.527);
   z-index: 1000;
 }
 
@@ -989,20 +1023,124 @@ textarea {
 }
 
 /* Newsletter Section */
-.footer-newsletter {
+
+.newsletter {
   width: 100%;
-  padding: 20px 0;
-  text-align: center;
+  background-color: var(--third-color-darkest);
+  color: var(--text-color-light);
 }
 
-.footer-newsletter h2 {
+.newsletter h2 {
   font-size: 2rem;
-  margin-bottom: 10px;
+  margin: 0;
 }
 
-.footer-newsletter p {
-  font-size: 1.1rem;
-  color: #fff;
+.newsletter p {
+  margin: 0;
+  font-size: 1rem; /* Make the text smaller on mobile */
+}
+
+.newsletter-container {
+  max-width: 980px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  align-items: center; /* Vertically center content */
+  /* padding: 0 20px; */
+}
+
+.newsletter-image {
+  flex: 1 1 50%; /* Image takes up 50% */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center the content inside the image */
+  height: 100%; /* Ensures the image fills the height of the container */
+}
+
+.newsletter-image img {
+  width: 100%;
+  height: 100%; /* Make the image fill the entire height */
+  object-fit: cover; /* Ensures the image covers the space while maintaining its aspect ratio */
+  display: block;
+}
+
+.newsletter-content {
+  flex: 1 1 50%; /* Content takes up the other 50% */
+  text-align: center;
+  padding: 1rem 2rem;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.newsletter-content .sign-up {
+  display: flex;
+  flex-direction: row;
+  border: 4px solid var(--secondary-color);
+  background-color: var(--secondary-color);
+  border-radius: 5px;
+  width: 100%;
+  max-width: 400px; /* Limit the width of the sign-up form */
+  margin: 2rem auto;
+}
+
+.newsletter-content .sign-up input {
+  padding: 15px;
+  border: none;
+  border-radius: 5px; /* Added rounded corners */
+  width: 100%; /* Make the input take up the remaining space */
+}
+
+.newsletter-content .sign-up button {
+  background: var(--secondary-color);
+  color: var(--third-color-darkest);
+  padding: 15px 25px;
+  font-family: "League Spartan", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.3s;
+  border: none;
+  border-radius: 5px; /* Rounded button corners */
+  height: 54px;
+}
+
+.newsletter-content .sign-up button:hover {
+  background: var(--light-secondary-color);
+  color: var(--primary-color);
+}
+
+/* Responsive adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+  .newsletter-container {
+    flex-direction: column; /* Stack image and content */
+    /* padding: 0 15px; */
+  }
+
+  .newsletter-image {
+    flex: 1 1 100%; /* Image takes full width on smaller screens */
+    margin-bottom: 20px;
+    height: 200px; /* Set a fixed height for the image on smaller screens */
+  }
+
+  .newsletter-content {
+    flex: 1 1 100%; /* Content takes full width on smaller screens */
+    text-align: center;
+  }
+
+  .newsletter h2 {
+    font-size: 1.8rem;
+  }
+
+  .newsletter p {
+    font-size: 1rem;
+  }
+
+  .sign-up {
+    width: 100%; /* Make the sign-up form full width */
+    max-width: 320px;
+    margin: 0 auto;
+  }
 }
 
 /* Footer Bottom */
@@ -1093,9 +1231,13 @@ Tailz home page
 }
 
 /* BUTTON PLACEMENT */
-.content-wrapper a {
+.content-wrapper button {
   align-self: flex-end;
   margin-top: 2rem;
+}
+.content-wrapper button a {
+  text-decoration: none;
+  color: var(--text-color-light);
 }
 
 /* ALTERNATE LAYOUT FOR ODD SECTIONS */
@@ -1104,7 +1246,8 @@ Tailz home page
 }
 
 .tailz-homepage-content section:nth-child(even) .section-container {
-  background-color: var(--light-secondary-color);
+  background: url(images/bg/paw-background.png),
+    linear-gradient(var(--light-secondary-color));
 }
 
 @media screen and (max-width: 720px) {
@@ -1116,6 +1259,10 @@ Tailz home page
   .section-container {
     flex-direction: column;
     align-items: center;
+    /* text-align: center; */
+  }
+
+  .section-container h3 {
     text-align: center;
   }
 
@@ -1125,19 +1272,28 @@ Tailz home page
     max-width: 100%;
     height: auto;
   }
-
   .image-wrapper img {
-    height: auto;
+    width: 100%; /* Ensures the image fills the container's width */
+    height: 220px; /* Fixed height of 220px */
+    object-fit: cover; /* Ensures the image covers the container without distorting */
+    object-position: center; /* Centers the image within the container */
   }
-
   .content-wrapper {
     align-items: center;
     text-align: center;
     justify-content: flex-start;
+    padding: 1rem; /* Reduce padding for smaller screens */
   }
 
   .content-wrapper a {
     align-self: center;
+    margin-top: 1rem; /* Adjust button margin for a better mobile layout */
+  }
+
+  /* Optional: Make the button larger on mobile */
+  .content-wrapper button {
+    padding: 12px 24px;
+    font-size: 1rem;
   }
 }
 
@@ -1145,135 +1301,63 @@ Tailz home page
 
 /* ---------------Product cards homepage----------------------------------- */
 
-.homepage-products {
-  text-align: center;
-  justify-content: center;
-  width: 100%;
-  padding: 1rem 0 2rem;
-  background-color: var(--light-secondary-color);
-  color: var(--text-color-light);
-}
-.homepage-products h2 {
-  font-size: 24px;
-  margin: 0;
-  color: var(--primary-color);
-}
-
 .product-cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
+  padding: 2rem 0;
+  text-decoration: none;
 }
 
-.product-card {
+.product-cards a {
+ 
+  text-decoration: none;
+}
+
+.homepage-products {
+  background: url(images/bg/paw-background.png),
+    linear-gradient(var(--light-secondary-color));
+    padding-top:1rem;
+}
+
+.homepage-products h2 {
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+
+}
+
+.homepage-product-card {
   background-color: var(--primary-color);
   color: var(--text-color-dark);
   padding: 0.5rem;
   border-radius: 10px;
-  max-width: 100px;
+  width: 160px; 
+  height: 200px; 
   box-shadow: 2px 8px 8px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
-
-.product-card h3 {
-  font-size: 1rem;
-  margin: 0;
-  color: var(--text-color-light);
-}
-
-.product-card img {
-  width: 100%;
-  height: auto;
-}
-
-/* ------------------------newsletter--------------------------- */
-
-.newsletter {
-  width: 100%;
-  background-color: var(--third-color-darkest);
-  color: var(--text-color-light);
-
-}
-
-.newsletter h2 {
-  font-size: 2rem;
-  margin: 0;
-}
-
-.newsletter p {
-  margin: 0;
-}
-
-.newsletter-container {
-  max-width: 980px;
-  margin: 0 auto;
-  display: flex;
-  align-items: top;
-  padding: 0;
-}
-
-.newsletter-image {
-}
-
-.newsletter-image img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  display: block;
-}
-
-.newsletter-content {
+  align-items: center;
   text-align: center;
-  padding: 1rem 2rem;
-  gap: 1rem;
-  justify-content: center;
-  width: 60%;
+  overflow: hidden;
 }
 
-.newsletter-content .sign-up {
-  display: flex;
-  flex-direction: row;
-  border: 4px solid var(--secondary-color);
-  border-radius: 5px;
-  width: fit-content;
-  margin: 2rem auto;
+.homepage-product-card h3 {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  color: var(--text-color-light);
+  flex-shrink: 0;
 }
 
-.newsletter-content .sign-up input {
-  padding: 15px;
-  border: none;
-  border-radius: none !important;
-  -webkit-border-radius: none !important;
-  -moz-border-radius: none !important;
-  -ms-border-radius: none !important;
-  -o-border-radius: none !important;
+.homepage-product-card img {
+  width: 100%;
+  height: auto;
+  max-height: 135px; 
+  object-fit: cover;
 }
 
-.newsletter-content .sign-up button {
-  background: var(--secondary-color);
-  color: var(--third-color-darkest);
-  padding: 15px 25px;
-  font-family: "League Spartan", sans-serif;
-  font-size: 1.2rem;
-  font-weight: 500;
-  text-decoration: none;
-  transition: background 0.3s;
-  border: none;
-  border-radius: none !important;
-  -webkit-border-radius: none !important;
-  -moz-border-radius: none !important;
-  -ms-border-radius: none !important;
-  -o-border-radius: none !important;
-  height: 54px;
-}
-
-.newsletter-content .sign-up button:hover {
-  background: var(--light-secondary-color);
-  color: var(--primary-color);
-}
 
 /* ============================================
 ================================================
@@ -1336,12 +1420,20 @@ masonry for photography
     width: 48%;
     /* 2 items per row */
   }
+  .homepage-product-card {
+ 
+    max-width: 100px; 
+    max-height: 200px; 
+ 
+  }
+  
+
 }
 
 @media (max-width: 480px) {
   .grid-item {
     width: 100%;
-    /* 1 item per row */
+    
   }
 }
 /* =========================
@@ -1374,22 +1466,11 @@ Doggy Daycare
   max-width: 980px;
   height: fit-content;
   margin: auto;
-  background-color: var(--light-secondary-color);
 }
 
 .get-started h2 {
   text-align: center;
   color: var(--primary-color);
-}
-
-.get-started p {
-  font-size: 0.8rem;
-  line-height: 1.5;
-}
-
-.get-started div:last-child {
-  max-width: 50%;
-  padding: 0 2rem;
 }
 
 .get-started img {
@@ -1411,7 +1492,7 @@ Doggy Daycare
   height: fit-content;
   margin: 0 auto;
   padding: 2rem;
-  background-color: var(--light-primary-color);
+  background-color: var(--tailz-green);
 }
 
 .rates-card-container {
@@ -1466,6 +1547,66 @@ Doggy Daycare
   color: var(--primary-color);
 }
 
+/* =============
+   Training Page
+   ============= */
+
+.section-secondary {
+  background: url(images/bg/paw-background.png),
+    linear-gradient(var(--light-secondary-color));
+}
+.section-secondary h2 {
+  color: var(--dark-primary-color);
+}
+
+.tailz-dog-training-content > .section-container {
+  flex-flow: column;
+  align-items: start;
+}
+.tailz-dog-training-content h2 {
+  text-align: center;
+  margin: 20px auto;
+}
+.tailz-dog-training-content .no-decoration {
+  margin: 0 0 0 auto;
+}
+
+.section-intro-text {
+  text-align: center;
+  margin: 0 auto;
+  text-transform: uppercase;
+}
+
+.section-intro-text p {
+  color: var(--dark-primary-color);
+  font-weight: bold;
+}
+
+.training-card {
+  background-color: var(--light-primary-color);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.training-card div:first-child {
+  background-color: var(--dark-primary-color);
+  color: var(--light-secondary-color);
+  padding: 10px;
+  border-radius: 10px 10px 0 0;
+}
+
+.training-card table {
+  border-collapse: collapse;
+}
+
+.training-card th {
+  padding: 7px 0;
+}
+
+.training-card tr:nth-child(2) {
+  background-color: #ffffff56;
+}
+
 /* --------puppy-training-banner-------------------- */
 
 .puppy-training-banner {
@@ -1486,7 +1627,7 @@ Doggy Daycare
   margin: 0;
 }
 
-.puppy-training-banner div {
+.puppy-training-banner > div {
   width: 50%;
   margin: auto;
   padding: 2rem;
@@ -1503,6 +1644,153 @@ Doggy Daycare
   -moz-border-radius: 26px;
   -ms-border-radius: 26px;
   -o-border-radius: 26px;
+}
+/* ===============================
+====================================
+Pet Spa & grooming
+=====================================
+=================================== */
+
+.loyalty-program {
+  background-color: var(--light-secondary-color); /* Main background */
+  background-image: url("images/svg/paw-black-shape-svgrepo-com.svg");
+
+  background-repeat: repeat; /* Ensures tiling */
+  background-size: 50px 50px; /* Adjust size of each tile */
+  position: relative;
+  padding: 40px;
+}
+
+.loyalty-program-scrim {
+  /* background-color: rgba(255, 255, 255, 0.6); Light overlay for better text readability */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* =============
+   Lodgings Page
+   ============= */
+.tailz-overnight-lodging-content ul {
+  margin-left: 0;
+}
+
+.overnight-lodging-packages {
+  flex-flow: column;
+  margin: 0 auto;
+}
+
+.package-card-container {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.package-card {
+  border-radius: 10px;
+  text-align: center;
+}
+
+.package-card ul {
+  margin-left: 0;
+  padding-right: 40px;
+}
+
+.package-card:first-child {
+  background-color: #ffdca2;
+}
+
+.package-card:nth-child(2) {
+  background-color: #bbc5f6;
+}
+
+.package-card:last-child {
+  background-color: #cef06f;
+}
+
+.package-card div:first-child {
+  background-color: var(--secondary-color);
+  padding: 10px;
+  border-radius: 10px 10px 0 0;
+}
+
+/* Amenities page */
+.hero-banner {
+  position: relative;
+  text-align: left;
+}
+.hero-banner img {
+  width: 100%;
+  height: auto;
+}
+.page-heading {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+.amenity-block {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem 1rem;
+}
+.amenity-block.reverse {
+  flex-direction: column-reverse;
+}
+
+.amenity-image img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.amenity-text {
+  background: white;
+  padding: 1.25rem;
+  border-radius: 8px;
+}
+.amenity-text.beige {
+  background: #f9e4b7;
+}
+
+.btn-yellow {
+  background-color: #ffd700;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+  border-radius: 4px;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.btn-purple {
+  background-color: #3b2b84;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+/* Tablet/Desktop */
+@media (min-width: 768px) {
+  .amenity-block {
+    flex-direction: row;
+    align-items: center;
+  }
+  .amenity-block.reverse {
+    flex-direction: row-reverse;
+  }
+  .amenity-image,
+  .amenity-text {
+    flex: 1;
+  }
 }
 
 /* ==================
@@ -1552,17 +1840,17 @@ Contact page
 --------------------------------------------------------------*/
 
 /* ===========paw cursor..... just somthing to set us apart ;') ================================ */
-.paw:hover {
-  /* cursor: url('/wp-content/themes/tailz/images/cursor/paw-64.png'), auto; */
-  /* cursor: url("/wp-content/themes/tailz/images/cursor/paw-border.png"), auto; */
-  /* cursor: url("/wp-content/themes/tailz/images/cursor/paw-border@2x.png"), auto; */
-  /* cursor: url('/wp-content/themes/tailz/images/cursor/paw-edited-32.png'), auto; */
-  /* cursor: url('/wp-content/themes/tailz/images/cursor/paw-inflate-38.png'), auto; */
-  /* cursor: url('/wp-content/themes/tailz/images/cursor/paw-w-shadow-38.png'), auto; */
-  cursor: url("/wp-content/themes/tailz/images/cursor/paw-w-border-shadow-inflate.png"),
-    auto;
-  /* cursor: url('/wp-content/themes/tailz/images/cursor/paw-w-border-shadow-inflate-2x.png' ) , auto; */
-}
+/* .paw:hover {
+
+  cursor: url("../tailz/images/cursor/paw-inflate-38.png"), auto;
+  
+} */
+
+/* .paw:hover {
+  cursor: url("/wp-content/themes/tailz/assets/images/cursor/paw-inflate-38.png"), auto;
+} */
+
+/* moved it into header : head>style  for loading with wp*/
 
 /* =========warning text============== */
 .warning-text {
@@ -1592,6 +1880,102 @@ Contact page
   /* overflow: hidden; */
 }
 
+/* ======== 3D Buttons ========
+BUTTON TEMPLATES:
+<a href="#" class="no-decoration"><div class="custom-button-bottom"><div class="custom-button">Book Now</div></div></a>
+<a href="#" class="no-decoration"><div class="custom-button-bottom yellow-colors"><div class="custom-button">Book Now</div></div></a>
+<a href="#" class="no-decoration"><div class="custom-button-bottom blue-colors"><div class="custom-button">Book Now</div></div></a>
+ */
+
+.no-decoration {
+  text-decoration: none;
+  margin: 1rem;
+}
+
+.custom-button {
+  transition: 0.07s ease-in;
+  position: relative;
+  padding: 10px 16px;
+  background: linear-gradient(var(--third-color-grey));
+  transform: translatey(-6px);
+  border-radius: 8px;
+  color: var(--text-color-light);
+  font-family: "League Spartan", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.custom-button-bottom {
+  transition: 0.07s ease-in;
+  background: linear-gradient(#00000090),
+    linear-gradient(var(--third-color-grey));
+  width: fit-content;
+  cursor: pointer;
+
+  border-radius: 8px;
+  box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.381);
+}
+
+.custom-button:hover {
+  background: linear-gradient(#ffffff25), no-repeat,
+    linear-gradient(var(--third-color-grey));
+}
+.custom-button-bottom:hover {
+  background: linear-gradient(#00000020),
+    linear-gradient(var(--third-color-grey));
+}
+
+.custom-button:active,
+.custom-button-bottom:active .custom-button {
+  transform: translateY(0);
+}
+
+.custom-button-bottom:active {
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.381);
+}
+
+.blue-colors .custom-button {
+  background: url(images/svg/blue-button-paw.svg) no-repeat,
+    linear-gradient(var(--primary-color));
+  color: var(--text-color-light);
+}
+
+.custom-button-bottom.blue-colors {
+  background: linear-gradient(#00000047), linear-gradient(var(--primary-color));
+}
+
+.blue-colors .custom-button:hover {
+  background: linear-gradient(#ffffff10),
+    url(images/svg/blue-button-paw.svg) no-repeat,
+    linear-gradient(var(--primary-color));
+}
+.custom-button-bottom.blue-colors:hover {
+  background: linear-gradient(#00000030), linear-gradient(var(--primary-color));
+}
+
+.yellow-colors .custom-button {
+  background: url(images/svg/orange-button-paw.svg) no-repeat,
+    linear-gradient(var(--secondary-color));
+  color: var(--third-color-darkest);
+}
+
+.custom-button-bottom.yellow-colors {
+  background: linear-gradient(#0000006c),
+    linear-gradient(var(--secondary-color));
+}
+
+.yellow-colors .custom-button:hover {
+  background: linear-gradient(#ffffff25),
+    url(images/svg/orange-button-paw.svg) no-repeat,
+    linear-gradient(var(--secondary-color));
+}
+.custom-button-bottom.yellow-colors:hover {
+  background: linear-gradient(#00000020),
+    linear-gradient(var(--secondary-color));
+}
+
 /* =====================Yellow button===================================== */
 .yellow-btn {
   display: inline-block;
@@ -1611,6 +1995,11 @@ Contact page
   -o-border-radius: 10px;
   box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.381);
 }
+/* 
+.yellow-btn a{
+  text-decoration: none;
+  color: var(--text-color-light);
+} */
 
 .yellow-btn:hover {
   background: var(--light-secondary-color);
@@ -1672,6 +2061,8 @@ Contact page
   justify-content: center;
   color: #fff;
   padding: 0 20px;
+  margin-top: 1.5rem;
+ 
 }
 
 .short-hero-banner {
@@ -1683,6 +2074,8 @@ Contact page
   justify-content: center;
   color: #fff;
   padding: 0 20px;
+  margin-top: 1.5rem;
+
 }
 
 .hero-content {
@@ -1707,10 +2100,33 @@ Contact page
   align-self: end;
 }
 
-/* =================hero image end=========================== */
+@media screen and (max-width: 720px) {
+  .hero-content h2 {
+    font-size: 2rem;
+  }
+  .hero-content p {
+    font-size: 1rem;
+  }
 
+  .hero-banner {
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    padding: 0 20px 2rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+}
+
+/* =================hero image end=========================== */
+/* --------------------------------------- */
 /* Navigation
 --------------------------------------------- */
+
 .main-navigation {
   display: flex;
   width: 100%;
@@ -1718,59 +2134,14 @@ Contact page
   justify-content: space-between;
   padding: 0 2rem;
 }
+/* 
 
-.main-navigation ul {
-  display: none;
-  list-style: none;
-  margin: 0;
-  padding-left: 0;
-}
-
-.main-navigation ul ul {
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-  float: left;
-  position: absolute;
-  top: 100%;
-  left: -999em;
-  z-index: 99999;
-}
-
-.main-navigation ul ul ul {
-  left: -999em;
-  top: 0;
-}
-
-.main-navigation ul ul li:hover > ul,
-.main-navigation ul ul li.focus > ul {
-  display: block;
-  left: auto;
-}
-
-.main-navigation ul ul a {
-  width: 200px;
-}
-
-.main-navigation ul li:hover > ul,
-.main-navigation ul li.focus > ul {
-  left: auto;
-}
-
-.main-navigation li {
-  position: relative;
-}
-
-.main-navigation a {
-  display: block;
-  text-decoration: none;
-}
 
 /* Small menu. */
 
-.header {
-  display: flex;
-  justify-items: space-between;
-  align-items: center;
-  align-items: center;
+.main-menu .menu-item-has-children > a {
+  text-decoration: none;
+  pointer-events: none;
 }
 
 .menu-toggle,
@@ -1778,7 +2149,35 @@ Contact page
   display: block;
 }
 
-@media screen and (min-width: 37.5em) {
+.mobile-view-menu {
+  display: none;
+}
+
+.mobile-nav-bar {
+  display: flex;
+}
+
+.mobile-nav-bar a {
+  width: 2rem;
+  fill: var(--text-color-light);
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  margin: 0 0.5rem;
+}
+
+.mobile-nav-bar a img {
+  width: 32px;
+  height: 32px;
+}
+.mobile-nav-bar a:hover img {
+  filter: brightness(0) saturate(100%) invert(83%) sepia(29%) saturate(5387%)
+    hue-rotate(344deg) brightness(102%) contrast(99%);
+}
+
+@media screen and (min-width: 770px) {
   .menu-toggle {
     display: none;
   }
@@ -1788,6 +2187,534 @@ Contact page
   }
 }
 
+/* Mobile Styles */
+@media screen and (max-width: 770px) {
+  .mobile-view-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .main-menu > li > a {
+    display: none;
+  }
+
+  .main-menu li.active > .sub-menu {
+    display: flex;
+  }
+
+  .main-navigation {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+
+  .main-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    width: 200px;
+    background: var(--primary-color);
+
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+
+  /* Menu items */
+  .main-menu li {
+    display: block;
+    width: 100%;
+  }
+
+  /* Links inside menu */
+  .main-menu a {
+    display: block;
+    /* padding: 10px; */
+    color: var(--text-color-light);
+    text-decoration: none;
+  }
+  .main-menu li:hover {
+    background: var(--dark-primary-color);
+    color: var(--secondary-color);
+  }
+
+  /* When menu is active, it is displayed */
+  .main-menu.active {
+    display: flex;
+  }
+
+  /* Hamburger Button */
+  .menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    z-index: 1001;
+  }
+
+  .mobile-nav-bar {
+    display: block;
+    background: none;
+    border: none;
+    padding: 10px;
+    position: absolute;
+    top: 8px;
+    right: 60px;
+    z-index: 1001;
+  }
+
+  .menu-toggle .hamburger-icon rect {
+    fill: var(--text-color-light);
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+  }
+
+  .menu-toggle:hover .hamburger-icon rect {
+    fill: var(--secondary-color);
+  }
+
+  .main-menu .sub-menu {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 0;
+    top: 0;
+    background: var(--primary-color);
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    box-shadow: none;
+  }
+
+  /* Sub-menu items */
+  .main-menu .sub-menu li {
+    display: block;
+  }
+
+  .main-menu li.active > .sub-menu {
+    display: flex;
+  }
+
+  .site-header {
+    padding: 0;
+  }
+}
+
+/* ================================
+   WooCommerce Shop Page Styling
+/* ================================
+/* Style for product card */
+/* General Box Sizing for Consistency */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.shop-welcome-intro {
+  text-align: center;
+  margin: 1rem auto;
+  max-width: 720px;
+}
+
+.shop-welcome-intro h2 {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+/* Product Card */
+.product-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 240px;
+}
+
+/* Product Title Styling */
+.woocommerce-loop-product__title {
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  align-self: left !important;
+  font-family: "league spartan", sans-serif;
+  margin-top: 10px;
+  text-align: left;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  text-transform: capitalize;
+}
+
+/* Product Description */
+.product-description {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 10px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* Product Price */
+.price {
+  font-size: 1rem;
+  color: var(--secondary-color);
+  text-align: center;
+  margin-top: 5px;
+}
+
+/* Product Rating */
+.product-rating {
+  text-align: center;
+  margin-top: 5px;
+}
+
+/* General Reset for List Markers */
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove Markers for Product List Items */
+ul.products li.product::marker,
+ul.products li.product a::marker,
+ul.products li.product .woocommerce-loop-product__title::marker {
+  content: none !important;
+}
+
+/* Shop Container */
+.shop-container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  background-color: var(--light-third-color);
+}
+
+/* Sidebar */
+.shop-sidebar {
+  flex: 1 1 250px;
+  max-width: 250px;
+  /* background-color: var(--light-primary-color); */
+  padding: 0 15px;
+  border-radius: 8px;
+}
+
+/* Sidebar Heading */
+.shop-sidebar h2 {
+  font-size: 1.5rem;
+  color: var(--dark-primary-color);
+  margin-bottom: 1rem;
+  padding-top: 0;
+}
+
+/* Sidebar Widget */
+.shop-sidebar .widget {
+  margin-bottom: 1.5rem;
+}
+
+.widget_product_categories .widgettitle {
+  font-size: 1.3rem;
+  color: var(--primary-color);
+  /* margin-bottom: 1rem; */
+  padding-top: 0;
+  font-family: "league spartan", sans-serif;
+}
+
+.widget_price_filter .widgettitle {
+  font-size: 1.3rem;
+  color: var(--primary-color);
+  /* margin-bottom: 1rem; */
+  padding-top: 0;
+  font-family: "league spartan", sans-serif;
+}
+
+.price_slider_amount {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  padding: 10px;
+ gap: 10px;
+}
+
+.price_slider_amount .button {
+  background-color: var(--secondary-color) !important;
+  color: var(--third-color-darkest) !important;
+}
+
+ .price_slider_amount .price_label {
+    width: 112px !important;
+    margin-top:0;
+  }
+
+  /* ================================================================= */
+@media screen and (max-width: 480px) {
+ 
+ 
+  
+}
+
+.widget_product_categories .product-categories li a {
+  list-style: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  color: var(--primary-color);
+  font-size: 1rem;
+  padding: 5px 0;
+  display: block;
+  transition: color 0.3s ease;
+  font-weight: 600;
+  font-family: "league spartan", sans-serif;
+}
+
+/* Main Shop Content */
+.shop-main {
+  flex: 3 1 700px;
+  min-width: 0;
+}
+
+/* Page Title */
+.page-title {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+/* Shop Toolbar */
+.shop-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.product-description {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 10px;
+  line-height: 1.5;
+  text-align: left;
+}
+
+/* Product Grid Layout */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 items per row on desktop */
+  gap: 20px;
+  margin-top: 1.5rem;
+}
+
+/* Product Item Styling */
+
+.product-card h2 {
+  text-align: left;
+}
+
+.products-grid li.product {
+  background-color: #fff;
+  /* padding: 15px; */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: space-between;
+  max-width: 240px; /* Max width for product cards */
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* Product Image */
+.products-grid li.product img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+  max-height: 200px; /* Ensure images do not become too large */
+}
+
+/* Product Title inside Product Card */
+.products-grid li.product .woocommerce-loop-product__title {
+  font-size: 1.1rem;
+  margin-top: 10px;
+  color: var(--primary-color);
+  font-weight: bold;
+  text-align: left;
+}
+
+/* Product Price inside Product Card */
+.products-grid li.product .price {
+  font-size: 1rem;
+  color: var(--secondary-color);
+  margin-top: 5px;
+  text-align: right;
+}
+
+.products-grid li.product .product-rating .star-rating {
+  align-self: left;
+  margin-top: 5px;
+}
+
+/* Pagination Styling */
+.woocommerce-pagination {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.woocommerce-pagination .page-numbers {
+  display: inline-block;
+  margin: 0 5px;
+  padding: 8px 14px;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.woocommerce-pagination .current {
+  background-color: var(--primary-color);
+  color: var(--text-color-light);
+}
+
+/* Heading Inside Product Card */
+.products-grid li h2 {
+  font-size: 1.2rem;
+  margin: 0;
+  color: var(--primary-color);
+  text-align: center;
+}
+
+/* Responsive Layouts */
+@media (max-width: 1280px) {
+  .products-grid {
+    grid-template-columns: repeat(4, 1fr); /* 4 items per row */
+  }
+}
+
+@media (max-width: 992px) {
+  .products-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+  }
+}
+
+@media (max-width: 768px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 items per row */
+  }
+
+  .results-count,
+  .sort-dropdown {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .products-grid {
+    grid-template-columns: 1fr; /* 1 item per row */
+  }
+
+  .shop-toolbar {
+    /* flex-direction: column; */
+    gap: 10px;
+    align-items: flex-start;
+  }
+}
+
+/* ==================================
+Booking pages
+======================================= */
+
+/* Booking Page Container */
+
+.booking-container {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: var(--primary-color);
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Booking Header */
+.booking-header {
+  text-align: center;
+  margin-bottom: 30px;
+  color: var(--text-color-light);
+}
+
+.booking-header h2::first-letter {
+  color: var(--secondary-color);
+}
+
+.booking-header h2 {
+  font-size: 2rem;
+  color: var(--text-color-light);
+  margin-bottom: 10px;
+}
+
+.booking-header p {
+  font-size: 1rem;
+}
+
+/* Booking Form */
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.booking-form-content {
+  width: 100%;
+  padding: 20px;
+  background-color: var(--text-color-light);
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  justify-content: center !important;
+}
+
+/* Customize form fields */
+.booking-form-content input,
+.booking-form-content select,
+.booking-form-content button {
+  /* width: 100%; */
+  padding: 12px;
+  margin: 8px 0;
+  border: 3px solid var(--secondary-color);
+  border-radius: 4px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+/* Add hover effect for buttons */
+.booking-form-content button:hover {
+  background-color: #3498db;
+  color: white;
+  cursor: pointer;
+}
+
+.cpp_form {
+  display: flex;
+  justify-content: center;
+}
+
+/* ---------------------------------------------------- */
 .site-main .comment-navigation,
 .site-main .posts-navigation,
 .site-main .post-navigation {
@@ -1870,7 +2797,6 @@ Contact page
   padding: 0;
 }
 
-/* Make sure logo link wraps around logo image. */
 .custom-logo-link {
   display: inline-block;
 }

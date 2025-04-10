@@ -2,59 +2,33 @@
 /**
  * The template for displaying 404 pages (not found)
  *
- * @link https://codex.wordpress.org/Creating_an_Error_404_Page
- *
  * @package tailz
  */
 
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
+<section class="hero-banner"
+    style="margin: 0; padding: 6rem 2rem; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('<?php echo get_template_directory_uri(); ?>/images/hero/dogs-on-chair.webp') center/cover no-repeat; color: #fff; text-align: center; display: flex; align-items: center; justify-content: center;">
+    
+    <div class="hero-content" style="max-width: 700px;">
+        <h2 style="font-size: 2rem; margin-bottom: 1rem;">Uh-oh! That page went walkies. 🐾</h2>
+        <p >
+            It looks like the page you're sniffing for doesn't exist.<br>
+            But don't worry, we’ve got plenty of treats elsewhere!
+        </p>
 
-		<section class="error-404 not-found">
-			<header class="page-header">
-				<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'tailz' ); ?></h1>
-			</header><!-- .page-header -->
+        <a href="<?php echo esc_url(home_url('/')); ?>" class="yellow-btn paw" style="display: inline-block; margin-bottom: 1.5rem;">
+        Back to Homepage
+        </a>
 
-			<div class="page-content">
-				<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'tailz' ); ?></p>
+        <div >
+            <p style="margin-bottom: 0.5rem;">Or try searching:</p>
+            <div style="max-width: 400px; margin: 0 auto;">
+                <?php get_search_form(); ?>
+            </div>
+        </div>
+    </div>
+</section>
 
-					<?php
-					get_search_form();
-
-					the_widget( 'WP_Widget_Recent_Posts' );
-					?>
-
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'tailz' ); ?></h2>
-						<ul>
-							<?php
-							wp_list_categories(
-								array(
-									'orderby'    => 'count',
-									'order'      => 'DESC',
-									'show_count' => 1,
-									'title_li'   => '',
-									'number'     => 10,
-								)
-							);
-							?>
-						</ul>
-					</div><!-- .widget -->
-
-					<?php
-					/* translators: %1$s: smiley */
-					$tailz_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'tailz' ), convert_smilies( ':)' ) ) . '</p>';
-					the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$tailz_archive_content" );
-
-					the_widget( 'WP_Widget_Tag_Cloud' );
-					?>
-
-			</div><!-- .page-content -->
-		</section><!-- .error-404 -->
-
-	</main><!-- #main -->
-
-<?php
-get_footer();
+<?php get_footer(); ?>

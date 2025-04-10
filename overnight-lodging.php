@@ -55,22 +55,25 @@ get_header();
 
     <!-- second section -->
 
-    <section>
-
-        <h2>Requirements</h2>
-        <p>Only social, dog friendly dogs are accepted into our lodging. We do not take aggressive dogs.</p>
-        <p>All dogs must pass a Meet & Greet prior to lodging.</p>
-        <p>They must have attended Doggy Daycare at least once in the last 3 months. Alternatively, new pups must have passed their Meet & Greet within the last 2 months</p>.
-        <p>All dogs require up-to-date vaccinations for Bordetella, Distemper/Parvovirus/Parainfluenza, and Rabies (after 6 months of age.)</p>
-        <p>All current vaccination records must be received 24-hours in advance of your pet’s overnight stay.</p>
-        <p>All pups are to be spayed or neutered by 7 months of age. If a medical exception has been granted, intact pups older than 10 months will not be accepted.</p>
-        <p>Our Canine Care Team may change the activity level of your dog should their needs require it during their stay.
-        </p>Check-in time is 12:00PM or afterwards during regular business hours. Early check-in fee of $17.99 applies before 12:00PM.
-        <p>Checkout time is by 12:00PM during regular business hours. Late checkout fee of $17.99 applies after 12:00PM.
-        </p>
-        <p>Dogs not checked out by closing time must stay overnight, and will be surcharged for additional night's stay and can be picked up the following business day.</p>
-
-    </section>
+    <div class="section-secondary">
+        <section class="section-container">
+            <div class="section-intro-text">
+                <h2>Requirements</h2>
+            </div>
+            <ul>
+                <li>Only social, dog friendly dogs are accepted into our lodging. We do not take aggressive dogs.</li>
+                <li>All dogs must pass a Meet & Greet prior to lodging.</li>
+                <li>They must have attended Doggy Daycare at least once in the last 3 months. Alternatively, new pups must have passed their Meet & Greet within the last 2 months.</li>
+                <li>All dogs require up-to-date vaccinations for Bordetella, Distemper/Parvovirus/Parainfluenza, and Rabies (after 6 months of age.)</li>
+                <li>All current vaccination records must be received 24-hours in advance of your pet’s overnight stay.</li>
+                <li>All pups are to be spayed or neutered by 7 months of age. If a medical exception has been granted, intact pups older than 10 months will not be accepted.</li>
+                <li>Our Canine Care Team may change the activity level of your dog should their needs require it during their stay.</li>
+                <li>Check-in time is 12:00PM or afterwards during regular business hours. Early check-in fee of $17.99 applies before 12:00PM.</li>
+                <li>Checkout time is by 12:00PM during regular business hours. Late checkout fee of $17.99 applies after 12:00PM.</li>
+                <li>Dogs not checked out by closing time must stay overnight, and will be surcharged for additional night's stay and can be picked up the following business day.</li>
+            </ul>
+        </section>
+    </div>
 
     <!-- third section -->
     <section class="overnight-lodging-packages">
@@ -113,18 +116,31 @@ get_header();
             </div>
 
         </div>
-
+        <a href="#" class="no-decoration max-margin-left">
+            <div class="custom-button-bottom yellow-colors">
+                <div class="custom-button">BOOK LODGINGS</div>
+            </div>
+        </a>
     </section>
 
-    <section>
-
-        <h2>Premium lodges</h2>
-
-        <p>Each of our lodgings is uniquely decorated for your dogs enjoyment.</p>
-
-        <img src="" alt="">
-        <img src="" alt="">
-        <img src="" alt="">
+    <div class="section-secondary">
+        <section class="section-container">
+            <div class="section-intro-text">
+                <h2>Premium lodges</h2>
+                <p>Each of our lodgings is uniquely decorated for your dogs enjoyment.</p>
+            </div>
+            <div class="package-card-container">
+                <img src="https://placehold.co/300x300" alt="">
+                <img src="https://placehold.co/300x300" alt="">
+                <img src="https://placehold.co/300x300" alt="">
+            </div>
+            <a href="#" class="no-decoration max-margin-left">
+                <div class="custom-button-bottom blue-colors">
+                    <div class="custom-button">BOOK LODGINGS</div> 
+                </div>
+            </a>
+        </section>
+    </div>
 
 
         <button></button>
@@ -132,7 +148,11 @@ get_header();
     </section>
 
 
-    <section>
+        <a href="#" class="no-decoration max-margin-left">
+            <div class="custom-button-bottom yellow-colors">
+                <div class="custom-button">BOOK YOUR CAT</div>
+            </div>
+        </a>
 
         <h2>Cat hotel</h2>
 
