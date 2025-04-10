@@ -41,11 +41,11 @@
 		gtag('config', 'G-XGERCH5WEY');
 	</script>
 
-	<style>
-		.paw:hover {
-			cursor: url("<?php echo get_template_directory_uri(); ?>/images/cursor/paw-inflate-38.png"), auto !important;
-		}
-	</style>
+<style>
+    .paw:hover {
+        cursor: url("<?php echo get_template_directory_uri(); ?>/images/cursor/paw-inflate-38.png"), auto !important;
+    }
+</style>
 
 
 	<?php wp_head(); ?>
@@ -99,7 +99,6 @@
 
 					<!-- Mobile View Menu -->
 					<div class="mobile-view-menu">
-
 						<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
 							<svg class="hamburger-icon" viewBox="0 0 100 80" width="30" height="30">
 								<rect width="100" height="10"></rect>
@@ -107,17 +106,7 @@
 								<rect y="60" width="100" height="10"></rect>
 							</svg>
 						</button>
-
-						<div class="mobile-nav-bar">
-							
-							<a href="<?php echo get_permalink(get_page_by_title('search')); ?>"><img src="<?= get_template_directory_uri() ?>/images/svg/search.svg" alt=""></a>
-							<a href="<?php echo get_permalink(get_page_by_title('my account')); ?>"><img src="<?= get_template_directory_uri() ?>/images/svg/user.svg" alt=""></a>
-							<a href="<?php echo get_permalink(get_page_by_title('cart')); ?>"><img src="<?= get_template_directory_uri() ?>/images/svg/cart.svg" alt=""></a>
-							
-						</div>
-
 					</div>
-
 				</nav>
 			<?php endif; ?>
 
