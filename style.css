@@ -559,6 +559,13 @@ ol {
   list-style: decimal;
 }
 
+ul.no-list-style,
+ol.no-list-style {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 li > ul,
 li > ol {
   margin-bottom: 0;
@@ -1241,7 +1248,8 @@ Tailz home page
 }
 
 .tailz-homepage-content section:nth-child(even) .section-container {
-  background-color: var(--light-secondary-color);
+  background: url(images/bg/paw-background.png),
+    linear-gradient(var(--light-secondary-color));
 }
 
 @media screen and (max-width: 720px) {
@@ -2701,6 +2709,13 @@ Booking pages
   text-align: end;
   flex: 1 0 50%;
 }
+
+
+/* 
+  Services Page
+*/
+
+.tailz-services-content .section-secondary .section-container{flex-flow: row-reverse;}
 
 /* Posts and pages
 --------------------------------------------- */
