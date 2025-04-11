@@ -37,7 +37,15 @@ get_header();
         <p>Each day of restful sleep offers the benefits of Doggy Daycare, meaning your pet will never be left alone while they’re with us. You may also sign your dog up for a departure bath on their last day so they come home fresh and squeaky clean!</p>
 
         <div class="section-container">
-            <div class="image-wrapper"><img src="https://placehold.co/600x400" alt=""></div>
+            <div class="image-wrapper">
+                <?php
+                $luxury_lodges = get_field('luxury_lodges'); // Get image URL
+                if ($luxury_lodges): ?>
+                    <img src="<?php echo esc_url($luxury_lodges); ?>" alt="luxury_lodges">
+                <?php else : ?>
+                    <div> <img src="<?php echo get_template_directory_uri(); ?>/images/hero/hero-preview/dog-on-bench.webp" alt=""></div>
+                <?php endif; ?>
+            </div>
 
             <div class="content-wrapper">
                 <p>We provide all the toys, beds, blankets and love that your dog needs; all you need to do is bring some dog food! We will feed your dog two to three times a day with the provided food. Bring all items in a marked reusable shopping bag. Pre-portioned food is appreciated.</p>
@@ -129,26 +137,54 @@ get_header();
     </section>
 
     <div class="section-secondary">
-        <section class="section-container">
+        <section class="section-container large-max-width">
             <div class="section-intro-text">
                 <h2>Premium lodges</h2>
                 <p>Each of our lodgings is uniquely decorated for your dogs enjoyment.</p>
             </div>
-            <div class="package-card-container">
-                <img src="https://placehold.co/300x300" alt="">
-                <img src="https://placehold.co/300x300" alt="">
-                <img src="https://placehold.co/300x300" alt="">
-            </div>
-            <a href="<?php echo get_permalink(get_page_by_title('booking')); ?>" class="no-decoration max-margin-left">
-                <div class="custom-button-bottom blue-colors">
-                    <div class="custom-button">BOOK LODGINGS</div>
+            <div class="image-row-container">
+                <div>
+                    <?php
+                    $first_lodging_image = get_field('first_lodging_image'); // Get image URL
+                    if ($first_lodging_image): ?>
+                        <img src="<?php echo esc_url($first_lodging_image); ?>" alt="first_lodging_image">
+                    <?php else : ?>
+                        <div> <img src="<?php echo get_template_directory_uri(); ?>/images/hero/hero-preview/dog-on-bench.webp" alt=""></div>
+                    <?php endif; ?>
                 </div>
-            </a>
+
+                <div>
+                    <?php
+                    $second_lodging_image = get_field('second_lodging_image'); // Get image URL
+                    if ($second_lodging_image): ?>
+                        <img src="<?php echo esc_url($second_lodging_image); ?>" alt="second_lodging_image">
+                    <?php else : ?>
+                        <div> <img src="<?php echo get_template_directory_uri(); ?>/images/hero/hero-preview/dog-on-bench.webp" alt=""></div>
+                    <?php endif; ?>
+                </div>
+
+                <div>
+                    <?php
+                    $third_lodging_image = get_field('third_lodging_image'); // Get image URL
+                    if ($third_lodging_image): ?>
+                        <img src="<?php echo esc_url($third_lodging_image); ?>" alt="third_lodging_image">
+                    <?php else : ?>
+                        <div> <img src="<?php echo get_template_directory_uri(); ?>/images/hero/hero-preview/dog-on-bench.webp" alt=""></div>
+                    <?php endif; ?>
+                </div>
+            </div>
+            <div class="section-container">
+                <a href="<?php echo get_permalink(get_page_by_title('booking')); ?>" class="no-decoration max-margin-left">
+                    <div class="custom-button-bottom blue-colors">
+                        <div class="custom-button">BOOK LODGINGS</div>
+                    </div>
+                </a>
+            </div>
         </section>
     </div>
 
 
-    <section class="section-container">
+    <section class="section-container large-max-width">
 
         <div class="section-intro-text">
             <h2>Cat hotel</h2>
@@ -156,18 +192,46 @@ get_header();
                 Our cat hotel offers a secure location for cats to stay overnight.</p>
         </div>
 
-        <div class="package-card-container">
-            <img src="https://placehold.co/300x300" alt="">
-            <img src="https://placehold.co/300x300" alt="">
-            <img src="https://placehold.co/300x300" alt="">
-        </div>
+        <div class="image-row-container">
+                <div>
+                    <?php
+                    $first_cat_hotel_image = get_field('first_cat_hotel_image'); // Get image URL
+                    if ($first_cat_hotel_image): ?>
+                        <img src="<?php echo esc_url($first_cat_hotel_image); ?>" alt="first_cat_hotel_image">
+                    <?php else : ?>
+                        <div> <img src="<?php echo get_template_directory_uri(); ?>/images/hero/hero-preview/dog-on-bench.webp" alt=""></div>
+                    <?php endif; ?>
+                </div>
 
+                <div>
+                    <?php
+                    $second_cat_hotel_image = get_field('second_cat_hotel_image'); // Get image URL
+                    if ($second_cat_hotel_image): ?>
+                        <img src="<?php echo esc_url($second_cat_hotel_image); ?>" alt="second_cat_hotel_image">
+                    <?php else : ?>
+                        <div> <img src="<?php echo get_template_directory_uri(); ?>/images/hero/hero-preview/dog-on-bench.webp" alt=""></div>
+                    <?php endif; ?>
+                </div>
 
-        <a href="<?php echo get_permalink(get_page_by_title('booking')); ?>" class="no-decoration max-margin-left">
-            <div class="custom-button-bottom yellow-colors">
-                <div class="custom-button">BOOK YOUR CAT</div>
+                <div>
+                    <?php
+                    $third_cat_hotel_image = get_field('third_cat_hotel_image'); // Get image URL
+                    if ($third_cat_hotel_image): ?>
+                        <img src="<?php echo esc_url($third_cat_hotel_image); ?>" alt="third_cat_hotel_image">
+                    <?php else : ?>
+                        <div> <img src="<?php echo get_template_directory_uri(); ?>/images/hero/hero-preview/dog-on-bench.webp" alt=""></div>
+                    <?php endif; ?>
+                </div>
             </div>
-        </a>
+
+
+        <div class="section-container">
+            <a href="<?php echo get_permalink(get_page_by_title('booking')); ?>" class="no-decoration max-margin-left">
+                <div class="custom-button-bottom yellow-colors">
+                    <div class="custom-button">BOOK YOUR CAT</div>
+                </div>
+            </a>
+        </div>
 
 
     </section>

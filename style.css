@@ -1241,6 +1241,7 @@ Tailz home page
   align-items: center;
   /* padding: 0.5rem; */
 }
+.large-max-width{max-width: 1300px;}
 
 /* IMAGE WRAPPER */
 .image-wrapper {
@@ -1784,6 +1785,21 @@ Pet Spa & grooming
   gap: 1rem;
   flex-wrap: wrap;
   justify-content: center;
+}
+.image-row-container {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0.2rem;
+  margin: 0 auto;
+}
+
+@media (min-width: 500px) {
+  .image-row-container > div{max-width: calc(50% - 1rem);}
+}
+@media (min-width: 768px) {
+  .image-row-container > div{max-width: calc(33%   - 2rem);}
 }
 
 .package-card {
