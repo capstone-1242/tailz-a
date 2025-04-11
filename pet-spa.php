@@ -116,7 +116,7 @@ get_header();
 
     </section>
 
-    <section class="loyalty-program ">
+    <section class="loyalty-program section-secondary">
 
         <div class="loyalty-program-scrim">
             

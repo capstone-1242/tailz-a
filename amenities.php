@@ -34,7 +34,7 @@ $hero_image = get_field('doggy_daycare_hero_image');
             <div class="content-wrapper">
                 <h2>The Barkery</h2>
                 <p>An in-house bakery offering freshly-baked dog treats for your pups! Bring our treats to your own home through our online store as well.</p>
-                <a href="<?php echo home_url('/store/'); ?>"><button class="yellow-btn paw">Purchase Now</button></a>
+                <a href="<?php echo home_url('/store/'); ?>" class="no-decoration"><div class="custom-button-bottom yellow-colors"><div class="custom-button">Purchase Now</div></div></a>
             </div>
         </div>
     </section>
@@ -67,7 +67,7 @@ $hero_image = get_field('doggy_daycare_hero_image');
             <div class="content-wrapper">
                 <h2>Outdoor Area</h2>
                 <p>Our large fenced-off outdoor play area allows your pets to roam in the fresh air safely during their daycare experience.</p>
-                <a href="<?php echo home_url('/doggy-daycare/'); ?>"><button class="blue-btn paw">View Daycare</button></a>
+                <a href="<?php echo home_url('/doggy-daycare/'); ?>" class="no-decoration"><div class="custom-button-bottom yellow-colors"><div class="custom-button">View Daycare</div></div></a>
             </div>
         </div>
     </section>
@@ -84,7 +84,7 @@ $hero_image = get_field('doggy_daycare_hero_image');
             <div class="content-wrapper">
                 <h2>Indoor Pool</h2>
                 <p>Imagine a safe, supervised space where your pet can cool off and enjoy a refreshing bath in a pool built just for them. Because every pet deserves a little splash of joy!</p>
-                <a href="<?php echo home_url('/contact-us/'); ?>"><button class="yellow-btn paw">Daycare Bathing</button></a>
+                <a href="<?php echo home_url('/contact-us/'); ?>" class="no-decoration"><div class="custom-button-bottom blue-colors"><div class="custom-button">Daycare Bathing</div></div></a>
             </div>
         </div>
     </section>
