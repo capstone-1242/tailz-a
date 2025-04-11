@@ -1754,9 +1754,6 @@ Pet Spa & grooming
 }
 
 .loyalty-program {
-  background-color: var(--light-secondary-color); /* Main background */
-  background-image: url("images/svg/paw-black-shape-svgrepo-com.svg");
-
   background-repeat: repeat; /* Ensures tiling */
   background-size: 50px 50px; /* Adjust size of each tile */
   position: relative;
