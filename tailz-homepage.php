@@ -192,6 +192,7 @@ get_header();
     <!-- cat services -->
 
     <section class="homepage-section">
+        
 
         <div class="section-container">
 
@@ -201,6 +202,7 @@ get_header();
                 $fourth_block_image = get_field('fourth_block_image'); // Get image URL
                 if ($fourth_block_image): ?>
                     <img src="<?php echo esc_url($fourth_block_image); ?>" alt="fourth_block_image">
+                    
                 <?php endif; ?>
 
             </div>
