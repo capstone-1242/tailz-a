@@ -2062,107 +2062,81 @@ Contact page
   padding: 2rem 0;
 }
 
-.hero-banner {
-  height: 300px;
+.contact-info-bar {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
+  justify-content: space-around;
   text-align: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
 }
 
-.hero-banner .hero-content h1 {
-  font-size: 3rem;
-  margin: 0;
+.info-block h3 {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 0.3rem;
+  color: var(--primary-color);
 }
 
-.contact-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-  padding: 2rem;
-  max-width: 1200px;
-  margin: auto;
-}
-
-.contact-boxes {
+.form-map-section {
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
 
-@media (min-width: 768px) {
-  .contact-boxes {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .form-group-inline {
-    display: flex;
-    gap: 1rem;
-  }
-
-  .form-group-inline input {
-    flex: 1;
-  }
-}
-
-.contact-details {
+.form-container,
+.map-container {
   flex: 1;
 }
 
-.contact-info-group {
-  margin-bottom: 1.5rem;
-}
-
-.contact-info-group h3 {
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-  color: var(--primary-color);
-}
-
-.contact-form {
-  flex: 1;
-}
-
-.contact-form h3 {
+.form-container h3 {
+  font-size: 1.4rem;
   margin-bottom: 1rem;
   color: var(--primary-color);
 }
 
-.contact-form input,
-.contact-form textarea {
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.form-container input,
+.form-container textarea {
   width: 100%;
   padding: 0.75rem;
-  margin-bottom: 1rem;
   border-radius: 5px;
   border: 1px solid #ccc;
-  font-size: 1rem;
 }
 
-.contact-form textarea {
+.form-container textarea {
   resize: vertical;
 }
 
-.contact-form button {
-  background-color: var(--secondary-color);
-  border: none;
-  padding: 0.75rem 2rem;
-  color: white;
-  border-radius: 5px;
+.btn-yellow {
+  background-color: #FFD700;
+  color: black;
   font-weight: bold;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
 }
 
-.contact-form button:hover {
-  background-color: #e6a300;
-}
+@media (min-width: 768px) {
+  .form-map-section {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 2rem;
+  }
 
-.map-container {
-  width: 100%;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  .form-row {
+    flex-direction: row;
+  }
+
+  .form-row input {
+    flex: 1;
+  }
 }
 
 
