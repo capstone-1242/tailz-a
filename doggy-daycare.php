@@ -45,7 +45,7 @@ $hero_image = get_field('doggy_daycare_hero_image');
                 <p>Our daycare offers a rich environment for your dog to exercise, socialize, and rest. With a carefully designed and unique program, your dog will have the best daycare experience the resort has to offer!</p>
                 <p>Play-groups are carefully chosen, ensuring the best experience for your dog, keeping them in a safe play environment as well as a paced schedule with regular downtime keeping them from becoming cranky.</p>
                 <p>Dogs looking to join us will be assessed through our Meet and Greet in order to ensure they are suitable for the program. To ensure the enjoyment and safety of all pups, some pups may not be accepted into the daycare program.</p>
-                <a href="#" class="no-decoration">
+                <a href="<?php echo get_permalink(get_page_by_title('booking')); ?>" class="no-decoration">
                     <div class="custom-button-bottom blue-colors">
                         <div class="custom-button">BOOK YOUR PUP</div>
                     </div>
