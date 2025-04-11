@@ -12,19 +12,15 @@ get_header();
     <h1><?php echo 'Tailz' . Get_the_title(); ?></h1>
 
     <!--  banner image -->
-
-    <section class="hero-banner">
-
-        <?php if (get_field('tailz-lodging-hero-banner')) : ?>
-
-            <div> <img src="<?php echo the_field('tailz-lodging-hero-banner'); ?>"></div>
-
-        <?php else : ?>
-
-            <div> <img src="https://placehold.co/800x300" alt=""></div>
-
-        <?php endif; ?>
-
+    <?php
+    $hero_image = get_field('services_hero_image');
+    ?>
+    <section class="short-hero-banner"
+        style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0, 0, 0, 0.15)), 
+           url('<?php echo esc_url($hero_image); ?>') center/cover no-repeat;">
+        <div class="hero-content">
+            <h2>Luxury Lodgings</h2>
+        </div>
     </section>
 
     <!-- banner image end -->
@@ -145,7 +141,7 @@ get_header();
             </div>
             <a href="<?php echo get_permalink(get_page_by_title('booking')); ?>" class="no-decoration max-margin-left">
                 <div class="custom-button-bottom blue-colors">
-                    <div class="custom-button">BOOK LODGINGS</div> 
+                    <div class="custom-button">BOOK LODGINGS</div>
                 </div>
             </a>
         </section>

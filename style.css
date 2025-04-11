@@ -1880,7 +1880,7 @@ BUTTON TEMPLATES:
 
  .no-decoration {
   text-decoration: none;
-  margin: 1rem;
+  margin: 1rem 0;
   display: block;
   width: fit-content;
 }
