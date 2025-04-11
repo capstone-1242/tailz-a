@@ -31,7 +31,7 @@ get_header();
 
         <div>
             <p>Come visit our resort! give your pet the luxury they deserve.</p>
-            <a href="<?php echo get_permalink(get_page_by_title('amenities')); ?>" class="no-decoration"><div class="custom-button-bottom blue-colors"><div class="custom-button">VIEW NEW AMENITIES</div></div></a>
+            <a href="<?php echo get_permalink(get_page_by_title('amenities')); ?>" class="no-decoration paw"><div class="custom-button-bottom blue-colors "><div class="custom-button">VIEW NEW AMENITIES</div></div></a>
 
         </div>
 
@@ -54,11 +54,9 @@ get_header();
         <div class="section-container">
 
             <div class="image-wrapper">
-                <?php
-                $second_block_image = get_field('second_block_image');
-                if ($second_block_image): ?>
-                    <img src="<?php echo esc_url($second_block_image); ?>" alt="Second Block Image">
-                <?php endif; ?>
+              
+                <img src="<?php echo get_template_directory_uri(); ?>/images/hero/doggy-daycare-hero.webp" alt="My Image Description">
+
             </div>
 
             <div class="content-wrapper">
@@ -89,12 +87,7 @@ get_header();
 
             <div class="image-wrapper">
 
-                <?php
-                $third_block_image = get_field('third_block_image'); // Get image URL
-                if ($third_block_image): ?>
-                    <img src="<?php echo esc_url($third_block_image); ?>" alt="third block Image">
-                <?php endif; ?>
-
+            <img src="<?php echo get_template_directory_uri(); ?>/images/hero/pet-spa-hero.webp" alt="My Image Description">
             </div>
 
 
@@ -175,17 +168,12 @@ get_header();
     <!-- cat services -->
 
     <section class="homepage-section">
+        
 
         <div class="section-container">
 
             <div class="image-wrapper">
-
-                <?php
-                $fourth_block_image = get_field('fourth_block_image'); // Get image URL
-                if ($fourth_block_image): ?>
-                    <img src="<?php echo esc_url($fourth_block_image); ?>" alt="fourth_block_image">
-                <?php endif; ?>
-
+            <img src="<?php echo get_template_directory_uri(); ?>/images/hero/cat.webp" alt="My Image Description">
             </div>
 
             <div class="content-wrapper">

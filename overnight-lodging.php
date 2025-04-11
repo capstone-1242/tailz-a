@@ -125,7 +125,7 @@ get_header();
             </div>
 
         </div>
-        <a href="#" class="no-decoration max-margin-left">
+        <a href="<?php echo get_permalink(get_page_by_title('booking')); ?>" class="no-decoration max-margin-left">
             <div class="custom-button-bottom yellow-colors">
                 <div class="custom-button">BOOK LODGINGS</div>
             </div>
@@ -143,7 +143,7 @@ get_header();
                 <img src="https://placehold.co/300x300" alt="">
                 <img src="https://placehold.co/300x300" alt="">
             </div>
-            <a href="#" class="no-decoration max-margin-left">
+            <a href="<?php echo get_permalink(get_page_by_title('booking')); ?>" class="no-decoration max-margin-left">
                 <div class="custom-button-bottom blue-colors">
                     <div class="custom-button">BOOK LODGINGS</div> 
                 </div>
@@ -167,7 +167,7 @@ get_header();
         </div>
 
 
-        <a href="#" class="no-decoration max-margin-left">
+        <a href="<?php echo get_permalink(get_page_by_title('booking')); ?>" class="no-decoration max-margin-left">
             <div class="custom-button-bottom yellow-colors">
                 <div class="custom-button">BOOK YOUR CAT</div>
             </div>

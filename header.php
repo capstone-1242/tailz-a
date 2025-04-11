@@ -42,7 +42,7 @@
 	</script>
 
 	<style>
-		.paw:hover {
+		.custom-button:hover {
 			cursor: url("<?php echo get_template_directory_uri(); ?>/images/cursor/paw-inflate-38.png"), auto !important;
 		}
 	</style>

@@ -37,7 +37,7 @@ $hero_image = get_field('photography_hero_image');
         <?php if (get_field('photography_heading')) : ?>
             <h2><?php the_field('photography_heading'); ?></h2>
         <?php else : ?>
-            <h2>Professional pet photography</h2> <!-- Default fallback heading -->
+            <h2>Professional pet photography</h2> 
         <?php endif; ?>
 
         <?php if (get_field('photography_content')) : ?>
@@ -54,6 +54,7 @@ $hero_image = get_field('photography_hero_image');
     <!-- photography gallery using masonry ui-->
 
   <div class="gallery-container">
+    
         <section class="gallery">
     
             <div id="masonry-grid" class="grid">

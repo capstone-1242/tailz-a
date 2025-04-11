@@ -71,7 +71,7 @@ get_header();
 
 
             <?php endif; ?>
-            <a href="#" class="no-decoration"><div class="custom-button-bottom yellow-colors"><div class="custom-button">Book Your Dog</div></div></a>
+            <a href="<?php echo get_permalink(get_page_by_title('booking')); ?>" class="no-decoration"><div class="custom-button-bottom yellow-colors"><div class="custom-button">Book Your Dog</div></div></a>
 
         </div>
 
@@ -111,7 +111,7 @@ get_header();
 
             <p>*We are only taking friendly cats at this time. Please call us at 780-988-0089 to book a cat grooming appointment. Please contact your veterinarian for grooming services if you believe your cat will require more than one person to hold them. Unknown behaviour or potentially aggressive cats will be referred to their veterinarian for care. Thank you for your understanding.</p>
 
-            <a href="#" class="no-decoration"><div class="custom-button-bottom blue-colors"><div class="custom-button">Book Your Cat</div></div></a>
+            <a href="<?php echo get_permalink(get_page_by_title('booking')); ?>" class="no-decoration"><div class="custom-button-bottom blue-colors"><div class="custom-button">Book Your Cat</div></div></a>
         </div>
 
     </section>
@@ -124,7 +124,7 @@ get_header();
             
             <p> Ensure your pup gets priority booking. With our Head-To-Tailz Loyalty Program we offer the added flexibility of choosing a 4-Week or 8-Week maintenance schedule for your dog to suit your needs and lifestyle!</p>
             
-            <a href="#" class="no-decoration"><div class="custom-button-bottom blue-colors"><div class="custom-button">Book Your Pet</div></div></a>
+            <a href="<?php echo get_permalink(get_page_by_title('booking')); ?>" class="no-decoration"><div class="custom-button-bottom blue-colors"><div class="custom-button">Book Your Pet</div></div></a>
         </div>
 
     </section>
