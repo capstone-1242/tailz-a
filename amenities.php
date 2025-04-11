@@ -8,7 +8,7 @@ get_header();
 <h1><?php echo 'Tailz ' . get_the_title(); ?></h1>
 
 <!-- Hero Banner -->
-<section class="hero-banner"
+<section class="short-hero-banner"
     style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0, 0, 0, 0.15)), 
            url('<?php echo esc_url(get_field('amenities_hero_image')); ?>') center/cover no-repeat;">
     <div class="hero-content">
