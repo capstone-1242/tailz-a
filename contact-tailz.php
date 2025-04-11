@@ -5,16 +5,23 @@ Template Name: Tailz Contact
 get_header();
 ?>
 
+<h1><?php echo 'Tailz ' . get_the_title(); ?></h1>
+
+<?php
+$hero_image = get_field('doggy_daycare_hero_image');
+?>
+<section class="short-hero-banner"
+    style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0, 0, 0, 0.15)), 
+           url('<?php echo esc_url($hero_image); ?>') center/cover no-repeat;">
+    <div class="hero-content">
+        <h2>Contact Us</h2>
+    </div>
+</section>
+
 <!-- Tailz contact page -->
 <div class="tailz-contact-content">
 
-    <!-- Page Banner -->
-    <section class="hero-banner"
-        style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<?php echo get_template_directory_uri(); ?>/images/hero/contact-banner.webp') center/cover no-repeat;">
-        <div class="hero-content">
-            <h1>Contact</h1>
-        </div>
-    </section>
+   
 
     <!-- Contact Info + Form + Map -->
     <div class="contact-wrapper container">
