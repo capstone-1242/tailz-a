@@ -91,7 +91,7 @@ $hero_image = get_field('pet_spa_hero_image');
                     <p> Friendly felines can also get treated to a lion cut at Tailz by select Pet Stylists. As one of our mandates is to minimize stress on the animals in our care, we ask that an owner or guardian accompany their feline friend for the grooming.* We book them as the first appointment of the day for the Pet Stylist to ensure as less dogs will be around or on specialized Feline Furball Days, minimizing stress on your cat.</p>
                     <p>*We are only taking friendly cats at this time. Please call us at 780-988-0089 to book a cat grooming appointment. Please contact your veterinarian for grooming services if you believe your cat will require more than one person to hold them. Unknown behaviour or potentially aggressive cats will be referred to their veterinarian for care. Thank you for your understanding.</p>
                     <a href="<?php echo get_permalink(get_page_by_title('booking')); ?>" class="no-decoration">
-                        <div class="custom-button-bottom orange-colors">
+                        <div class="custom-button-bottom yellow-colors">
                             <div class="custom-button">Book Your Cat</div>
                         </div>
                     </a>
