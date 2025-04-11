@@ -42,7 +42,7 @@
 	</script>
 
 	<style>
-		.paw:hover {
+		.custom-button:hover {
 			cursor: url("<?php echo get_template_directory_uri(); ?>/images/cursor/paw-inflate-38.png"), auto !important;
 		}
 	</style>
@@ -113,7 +113,6 @@
 							<a href="<?php echo get_permalink(get_page_by_title('search')); ?>"><img src="<?= get_template_directory_uri() ?>/images/svg/search.svg" alt=""></a>
 							<a href="<?php echo get_permalink(get_page_by_title('my account')); ?>"><img src="<?= get_template_directory_uri() ?>/images/svg/user.svg" alt=""></a>
 							<a href="<?php echo get_permalink(get_page_by_title('cart')); ?>"><img src="<?= get_template_directory_uri() ?>/images/svg/cart.svg" alt=""></a>
-							<a href="<?php echo get_permalink(get_page_by_title('shop')); ?>"><img src="<?= get_template_directory_uri() ?>/images/svg/shop.svg" alt=""></a>
 							
 						</div>
 

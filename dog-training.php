@@ -12,47 +12,42 @@ get_header();
 
 
 
-    <h1><?php echo 'Tailz' . Get_the_title(); ?></h1>
+    <h1>
+        <?php echo 'Tailz' . Get_the_title(); ?>
+    </h1>
 
-    <!--  banner image -->
+    <!-- banner image -->
 
-    <section class="hero-banner">
+    <section class="non-background-hero">
 
         <?php if (get_field('')) : ?>
-
             <div> <img src="<?php echo the_field(''); ?>"></div>
-
         <?php else : ?>
-
-            <div> <img src="" alt=""></div>
-
+            <div> <img src="<?php echo get_template_directory_uri(); ?>/images/hero/dog-training-hero.webp" alt=""></div>
         <?php endif; ?>
-
     </section>
 
     <!-- banner image end -->
 
+    <!-- Commented just in case these are used Later -->
+    <!-- <section class="section-container">
 
-   
-    <section>
+    <h2>Puppy Training</h2>
 
-        <h2>Puppy Training</h2>
+    <p>The early months of a puppy are critical to them, as early socialization and care will heavily reduce fears and anxieties affecting them in the future.</p>
 
-        <p>The early months of a puppy are critical to them, as early socialization and care will heavily reduce fears and anxieties affecting them in the future.</p>
+    <p>Early socialization and desensitization leads to decreased fears and anxieties down the road. Whether your puppy visits us once a week, or every day, they will get to experience our structured curriculum that focuses on socialization to sights, sounds, and experiences that they'll need to navigate life as an adult.</p>
 
-        <p>Early socialization and desensitization leads to decreased fears and anxieties down the road. Whether your puppy visits us once a week, or every day, they will get to experience our structured curriculum that focuses on socialization to sights, sounds, and experiences that they'll need to navigate life as an adult.</p>
+    <p>These are programs that go beyond the traditional benefits of Doggy Daycare for our youngest pups. So whether you bring them once a week or every day, they will have the positive experiences that are pivotal in creating that healthy and happy member of your family.</p>
 
-        <p>These are programs that go beyond the traditional benefits of Doggy Daycare for our youngest pups. So whether you bring them once a week or every day, they will have the positive experiences that are pivotal in creating that healthy and happy member of your family.</p>
+  </section>
+  <section class="section-container">
+    <h2>Puppy pre school</h2>
 
-    </section>
-
-    <section>
-        <h2>Puppy pre school</h2>
-
-        <p>
-            Our Puppy Preschool is our signature 4- or 6-week puppy training program and socialization curriculum designed for young puppies aged 8-20 weeks.
-            During their days at Puppy Preschool we focus on:
-        </p>
+    <p>
+      Our Puppy Preschool is our signature 4- or 6-week puppy training program and socialization curriculum designed for young puppies aged 8-20 weeks.
+      During their days at Puppy Preschool we focus on:
+    </p>
 
         <ul>
 
@@ -80,8 +75,7 @@ get_header();
         </ul>
 
     </section>
-
-    <section>
+    <section class="section-container">
 
         <img src="" alt="">
 
@@ -95,13 +89,12 @@ get_header();
             <p>Choosing to add an additional 2 weeks of Puppy Preschool training for a total of six weeks will allow your pup to become more well rounded and socialized.</p>
             <p>Putting you and your puppy on the same page ensures consistency in training, which is why we review the skills your pup is learning with you on a weekly basis, so that you can also teach and implement the same things at home. Let us do the hard work for you, so you can enjoy your happy puppy at home!</p>
 
-            <button>Book your pup</button>
+            <a href="#" class="no-decoration"><div class="custom-button-bottom blue-colors"><div class="custom-button">BOOK YOUR PUP</div></div></a>
 
         </div>
 
     </section>
-
-    <section>
+    <section class="section-container">
         <h2>Puppy Daycare</h2>
         <p>
             Helping to shape puppies, our Puppy Daycare program focuses on the socialization of puppies. We'll work on polite playtime, potty training, crate training, and socialization to help your puppy learn skills for everyday life.
@@ -123,27 +116,24 @@ get_header();
                 <p>Safe play and socialization skills</p>
                 <p>Puppy playtime</p>
 
-                <button>Book your pup</button>
+                <a href="#" class="no-decoration"><div class="custom-button-bottom blue-colors"><div class="custom-button">BOOK YOUR PUP</div></div></a>
 
             </div>
 
         </div>
 
     </section>
-
-
-    <section>
+    <section class="section-container">
 
         <h2>requirements</h2>
 
         <p>
-            Puppies must have their first Distemper Combination and Bordetella vaccination at least 7 days prior to their first day of Puppy Preschool, and must be kept up to date during their time at Tailz.​ 
+            Puppies must have their first Distemper Combination and Bordetella vaccination at least 7 days prior to their first day of Puppy Preschool, and must be kept up to date during their time at Tailz.​ 
             While it used to be recommended that puppies not be socialized until after their third set of puppy vaccines at 16 weeks, research now shows us that waiting this long can be at the detriment of their social skills, and the risk of diseases is quite low if they have received their first or second set of vaccinations.
         </p>
 
     </section>
-
-    <section>
+    <section class="section-container">
         <h2>FAQ</h2>
         <p>
             🦴 When do the Puppy Programs run?</p>
@@ -160,9 +150,7 @@ get_header();
         <p>Your puppy will have access to fresh, cold water during each structured playtime.</p>
 
     </section>
-
-
-    <section>
+    <section class="section-container">
 
         <h2>Adult training</h2>
 
@@ -188,7 +176,7 @@ get_header();
             guidance and direction specific to your pup's needs.
         </p>
     </section>
-    <section>
+    <section class="section-container">
         <nav>
             <ul>
                 <li><a href="#puppy-classes">Puppy Classes</a></li>
@@ -206,7 +194,8 @@ get_header();
             <p>PUPPY cLASSES</p>
         </div>
         <div>
-            <h3>Puppy Kindergarten (8-22 weeks) | 6 WEEKS | $###.###</h3>
+            <?php $puppy_kindergarten_price = get_field('puppy_kindergarten_price'); ?>
+            <h3>Puppy Kindergarten (8-22 weeks) | 6 WEEKS | $<?php echo $puppy_kindergarten_price; ?></h3>
             <p>The Puppy Kindergarten class focuses on socialization with people, dogs, and objects, problem prevention,
                 problem solving (biting, jumping, chewing) and foundations for training using positive methods (leash
                 walking, name, come, focus, drop it, leave it, sit, down, wait, stay etc.). This class is for puppies
@@ -214,7 +203,8 @@ get_header();
                 their humans to train together.</p>
         </div>
         <div>
-            <h3>Puppy Elementary (5-10 months) | 6 WEEKS | $###.###</h3>
+            <?php $puppy_elementary = get_field('puppy_elementary'); ?>
+            <h3>Puppy Elementary (5-10 months) | 6 WEEKS | $<?php echo $puppy_elementary; ?></h3>
             <p>Puppy Elementary is the next step for most puppies after they complete our Puppy Kindergarten but is also
                 a
                 great first class for puppies that are too old for Puppy Kindergarten. You’ll have a chance to build on
@@ -247,7 +237,8 @@ get_header();
         <section class="section-container">
             <h2>Adult Classes</h2>
             <div>
-                <h3>Basic Dog Manners (9 months +) | 4 WEEKS | $229</h3>
+                <?php $basic_dog_manners = get_field('basic_dog_manners'); ?>
+                <h3>Basic Dog Manners (9 months +) | 4 WEEKS | $<?php echo $basic_dog_manners; ?></h3>
                 <p>This class teaches the foundations of obedience training to help build training skills, manners, and
                     solve
                     regular dog behavior challenges. It’s also recommended for dogs that are getting settled into a new home
@@ -269,7 +260,8 @@ get_header();
                 <p>Manners meets the prerequisite requirement for: Intermediate Manners</p>
             </div>
             <div>
-                <h3>Intermediate Manners (9 months +) | 6 WEEKS | $ 269</h3>
+                <?php $intermediate_manners = get_field('intermediate_manners'); ?>
+                <h3>Intermediate Manners (9 months +) | 6 WEEKS | $ <?php echo $intermediate_manners; ?></h3>
                 <p>
                     This class focuses on distraction training for leash walking, name, come, targeting (nose to hand – very
                     useful), go lie down, anti-jump, focus, leave it, tricks, and more. The Intermediate Dog Manners
@@ -300,7 +292,8 @@ get_header();
     <section class="section-container" id="sports-&-games">
         <h2>SPORTS & GAMES </h2>
         <div>
-            <h3>Sports & Games Intro (9 months+) | 6 WEEKS | $229</h3>
+            <?php $sports_games_intro = get_field('sports_games_intro'); ?>
+            <h3>Sports & Games Intro (9 months+) | 6 WEEKS | $<?php echo $sports_games_intro; ?></h3>
             <p>This class is designed to be mostly for fun, but it also helps you and your dog become a team. You’ll
                 build
                 collaborative skills with your dog and improve your training skills and mechanics in a fun,
@@ -313,7 +306,8 @@ get_header();
             <p>REQUIRED Prerequisites: Must have taken any Tailz class.</p>
         </div>
         <div>
-            <h3>Nosework Games (8 months +) | 4 WEEKS | $229</h3>
+            <?php $nosework_games = get_field('nosework_games'); ?>
+            <h3>Nosework Games (8 months +) | 4 WEEKS | $<?php echo $nosework_games; ?></h3>
             <p>
                 Do you want a new enrichment activity to do with your dog during the cold and rainy weather? Does your
                 dog
@@ -475,7 +469,7 @@ get_header();
                 <?php if (get_field('private-training-image')) : ?>
                     <div> <img src="<?php echo the_field('private-training-image'); ?>"></div>
                 <?php else : ?>
-                    <div> <img src="https://placehold.co/600x400" alt=""></div>
+                    <div> <img src="<?php echo get_template_directory_uri(); ?>/images/one-on-one-lessons-dog.webp" alt=""></div>
                 <?php endif; ?>
             </div>
         </div>
@@ -487,14 +481,14 @@ get_header();
             </div>
         </a>
     </section>
+    <section class="non-background-hero">
+        <?php if (get_field('')) : ?>
+            <div> <img src="<?php echo the_field(''); ?>"></div>
+        <?php else : ?>
+            <div> <img src="<?php echo get_template_directory_uri(); ?>/images/hero/canine-skill-building.webp" alt=""></div>
+        <?php endif; ?>
+    </section>
     <section class="section-container" id="behaviour-modifications">
-        <section class="hero-banner">
-            <?php if (get_field('tailz-behaviour-modifications-hero')) : ?>
-                <div> <img src="<?php echo the_field('tailz-behaviour-modifications-hero'); ?>"></div>
-            <?php else : ?>
-                <div> <img src="https://placehold.co/800x300" alt=""></div>
-            <?php endif; ?>
-        </section>
         <div class="section-intro-text">
             <h2>BEHAVIOUR MODIFICATIONS</h2>
             <p>Taking a scientific approach to solving problem behaviours.</p>
@@ -554,7 +548,7 @@ get_header();
                 <?php if (get_field('tailz-canine-skill-image')) : ?>
                     <div> <img src="<?php echo the_field('tailz-canine-skill-image'); ?>"></div>
                 <?php else : ?>
-                    <div> <img src="https://placehold.co/600x400" alt=""></div>
+                    <div> <img src="<?php echo get_template_directory_uri(); ?>/images/canine-skill-dog.webp" alt=""></div>
                 <?php endif; ?>
             </div>
             <div class="content-wrapper">
