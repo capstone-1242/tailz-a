@@ -21,7 +21,11 @@ get_header();
 
 
 <?php
+<<<<<<< HEAD
+$hero_image = get_field('services_hero');
+=======
 $hero_image = get_field('services_hero_image');
+>>>>>>> 13f59c2e096717a8170ea30b5419bf9851ee02bb
 ?>
 <section class="short-hero-banner"
     style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0, 0, 0, 0.15)), 
