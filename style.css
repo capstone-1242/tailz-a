@@ -1680,6 +1680,12 @@ Doggy Daycare
 Pet Spa & grooming
 =====================================
 =================================== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
 .tailz-pet-spa-content {
 }
 
@@ -1748,16 +1754,13 @@ Pet Spa & grooming
 }
 
 .loyalty-program {
-<<<<<<< HEAD
-  background: url(images/bg/paw-background.png), linear-gradient(var(--light-secondary-color));
+  background-color: var(--light-secondary-color); /* Main background */
+  background-image: url("images/svg/paw-black-shape-svgrepo-com.svg");
+
   background-repeat: repeat; /* Ensures tiling */
-  
-=======
-  background: url(images/bg/paw-background.png),
-  linear-gradient(var(--light-secondary-color));
+  background-size: 50px 50px; /* Adjust size of each tile */
   position: relative;
   padding: 40px;
->>>>>>> 13f59c2e096717a8170ea30b5419bf9851ee02bb
 }
 
 .loyalty-program-scrim {
