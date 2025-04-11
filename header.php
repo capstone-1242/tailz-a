@@ -1,22 +1,8 @@
-<?php
-
-/**
- * The header for our theme
- *
- * This is the template that displays all of the <head> section and everything up until <div id="content">
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package tailz
- */
-
-?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
 
 <head>
-	<meta name="description" content="Tailz is a pet resort that offers
-	grooming, daycare, overnight lodging, products, and training services.">
+	<meta name="description" content="Tailz is a pet resort that offers grooming, daycare, overnight lodging, products, and training services.">
 	<meta name="keywords" content="pet resort, grooming, daycare, overnight lodging, products, training, Edmonton">
 	<meta name="author" content="Tailz | Code catalyst">
 	<meta charset="<?php bloginfo('charset'); ?>">
@@ -29,7 +15,6 @@
 
 	<!-- Google tag (gtag.js) -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-XGERCH5WEY"></script>
-
 	<script>
 		window.dataLayer = window.dataLayer || [];
 
@@ -47,9 +32,7 @@
 		}
 	</style>
 
-
 	<?php wp_head(); ?>
-
 </head>
 
 <body <?php body_class(); ?>>
@@ -57,11 +40,7 @@
 	<div id="page" class="site">
 		<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'tailz'); ?></a>
 
-
-		<header id="masthead" class="site-header">
-
-
-
+		<header id="masthead" class="site-header" role="banner">
 			<?php
 			the_custom_logo();
 			if (is_front_page() && is_home()) :
@@ -69,58 +48,54 @@
 				<h1 class="site-title">
 					<a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a>
 				</h1>
-
 			<?php else : ?>
-
-				<p class="site-title	">
-					<a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?>
-					</a>
+				<p class="site-title">
+					<a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a>
 				</p>
-
-
-				<nav id="site-navigation" class="main-navigation">
-
-					<a class="paw" href="<?php echo esc_url(home_url('/')); ?>" rel="home">
-						<?= the_custom_logo(); ?>
-						<img class="header-logo" src="<?= get_template_directory_uri() ?>/images/logo/tailz-transperant-logo.png" alt="Logo">
-					</a>
-
-					<div>
-						<?php
-						wp_nav_menu(array(
-							'theme_location' => 'menu-1',
-							'menu_id'        => 'primary-menu',
-							'menu_class'     => 'main-menu',
-							'container'      => 'ul',
-
-						));
-						?>
-					</div>
-
-					<!-- Mobile View Menu -->
-					<div class="mobile-view-menu">
-
-						<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
-							<svg class="hamburger-icon" viewBox="0 0 100 80" width="30" height="30">
-								<rect width="100" height="10"></rect>
-								<rect y="30" width="100" height="10"></rect>
-								<rect y="60" width="100" height="10"></rect>
-							</svg>
-						</button>
-
-						<div class="mobile-nav-bar">
-							
-							<a href="<?php echo get_permalink(get_page_by_title('search')); ?>"><img src="<?= get_template_directory_uri() ?>/images/svg/search.svg" alt=""></a>
-							<a href="<?php echo get_permalink(get_page_by_title('my account')); ?>"><img src="<?= get_template_directory_uri() ?>/images/svg/user.svg" alt=""></a>
-							<a href="<?php echo get_permalink(get_page_by_title('cart')); ?>"><img src="<?= get_template_directory_uri() ?>/images/svg/cart.svg" alt=""></a>
-							
-						</div>
-
-					</div>
-
-				</nav>
 			<?php endif; ?>
 
+			<nav id="site-navigation" class="main-navigation" role="navigation" aria-label="Main navigation">
+				<a class="paw" href="<?php echo esc_url(home_url('/')); ?>" rel="home" aria-label="Tailz homepage">
+					<?= the_custom_logo(); ?>
+					<img class="header-logo" src="<?= get_template_directory_uri() ?>/images/logo/tailz-transperant-logo.png" alt="Tailz logo">
+				</a>
 
+				<div>
+					<?php
+					wp_nav_menu(array(
+						'theme_location' => 'menu-1',
+						'menu_id'        => 'primary-menu',
+						'menu_class'     => 'main-menu',
+						'container'      => 'ul',
+						'container_aria_label' => 'Primary site menu',
+					));
+					?>
+				</div>
 
+				<!-- Mobile View Menu -->
+				<div class="mobile-view-menu">
+					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false" aria-label="Toggle mobile menu">
+						<svg class="hamburger-icon" viewBox="0 0 100 80" width="30" height="30" role="img" aria-hidden="true" focusable="false">
+							<rect width="100" height="10"></rect>
+							<rect y="30" width="100" height="10"></rect>
+							<rect y="60" width="100" height="10"></rect>
+						</svg>
+					</button>
+
+					<div class="mobile-nav-bar" aria-label="Mobile navigation bar">
+						<a href="<?php echo get_permalink(get_page_by_title('search')); ?>" aria-label="Search page">
+							<img src="<?= get_template_directory_uri() ?>/images/svg/search.svg" alt="Search icon">
+						</a>
+						<a href="<?php echo get_permalink(get_page_by_title('my account')); ?>" aria-label="My account page">
+							<img src="<?= get_template_directory_uri() ?>/images/svg/user.svg" alt="User account icon">
+						</a>
+						<a href="<?php echo get_permalink(get_page_by_title('cart')); ?>" aria-label="Shopping cart">
+							<img src="<?= get_template_directory_uri() ?>/images/svg/cart.svg" alt="Cart icon">
+						</a>
+						<a href="<?php echo get_permalink(get_page_by_title('shop')); ?>" aria-label="Store front">
+							<img src="<?= get_template_directory_uri() ?>/images/svg/shop.svg" alt="Cart icon">
+						</a>
+					</div>
+				</div>
+			</nav>
 		</header><!-- #masthead -->

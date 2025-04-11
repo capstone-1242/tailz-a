@@ -21,7 +21,7 @@ get_header();
 
 
 <?php
-$hero_image = get_field('doggy_daycare_hero_image');
+$hero_image = get_field('services_hero');
 ?>
 <section class="short-hero-banner"
     style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0, 0, 0, 0.15)), 
