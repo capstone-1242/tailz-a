@@ -194,8 +194,12 @@ get_header();
             <p>PUPPY cLASSES</p>
         </div>
         <div>
-            <?php $puppy_kindergarten_price = get_field('puppy_kindergarten_price'); ?>
-            <h3>Puppy Kindergarten (8-22 weeks) | 6 WEEKS | $<?php echo $puppy_kindergarten_price; ?></h3>
+            <?php
+            $puppy_kindergarten_price = get_field('puppy_kindergarten_price');
+            $price = $puppy_kindergarten_price ? $puppy_kindergarten_price : '19.99';
+            ?>
+            <h3>Puppy Kindergarten (8-22 weeks) | 6 WEEKS | $<?php echo $price; ?></h3>
+
             <p>The Puppy Kindergarten class focuses on socialization with people, dogs, and objects, problem prevention,
                 problem solving (biting, jumping, chewing) and foundations for training using positive methods (leash
                 walking, name, come, focus, drop it, leave it, sit, down, wait, stay etc.). This class is for puppies
@@ -203,8 +207,12 @@ get_header();
                 their humans to train together.</p>
         </div>
         <div>
-            <?php $puppy_elementary = get_field('puppy_elementary'); ?>
-            <h3>Puppy Elementary (5-10 months) | 6 WEEKS | $<?php echo $puppy_elementary; ?></h3>
+            <?php
+            $puppy_elementary = get_field('puppy_elementary');
+            $price = $puppy_elementary ? $puppy_elementary : '19.99';
+            ?>
+            <h3>Puppy Elementary (5-10 months) | 6 WEEKS | $<?php echo $price; ?></h3>
+
             <p>Puppy Elementary is the next step for most puppies after they complete our Puppy Kindergarten but is also
                 a
                 great first class for puppies that are too old for Puppy Kindergarten. You’ll have a chance to build on
@@ -237,8 +245,12 @@ get_header();
         <section class="section-container">
             <h2>Adult Classes</h2>
             <div>
-                <?php $basic_dog_manners = get_field('basic_dog_manners'); ?>
-                <h3>Basic Dog Manners (9 months +) | 4 WEEKS | $<?php echo $basic_dog_manners; ?></h3>
+                <?php
+                $basic_dog_manners = get_field('basic_dog_manners');
+                $price = $basic_dog_manners ? $basic_dog_manners : '19.99';
+                ?>
+                <h3>Basic Dog Manners (9 months +) | 4 WEEKS | $<?php echo $price; ?></h3>
+
                 <p>This class teaches the foundations of obedience training to help build training skills, manners, and
                     solve
                     regular dog behavior challenges. It’s also recommended for dogs that are getting settled into a new home
@@ -260,8 +272,12 @@ get_header();
                 <p>Manners meets the prerequisite requirement for: Intermediate Manners</p>
             </div>
             <div>
-                <?php $intermediate_manners = get_field('intermediate_manners'); ?>
-                <h3>Intermediate Manners (9 months +) | 6 WEEKS | $ <?php echo $intermediate_manners; ?></h3>
+                <?php
+                $intermediate_manners = get_field('intermediate_manners');
+                $price = $intermediate_manners ? $intermediate_manners : '19.99';
+                ?>
+                <h3>Intermediate Manners (9 months +) | 6 WEEKS | $<?php echo $price; ?></h3>
+
                 <p>
                     This class focuses on distraction training for leash walking, name, come, targeting (nose to hand – very
                     useful), go lie down, anti-jump, focus, leave it, tricks, and more. The Intermediate Dog Manners
@@ -292,8 +308,12 @@ get_header();
     <section class="section-container" id="sports-&-games">
         <h2>SPORTS & GAMES </h2>
         <div>
-            <?php $sports_games_intro = get_field('sports_games_intro'); ?>
-            <h3>Sports & Games Intro (9 months+) | 6 WEEKS | $<?php echo $sports_games_intro; ?></h3>
+            <?php
+            $sports_games_intro = get_field('sports_games_intro');
+            $price = $sports_games_intro ? $sports_games_intro : '19.99';
+            ?>
+            <h3>Sports & Games Intro (9 months+) | 6 WEEKS | $<?php echo $price; ?></h3>
+
             <p>This class is designed to be mostly for fun, but it also helps you and your dog become a team. You’ll
                 build
                 collaborative skills with your dog and improve your training skills and mechanics in a fun,
@@ -306,8 +326,12 @@ get_header();
             <p>REQUIRED Prerequisites: Must have taken any Tailz class.</p>
         </div>
         <div>
-            <?php $nosework_games = get_field('nosework_games'); ?>
-            <h3>Nosework Games (8 months +) | 4 WEEKS | $<?php echo $nosework_games; ?></h3>
+            <?php
+            $nosework_games = get_field('nosework_games');
+            $price = $nosework_games ? $nosework_games : '19.99';
+            ?>
+            <h3>Nosework Games (8 months +) | 4 WEEKS | $<?php echo $price; ?></h3>
+
             <p>
                 Do you want a new enrichment activity to do with your dog during the cold and rainy weather? Does your
                 dog

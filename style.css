@@ -473,7 +473,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "League Spartan", sans-serif;
+  font-family: "League Spartan", sans-serif !important;
   font-optical-sizing: auto;
   font-weight: 800;
   font-style: normal;
@@ -483,6 +483,7 @@ h6 {
 
 p {
   margin-bottom: 1.5em;
+  font-family: 'montserrat', sans-serif !important;
 }
 
 dfn,
@@ -851,13 +852,29 @@ textarea {
   text-decoration: none;
   font-style: none;
   font-size: 1rem;
-  color: #fff;
+  color: var(--text-color-light);
   margin-top: 10px;
+  transition: .3s ease;
+  -webkit-transition: .3s ease;
+  -moz-transition: .3s ease;
+  -ms-transition: .3s ease;
+  -o-transition: .3s ease;
+}
+
+.footer-phone:hover {
+  color: var(--secondary-color);
+  text-decoration: none;
 }
 
 .footer-icons svg {
   width: 3rem;
   height: 3rem;
+ 
+}
+
+.footer-icons svg:hover {
+  filter: brightness(0) saturate(100%) invert(83%) sepia(29%) saturate(5387%)
+  hue-rotate(344deg) brightness(102%) contrast(99%);
 }
 
 /* Our Promise Section */
@@ -880,6 +897,24 @@ textarea {
 .footer-services {
   width: 30%;
   text-align: left;
+}
+
+.footer-services ul, .footer-services a {
+  list-style-type: none;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  color: var(--text-color-light);
+  transition: .3s ease;
+  -webkit-transition: .3s ease;
+  -moz-transition: .3s ease;
+  -ms-transition: .3s ease;
+  -o-transition: .3s ease;
+}
+
+.footer-services ul, .footer-services a:hover{
+  color: var(--secondary-color);
+  /* text-decoration: underline; */
 }
 
 .footer-services h2 {
@@ -1714,10 +1749,16 @@ Pet Spa & grooming
 }
 
 .loyalty-program {
+<<<<<<< HEAD
+  background: url(images/bg/paw-background.png), linear-gradient(var(--light-secondary-color));
+  background-repeat: repeat; /* Ensures tiling */
+  
+=======
   background: url(images/bg/paw-background.png),
   linear-gradient(var(--light-secondary-color));
   position: relative;
   padding: 40px;
+>>>>>>> 13f59c2e096717a8170ea30b5419bf9851ee02bb
 }
 
 .loyalty-program-scrim {
@@ -2181,7 +2222,7 @@ BUTTON TEMPLATES:
 
  .no-decoration {
   text-decoration: none;
-  margin: 1rem;
+  margin: 1rem 0;
   display: block;
   width: fit-content;
 }
@@ -2442,7 +2483,7 @@ BUTTON TEMPLATES:
 
 .main-menu .menu-item-has-children > a {
   text-decoration: none;
-  pointer-events: none;
+  /* pointer-events: none; */
 }
 
 .menu-toggle,

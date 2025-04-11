@@ -71,13 +71,13 @@
 
 				<!-- Services Section -->
 				<div class="footer-services">
-					<h2>Services</h2>
+					<a href="<?php echo get_permalink(get_page_by_title('services')); ?>"><h2>Services</h2></a>
 					<ul>
-						<li>Grooming</li>
-						<li>Daycare</li>
-						<li>Overnight Lodging</li>
-						<li>Products</li>
-						<li>Training</li>
+						<a href="<?php echo get_permalink(get_page_by_title('pet spa grooming')); ?>"><li>Grooming</li></a>
+						<a href="<?php echo get_permalink(get_page_by_title('doggy daycare')); ?>"><li>Daycare</li></a>
+						<a href="<?php echo get_permalink(get_page_by_title('overnight lodgings')); ?>"><li>Overnight Lodging</li></a>
+						<a href="<?php echo get_permalink(get_page_by_title('shop')); ?>"><li>Products</li></a>
+						<a href="<?php echo get_permalink(get_page_by_title('dog training')); ?>"><li>Training</li></a>
 					</ul>
 				</div>
 
@@ -116,36 +116,7 @@
 
 <?php wp_footer(); ?>
 
-<script>
-	document.addEventListener("DOMContentLoaded", function() {
-	
-		const menuToggle = document.querySelector(".menu-toggle");
-		const menu = document.querySelector(".main-menu");
 
-		if (menuToggle && menu) {
-			menuToggle.addEventListener("click", function() {
-				let isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
-				menuToggle.setAttribute("aria-expanded", !isExpanded);
-				menu.classList.toggle("active"); 
-
-			
-				if (!isExpanded) {
-					menu.classList.add("active");
-				} else {
-					menu.classList.remove("active");
-				}
-			});
-		}
-
-		
-		document.addEventListener('click', function(e) {
-			if (!menu.contains(e.target) && !menuToggle.contains(e.target)) {
-				menu.classList.remove('active'); 
-				menuToggle.setAttribute("aria-expanded", "false");
-			}
-		});
-	});
-</script>
 
 </body>
 
