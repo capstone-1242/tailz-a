@@ -187,12 +187,7 @@ function tailz_register_menus() {
 }
 add_action( 'after_setup_theme', 'tailz_register_menus' );
 
-function tailz_register_mobile_menus() {
-    register_nav_menus( array(
-        'menu-2' => __( 'Mobile menu', 'tailz' ), // Ensure this matches your theme location
-    ) );
-}
-add_action( 'after_setup_theme', 'tailz_register_mobile_menus' );
+
 
 
 

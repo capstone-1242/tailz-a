@@ -9,7 +9,7 @@ get_header();
 <h1><?php echo 'Tailz ' . get_the_title(); ?></h1>
 
 <?php
-$hero_image = get_field('doggy_daycare_hero_image');
+$hero_image = get_field('amenities_hero_image');
 ?>
 <section class="short-hero-banner"
     style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0, 0, 0, 0.15)), 
