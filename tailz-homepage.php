@@ -245,7 +245,7 @@ get_header();
             </div>
         </a>
 
-        <a href="<?php echo get_term_link('dog-food', 'product_cat'); ?>">
+        <a href="<?php echo get_term_link('dog-treats', 'product_cat'); ?>">
             
             <div class="homepage-product-card">
 
@@ -260,11 +260,11 @@ get_header();
             </div>
         </a>
 
-        <a href="<?php echo get_term_link('dog-food', 'product_cat'); ?>">
+        <a href="<?php echo get_term_link('uncategorized', 'product_cat'); ?>">
 
             <div class="homepage-product-card">
 
-                <h3>WET FOOD</h3>
+                <h3>All Products</h3>
 
                 <?php
                 $third_category_image = get_field('third_category_image');
@@ -276,7 +276,7 @@ get_header();
 
         </a>
 
-        <as href="<?php echo get_term_link('dog-food', 'product_cat'); ?>">
+        <as href="<?php echo get_term_link('bulk-treats', 'product_cat'); ?>">
 
             <div class="homepage-product-card">
 
@@ -292,7 +292,7 @@ get_header();
 
         </as>
 
-        <a href="<?php echo get_term_link('dog-food', 'product_cat'); ?>">
+        <a href="<?php echo get_term_link('cat-treats', 'product_cat'); ?>">
 
             <div class="homepage-product-card">
 
@@ -308,7 +308,7 @@ get_header();
 
         </a>
 
-        <a href="<?php echo get_term_link('dog-food', 'product_cat'); ?>">
+        <a href="<?php echo get_term_link('cat-food', 'product_cat'); ?>">
 
             <div class="homepage-product-card">
 

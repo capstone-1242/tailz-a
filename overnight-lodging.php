@@ -37,7 +37,17 @@ get_header();
         <p>Each day of restful sleep offers the benefits of Doggy Daycare, meaning your pet will never be left alone while they’re with us. You may also sign your dog up for a departure bath on their last day so they come home fresh and squeaky clean!</p>
 
         <div class="section-container">
-            <div class="image-wrapper"><img src="https://placehold.co/600x400" alt=""></div>
+        
+            <?php $image = get_field('lodging_image_1'); ?>
+            <div class="image-wrapper">
+                <?php if ($image): ?>
+                    <img src="<?php echo esc_url($image); ?>" alt="Image">
+                <?php else: ?>
+                    <img src="https://placehold.co/600x400" alt="Placeholder image">
+                <?php endif; ?>
+            </div>
+
+
 
             <div class="content-wrapper">
                 <p>We provide all the toys, beds, blankets and love that your dog needs; all you need to do is bring some dog food! We will feed your dog two to three times a day with the provided food. Bring all items in a marked reusable shopping bag. Pre-portioned food is appreciated.</p>
@@ -135,9 +145,30 @@ get_header();
                 <p>Each of our lodgings is uniquely decorated for your dogs enjoyment.</p>
             </div>
             <div class="package-card-container">
-                <img src="https://placehold.co/300x300" alt="">
-                <img src="https://placehold.co/300x300" alt="">
-                <img src="https://placehold.co/300x300" alt="">
+                <?php
+                $image1 = get_field('lodging_image_2');
+                $image2 = get_field('lodging_image_3');
+                $image3 = get_field('lodging_image_4');
+                ?>
+
+                <?php if ($image1): ?>
+                    <img src="<?= esc_url($image1); ?>" alt="<?= esc_attr($image1); ?>">
+                <?php else: ?>
+                    <img src="https://placehold.co/300x300" alt="Placeholder image 1">
+                <?php endif; ?>
+
+                <?php if ($image2): ?>
+                    <img src="<?= esc_url($image2); ?>" alt="<?= esc_attr($image2); ?>">
+                <?php else: ?>
+                    <img src="https://placehold.co/300x300" alt="Placeholder image 2">
+                <?php endif; ?>
+
+                <?php if ($image3): ?>
+                    <img src="<?= esc_url($image3); ?>" alt="<?= esc_attr($image3); ?>">
+                <?php else: ?>
+                    <img src="https://placehold.co/300x300" alt="Placeholder image 3">
+                <?php endif; ?>
+
             </div>
             <a href="<?php echo get_permalink(get_page_by_title('booking')); ?>" class="no-decoration max-margin-left">
                 <div class="custom-button-bottom blue-colors">
@@ -157,9 +188,30 @@ get_header();
         </div>
 
         <div class="package-card-container">
-            <img src="https://placehold.co/300x300" alt="">
-            <img src="https://placehold.co/300x300" alt="">
-            <img src="https://placehold.co/300x300" alt="">
+            <?php
+            $image4 = get_field('lodging_image_5');
+            $image5 = get_field('lodging_image_6');
+            $image6 = get_field('lodging_image_7');
+            ?>
+
+            <?php if ($image4): ?>
+                <img src="<?= esc_url($image4); ?>" alt="<?= esc_attr($image1); ?>">
+            <?php else: ?>
+                <img src="https://placehold.co/300x300" alt="Placeholder image 1">
+            <?php endif; ?>
+
+            <?php if ($image5): ?>
+                <img src="<?= esc_url($image5); ?>" alt="<?= esc_attr($image2); ?>">
+            <?php else: ?>
+                <img src="https://placehold.co/300x300" alt="Placeholder image 2">
+            <?php endif; ?>
+
+            <?php if ($image3): ?>
+                <img src="<?= esc_url($image6); ?>" alt="<?= esc_attr($image3); ?>">
+            <?php else: ?>
+                <img src="https://placehold.co/300x300" alt="Placeholder image 3">
+            <?php endif; ?>
+
         </div>
 
 

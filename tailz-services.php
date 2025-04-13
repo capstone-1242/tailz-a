@@ -84,7 +84,7 @@ $hero_image = get_field('services_hero');
             <div class="image-wrapper">
 
                 <?php
-                $third_block_image = get_field('third_block_image'); // Get image URL
+                $third_block_image = get_field('third_block_image'); 
                 if ($third_block_image): ?>
                     <img src="<?php echo esc_url($third_block_image); ?>" alt="third block Image">
                 <?php else : ?>
@@ -166,9 +166,9 @@ $hero_image = get_field('services_hero');
             <div class="image-wrapper">
 
                 <?php
-                $fourth_block_image = get_field('fourth_block_image'); // Get image URL
-                if ($fourth_block_image): ?>
-                    <img src="<?php echo esc_url($fourth_block_image); ?>" alt="fourth_block_image">
+                $fifth_block_image = get_field('fifth_block_image'); // Get image URL
+                if ($fifth_block_image): ?>
+                    <img src="<?php echo esc_url($fifth_block_image); ?>" alt="fifth_block_image">
                 <?php else : ?>
                     <div> <img src="<?php echo get_template_directory_uri(); ?>/images/hero/hero-preview/puppy-programs-hero.webp" alt=""></div>
                 <?php endif; ?>
@@ -198,9 +198,9 @@ $hero_image = get_field('services_hero');
             <div class="image-wrapper">
 
                 <?php
-                $fifth_block_image = get_field('fifth_block_image'); // Get image URL
-                if ($fifth_block_image): ?>
-                    <img src="<?php echo esc_url($fifth_block_image); ?>" alt="fifth_block_image">
+                $sixth_block_image = get_field('sixth_block_image'); // Get image URL
+                if ($sixth_block_image): ?>
+                    <img src="<?php echo esc_url($sixth_block_image); ?>" alt="sixth_block_image">
                 <?php else : ?>
                     <div> <img src="<?php echo get_template_directory_uri(); ?>/images/hero/hero-preview/dog-on-bench.webp" alt=""></div>
                 <?php endif; ?>
@@ -229,9 +229,9 @@ $hero_image = get_field('services_hero');
         <div class="section-container">
             <div class="image-wrapper">
                 <?php
-                $sixth_block_image = get_field('sixth_block_image'); // Get image URL
-                if ($sixth_block_image): ?>
-                    <img src="<?php echo esc_url($sixth_block_image); ?>" alt="sixth_block_image">
+                $seventh_block_image = get_field('seventh_block_image'); // Get image URL
+                if ($seventh_block_image): ?>
+                    <img src="<?php echo esc_url($seventh_block_image); ?>" alt="seventh_block_image">
                 <?php else : ?>
                     <div> <img src="<?php echo get_template_directory_uri(); ?>/images/hero/puppy-programs-hero.webp" alt=""></div>
                 <?php endif; ?>
