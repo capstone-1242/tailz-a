@@ -177,7 +177,7 @@ $hero_image = get_field('services_hero');
 
             <div class="content-wrapper">
                 <h2>Dog Training</h2>
-                <p>Get your puppies a head-start on their training and socialization, or teach older dogs new tricks! </p>
+                <p>New cat services are coming to Tailz! Bring your cat in for a spa day, or bring them in for luxury lodgings!</p>
                 <a href="<?php echo get_permalink(get_page_by_title('booking')); ?>" class="no-decoration">
                     <div class="custom-button-bottom blue-colors">
                         <div class="custom-button">BOOK NOW</div>
@@ -211,7 +211,10 @@ $hero_image = get_field('services_hero');
 
 
                 <h2>Amenities</h2> <!-- Default fallback heading -->
-                <p>The new location offers a dog-pile of new features to make your dog's stay the best it can be.</p> <!-- Default fallback content -->
+
+
+
+                <p>Come visit our resort! Give your pet the luxury they deserve.</p> <!-- Default fallback content -->
 
 
                 <a href="<?php echo get_permalink(get_page_by_title('amenities')); ?>" class="no-decoration">
@@ -236,10 +239,10 @@ $hero_image = get_field('services_hero');
 
             <div class="content-wrapper">
                 <h2>Pet Photography</h2>
-                <p>Professional and personalized photographs for your pet for holidays all year round!</p>
+                <p>New cat services are coming to Tailz! Bring your cat in for a spa day, or bring them in for luxury lodgings!</p>
                 <a href="<?php echo get_permalink(get_page_by_title('pet photography')); ?>" class="no-decoration">
                     <div class="custom-button-bottom blue-colors">
-                        <div class="custom-button">View Photography</div>
+                        <div class="custom-button">BOOK NOW</div>
                     </div>
                 </a>
             </div>
