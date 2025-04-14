@@ -49,7 +49,7 @@ $hero_image = get_field('doggy_daycare_hero_image');
                         <input type="tel" name="phone" placeholder="Phone Number">
                     </div>
                     <textarea name="message" rows="4" placeholder="Message" required></textarea>
-                    <button type="submit" class="btn-yellow paw">SEND MESSAGE</button>
+                    <button type="submit" class="no-decoration"><div class="custom-button-bottom yellow-colors"><div class="custom-button">Send Message</div></div></button>
                 </form>
             </div>
 

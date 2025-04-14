@@ -1939,6 +1939,10 @@ BUTTON TEMPLATES:
   width: fit-content;
 }
 
+button.no-decoration{
+  border: none;
+}
+
 .max-margin-left {
   margin-left: auto;
 }
