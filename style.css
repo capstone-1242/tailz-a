@@ -1556,7 +1556,7 @@ Doggy Daycare
   color: var(--text-color-light);
   border-radius: 10px;
   max-width: 300px;
-  box-shadow: 2px 8px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 0 0 #00000011,3px 8px 5px 0 #0000003c,0 5px 0 0 var(--text-color-light),6px 11px 6px 0 #00000023;
 }
 
 .rate-card-header {
@@ -1622,6 +1622,7 @@ Doggy Daycare
   background-color: var(--light-primary-color);
   border-radius: 10px;
   text-align: center;
+  box-shadow: 0 5px 0 0 #00000011,3px 8px 5px 0 #0000003c,0 5px 0 0 var(--light-primary-color),6px 11px 6px 0 #00000023;
 }
 
 .training-card div:first-child {
@@ -1728,6 +1729,8 @@ Pet Spa & grooming
 .package-card {
   border-radius: 10px;
   text-align: center;
+  box-shadow: 0 5px 0 0 #00000066,0 5px 0 0 var(--secondary-color),6px 11px 6px 0 #00000023;
+  margin-bottom: 8px;
 }
 
 .package-card ul {
@@ -1737,14 +1740,17 @@ Pet Spa & grooming
 
 .package-card:first-child {
   background-color: #ffdca2;
+  box-shadow: 0 5px 0 0 #00000011,3px 8px 5px 0 #0000003c,0 5px 0 0 #ffdca2,6px 11px 6px 0 #00000023;
 }
 
 .package-card:nth-child(2) {
   background-color: #bbc5f6;
+  box-shadow: 0 5px 0 0 #00000011,3px 8px 5px 0 #0000003c,0 5px 0 0 #bbc5f6,6px 11px 6px 0 #00000023;
 }
 
 .package-card:last-child {
   background-color: #cef06f;
+  box-shadow: 0 5px 0 0 #00000011,3px 8px 5px 0 #0000003c,0 5px 0 0 #a9c755,6px 11px 6px 0 #00000023;
 }
 
 .package-card div:first-child {
@@ -2554,7 +2560,7 @@ BUTTON TEMPLATES:
 }
 
 /* General Reset for List Markers */
-ul,
+/* ul, */
 ol {
   list-style: none;
   margin: 0;
